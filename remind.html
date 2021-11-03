@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- 오픈 그래프 -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="마이렌탈바이크">
+        <meta property="og:description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta property="og:image" content="images/common/rbicon.png">
+        <meta property="og:url" content="https://rentalbike.kr/">
+
+        <!-- bing은 xml로 대체 -->
+        <meta name="naver-site-verification" content="02805b5edd23aab251aa712194a9829b44f6a633"> <!-- naver -->
+        <meta name="google-site-verification" content="QuRSeSM0JKaS8OeovUQYa1hDRHgPJDaRTXz67ov3w-0"> <!-- google -->
+        <meta name="description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta name="keywords" content="맥스토크, 마이렌탈바이크, 당빠, 홈페이지, IT, 이륜차, 오토바이, 바이크, 라이더, 전국, 모터사이클, 중고, 신차, 구매, 관광지, 리스, 대여, 렌탈, 렌트, mrb">
+        <!-- 모바일용 화면크기 비율고정 -->
+        <meta id="mobileMeta" name="viewport" content="width=device-width">
+
+        <title>마이렌탈바이크</title>
+
+        <!-- 서비스 아이콘 -->
+        <link rel="canonical" href="https://rentalbike.kr/">
+        <link rel="shortcut icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+        <link rel="apple-touch-icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/jquery.datetimepicker.full.js"></script>
+
+        <!-- Naver Analytics -->
+	    <script type="text/javascript" src="js/wcslog.js"></script>
+        <script type="text/javascript">
+            if(!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "8b08b84b8b1f38";
+            if(window.wcs) {
+                wcs_do();
+            }
+        </script>
+
+        <!-- nav 스크롤시 배경색 변경 -->
+        <script> 
+        $(document).scroll(function () { 
+            var $nav = $("#navHeader"); 
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height()); }); 
+            </script>
+    </head>
+    <body>
+        <!-- nav -->
+		<nav  id="navHeader" class="navbar-default navbar-fixed-top">
+            <div class="Container h100p">
+                <div class="navbar-head wh100p">
+                    <!-- navbar-left -->
+                    <div class="navbar-logo w100">
+                        <a href="main.html">
+                            <img class="w100p logonormal" src="images/rb_w_rv.png" alt="마이렌탈바이크">
+                            <img class="w100p logohover" src="images/rb_w.png" alt="마이렌탈바이크">
+                        </a>
+                    </div>
+                    <!-- navbar-right -->
+                    <div class="navbar-btns">
+                        <ul>
+                            <li><a href="guide.html">이용안내</a></li>
+                            <li><a href="searchs.html">바이크검색</a></li>
+                            <li><a href="contens.html">콘텐츠</a></li>
+                            <li><a href="community.html">커뮤니티</a></li>
+                        </ul>
+                        <!-- 로그인 전 노출 -->
+                        <div class="loginBox">
+                            <ul>
+                                <li><a href="login.html">로그인</a></li> 
+                                <li><a href="signin.html">회원가입</a></li> 
+                            </ul>
+                        </div>
+                        <!-- 로그인 후 노출 -->
+                        <!-- navbar-right-dropdown -->
+                        <div class="dropdown" style="display: none;">
+                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                사용자 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a class="newblue" href="">마이페이지</a></li>
+                                <li><a class="newblue" href="">로그아웃</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- content -->
+        <div class="Container600">
+            <div class="loginWrap boxShadow borderRad15 borderBF">
+                <h2 class="borderBottom fontWeightBold">비밀번호 재설정</h2>
+                <div class="lg_cont">
+                    <p>가입 시 입력하신 메일주소를 적어주세요.<br>입력하신 이메일 주소로 비밀번호 재설정 링크를 전송해드립니다.</p>
+                    <div class="input_text">
+                        <input class="borderRad50 w100p" type="text" placeholder="이메일">
+                    </div>
+                </div>
+                <div class="lg_foot borderTop">
+                    <button type="submit" class="w100p white borderRad50 fontWeightBold">비밀번호 재설정 링크 보내기</button>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer w100p">
+            <div class="Container">
+                <div class="leftArea">
+                    <div class="logo_ft">
+                        <img src="images/rb_w_ft.png" alt="마이렌탈바이크">
+                    </div>
+                    <div class="txt_ft">
+                        <ul>
+                            <li class="white">맥스토크 ｜ 관리자:임성용</li>
+                            <li class="white">Tel:010-4952-0134 ｜ E-mail:admin@rentalbike.kr</li>
+                            <li class="white">주소:전북 전주시 완산구 풍남문4길 25-26 813호</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rightArea">
+                    <ul>
+                        <li><a href="https://www.instagram.com/myrental_bike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.facebook.com/myrentalbike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://blog.naver.com/biz9ine"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC3IQigWXcYpJRCFWPMqM9KQ/featured"><span class="bgImg"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

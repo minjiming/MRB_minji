@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- 오픈 그래프 -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="마이렌탈바이크">
+        <meta property="og:description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta property="og:image" content="images/common/rbicon.png">
+        <meta property="og:url" content="https://rentalbike.kr/">
+
+        <!-- bing은 xml로 대체 -->
+        <meta name="naver-site-verification" content="02805b5edd23aab251aa712194a9829b44f6a633"> <!-- naver -->
+        <meta name="google-site-verification" content="QuRSeSM0JKaS8OeovUQYa1hDRHgPJDaRTXz67ov3w-0"> <!-- google -->
+        <meta name="description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta name="keywords" content="맥스토크, 마이렌탈바이크, 당빠, 홈페이지, IT, 이륜차, 오토바이, 바이크, 라이더, 전국, 모터사이클, 중고, 신차, 구매, 관광지, 리스, 대여, 렌탈, 렌트, mrb">
+        <!-- 모바일용 화면크기 비율고정 -->
+        <meta id="mobileMeta" name="viewport" content="width=device-width">
+
+        <title>마이렌탈바이크</title>
+
+        <!-- 서비스 아이콘 -->
+        <link rel="canonical" href="https://rentalbike.kr/">
+        <link rel="shortcut icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+        <link rel="apple-touch-icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/jquery.datetimepicker.full.js"></script>
+        <!-- 어썸폰트 -->
+        <script src="https://kit.fontawesome.com/c184921f02.js" crossorigin="anonymous"></script>
+
+        <!-- Naver Analytics -->
+	    <script type="text/javascript" src="js/wcslog.js"></script>
+        <script type="text/javascript">
+            if(!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "8b08b84b8b1f38";
+            if(window.wcs) {
+                wcs_do();
+            }
+        </script>
+
+        <!-- nav 스크롤시 배경색 변경 -->
+        <script> 
+        $(document).scroll(function () { 
+            var $nav = $("#navHeader"); 
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height()); }); 
+        </script>
+    </head>
+    <body>
+        <!-- nav -->
+		<nav  id="navHeader" class="navbar-default navbar-fixed-top">
+            <div class="Container h100p">
+                <div class="navbar-head wh100p">
+                    <!-- navbar-left -->
+                    <div class="navbar-logo w100">
+                        <a href="main.html">
+                            <img class="w100p logonormal" src="images/rb_w_rv.png" alt="마이렌탈바이크">
+                            <img class="w100p logohover" src="images/rb_w.png" alt="마이렌탈바이크">
+                        </a>
+                    </div>
+                    <!-- navbar-right -->
+                    <div class="navbar-btns">
+                        <ul>
+                            <li><a href="guide.html">이용안내</a></li>
+                            <li><a href="searchs.html">바이크검색</a></li>
+                            <li class="on"><a href="contens.html">콘텐츠</a></li>
+                            <li><a href="community.html">커뮤니티</a></li>
+                        </ul>
+                        <!-- 로그인 전 노출 / 드롭다운 기능 보여주기 위해 임시로 display:none -->
+                        <div class="loginBox" style="display: none;">
+                            <ul>
+                                <li><a href="login.html">로그인</a></li> 
+                                <li><a href="signin.html">회원가입</a></li> 
+                            </ul>
+                        </div>
+                        <!-- 로그인 후 노출 -->
+                        <!-- navbar-right-dropdown -->
+                        <div class="dropdown">
+                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                사용자 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a class="newblue" href="">마이페이지</a></li>
+                                <li><a class="newblue" href="">로그아웃</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+         <!-- middle title banner area -->
+         <div class="mid_banner w100p bgImg mid_cont">
+            <img src="images/contents_title.png" alt="함께 공유하는 생상한 감동! 커뮤니티">
+        </div>
+
+        <!-- contens -->
+            <div role="tabpanel">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs contents-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#area_trip" aria-controls="area_trip" role="tab" data-toggle="tab">지역별 여행지</a></li>
+                  <li role="presentation"><a href="#sns" aria-controls="sns" role="tab" data-toggle="tab">SNS</a></li>
+                </ul>
+              
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- #지역별 여행지 -->
+                    <!-- 지도 & 지역별 여행지 리스트 -->
+                    <div role="tabpanel" class="tab-pane active area_trip Container" id="area_trip">
+                        <!-- tab-content -->
+                        <div id="myTabContent" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active in" id="all" aria-labelledby="all-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/all.png" alt="전체">
+                                    <p class="jalnanFont">전체</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="seoul" aria-labelledby="drop-seoul-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/seoul.png" alt="서울시">
+                                    <p class="jalnanFont">서울시</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="jeju" aria-labelledby="drop-jeju-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/jeju.png" alt="제주">
+                                    <p class="jalnanFont">제주</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="gyeonggi" aria-labelledby="drop-gyeonggi-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/gyeonggi.png" alt="인천/경기">
+                                    <p class="jalnanFont">인천/경기</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="gangwon" aria-labelledby="drop-gangwon-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/gangwon.png" alt="강원">
+                                    <p class="jalnanFont">강원</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="sejong" aria-labelledby="drop-sejong-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/sejong.png" alt="세종시">
+                                    <p class="jalnanFont">세종시</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="chungnam" aria-labelledby="drop-chungnam-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/chungnam.png" alt="대전/충남">
+                                    <p class="jalnanFont">대전/충남</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="chungbuk" aria-labelledby="drop-chungbuk-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/chungbuk.png" alt="충북">
+                                    <p class="jalnanFont">충북</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="jeonnam" aria-labelledby="drop-jeonnam-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/jeonnam.png" alt="광주/전남">
+                                    <p class="jalnanFont">광주/전남</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="jeonbuk" aria-labelledby="drop-jeonbuk-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/jeonbuk.png" alt="전북">
+                                    <p class="jalnanFont">전북</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="gyeongnam" aria-labelledby="drop-gyeongnam-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/gyeongnam.png" alt="부산/울산/경남">
+                                    <p class="jalnanFont">부산/울산/경남</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="gyeongbuk" aria-labelledby="drop-gyeongbuk-tab">
+                                <!-- 지도 -->
+                                <div class="left_map">
+                                    <img src="images/map/gyeongbuk.png" alt="대구/경북">
+                                    <p class="jalnanFont">대구/경북</p>
+                                </div>
+                                <!-- 지역별 여행지 리스트 -->
+                                <div class="right_cont">
+                                    <div class="box box01">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box02">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box03">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box04">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box05">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box box06">
+                                        <a href="">
+                                            <div class="imgArea wh100p">
+                                                <div class="bgImg imgChild wh100p"></div>
+                                            </div>
+                                            <div class="txtArea">
+                                                <p>전주한옥마을</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- tab -->
+                        <ul id="myTab" class="nav nav-tabs area-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#all" role="tab" id="all-tab" data-toggle="tab" aria-controls="all" aria-expanded="true">전체지역보기</a></li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" id="area-drop" class="dropdown-toggle borderBF" data-toggle="dropdown" aria-controls="myTabDrop1-contents">지역 (선택) <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                                    <li><a href="#seoul" tabindex="-1" role="tab" id="drop-seoul-tab" data-toggle="tab" aria-controls="seoul">서울시</a></li>
+                                    <li><a href="#jeju" tabindex="-1" role="tab" id="drop-jeju-tab" data-toggle="tab" aria-controls="jeju">제주</a></li>
+                                    <li><a href="#gyeonggi" tabindex="-1" role="tab" id="drop-gyeonggi-tab" data-toggle="tab" aria-controls="gyeonggi">인천/경기</a></li>
+                                    <li><a href="#gangwon" tabindex="-1" role="tab" id="drop-gangwon-tab" data-toggle="tab" aria-controls="gangwon">강원</a></li>
+                                    <li><a href="#sejong" tabindex="-1" role="tab" id="drop-sejong-tab" data-toggle="tab" aria-controls="sejong">세종시</a></li>
+                                    <li><a href="#chungnam" tabindex="-1" role="tab" id="drop-chungnam-tab" data-toggle="tab" aria-controls="chungnam">대전/충남</a></li>
+                                    <li><a href="#chungbuk" tabindex="-1" role="tab" id="drop-chungbuk-tab" data-toggle="tab" aria-controls="chungbuk">충북</a></li>
+                                    <li><a href="#jeonnam" tabindex="-1" role="tab" id="drop-jeonnam-tab" data-toggle="tab" aria-controls="jeonnam">광주/전남</a></li>
+                                    <li><a href="#jeonbuk" tabindex="-1" role="tab" id="drop-jeonbuk-tab" data-toggle="tab" aria-controls="jeonbuk">전북</a></li>
+                                    <li><a href="#gyeongnam" tabindex="-1" role="tab" id="drop-gyeongnam-tab" data-toggle="tab" aria-controls="gyeongnam">부산/울산/경남</a></li>
+                                    <li><a href="#gyeongbuk" tabindex="-1" role="tab" id="drop-gyeongbuk-tab" data-toggle="tab" aria-controls="gyeongbuk">대구/경북</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                         <!-- 목적지 찾기 -->
+                        <div class="comm_titArea">
+                            <h2 class="fontWeightBold">목적지 찾기</h2>
+                        </div>
+
+                        <div role="tabpanel" class="area_find">
+                            
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs find-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#around_sch" aria-controls="around_sch" role="tab" data-toggle="tab"><i class="fas fa-map-marker-alt"></i>내 주변 검색</a></li>
+                                <li role="presentation"><a href="#area_sch" aria-controls="area_sch" role="tab" data-toggle="tab"><i class="bgImg"></i>지역별 검색</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <!-- 내 주변 검색 -->
+                                <div role="tabpanel" class="tab-pane active" id="around_sch">
+                                    <p class="borderBottom">· 현재 위치에서 가까운 목적지를 찾아드려요! 다른 지역을 찾고 싶으시면 지역별 검색을 이용해주세요!</p>
+                                    <div class="tagbox">
+                                        <!-- 태그 -->
+                                        <p>태그를 골라주세요!</p>
+                                        <div class="tagArea">
+                                            <a href=""># 드라이브</a>
+                                            <a href=""># 관광지</a>
+                                            <a href=""># 식당</a>
+                                            <a href=""># 카페</a>
+                                            <a href=""># 공원</a>
+                                            <a href=""># 주차장</a>
+                                            <a href=""># 숙박</a>
+                                            <a href=""># 캠핑</a>
+                                        </div>
+                                    </div>
+                                    <div class="result_wrap">
+                                        <!-- 검색 결과 개수 -->
+                                        <p class="num fontWeight500">총 <span class="newblue_txt">00</span>개</p>
+                                        <div class="result_box borderTop borderBottom">
+                                            <!-- 검색 결과 리스트 -->
+                                            <div class="leftArea overflowYScroll">
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- 지도영역 -->
+                                            <div class="rightArea">
+                                                <!-- 임시 지도 -->
+                                                <img class="wh100p" src="images/exam/ex_result_map.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 지역별 검색 -->
+                                <div role="tabpanel" class="tab-pane" id="area_sch">
+                                    <p class="borderBottom">· 현재 위치에서 가까운 목적지를 찾아드려요! 다른 지역을 찾고 싶으시면 지역별 검색을 이용해주세요!</p>
+                                    <div class="area_sch_sel borderBottom">
+                                        <span class="fontWeightBold">지역 선택</span>
+                                        <select class="borderBF bgsNoReat" name="area" id="area">
+                                            <option value="" selected="selected">광역시/도 선택</option>
+                                            <option value="all" selected="selected">지역 (전체)</option>
+                                            <option value="seoul">서울시</option>
+                                            <option value="jeju">제주도</option>
+                                            <option value="gyeonggi">인천/경기</option>
+                                            <option value="gangwon">강원</option>
+                                            <option value="sejong">세종시</option>
+                                            <option value="chungnam">대전/충남</option>
+                                            <option value="chungbuk">충북</option>
+                                            <option value="jeonnam">광주/전남</option>
+                                            <option value="jeonbuk">전북</option>
+                                            <option value="gyeongnam">부산/울산/경남</option>
+                                            <option value="gyeongbuk">대구/경북</option>
+                                        </select>
+                                        <!-- 예시1!!!!!!! -->
+                                        <select class="borderBF bgsNoReat" name="" id="">
+                                            <option value="" selected="selected">광역시/도 선택</option>
+                                            <option value="">강남구</option>
+                                            <option value="">강동구</option>
+                                            <option value="">강북구</option>
+                                            <option value="">강서구</option>
+                                            <option value="">관악구</option>
+                                        </select>
+                                        <button class="backblue_btn">검색</button>
+                                    </div>
+                                    <div class="tagbox">
+                                        <!-- 태그 -->
+                                        <p>태그를 골라주세요!</p>
+                                        <div class="tagArea">
+                                            <a href=""># 드라이브</a>
+                                            <a href=""># 관광지</a>
+                                            <a href=""># 식당</a>
+                                            <a href=""># 카페</a>
+                                            <a href=""># 공원</a>
+                                            <a href=""># 주차장</a>
+                                            <a href=""># 숙박</a>
+                                            <a href=""># 캠핑</a>
+                                        </div>
+                                    </div>
+                                    <div class="result_wrap">
+                                        <!-- 검색 결과 개수 -->
+                                        <p class="num fontWeight500">총 <span class="newblue_txt">00</span>개</p>
+                                        <div class="result_box borderTop borderBottom">
+                                            <!-- 검색 결과 리스트 -->
+                                            <div class="leftArea overflowYScroll">
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="re_list borderBottom">
+                                                    <div class="imgArea bgImg borderRad15 borderBF"></div>
+                                                    <div class="txtArea">
+                                                        <div class="txtHead">
+                                                            <!-- 글제목 -->
+                                                            <h2 class="fontWeightBold">전주 한옥마을</h2>
+                                                            <!-- 주소 -->
+                                                            <p class="fontWeight500">전북 전주시 완산구 기린대로 99 <i class="fas fa-copy"></i></p>
+                                                        </div>
+                                                        <!-- 글내용 + 태그 + 위치보기 버튼 -->
+                                                        <div class="txtCont">
+                                                            <div class="leftCont">
+                                                                <!-- 글내용 최대 3줄 노출 -->
+                                                                <p>전주는 후백제의 도읍이었으며, 조선 태조의 본향으로 왕조의 뿌리다. 또 한식과 한복, 한지 등 우리 문화의 참맛이 살아 있는 고장이다. 풍남동과 교동 일대 전주한옥마을은 그 중심이다. 일제강점기 일본</p>
+                                                                <!-- 태그 -->
+                                                                <div class="tagArea">
+                                                                    <a href=""># 드라이브</a>
+                                                                    <a href=""># 관광지</a>
+                                                                    <a href=""># 식당</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rightCont">
+                                                                <!-- 위치보기 버튼 -->
+                                                                <button class="borderRad15"><i class="fas fa-map-marker-alt"></i><span class="white">위치보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- 지도영역 -->
+                                            <div class="rightArea">
+                                                <!-- 임시 지도 -->
+                                                <img class="wh100p" src="images/exam/ex_result_map.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- #sns -->
+                    <div role="tabpanel" class="tab-pane" id="sns">
+                        <div class="Container">
+                            <!-- youtube section -->
+                            <div class="sns_sec you_sec">
+                                <h4 class="fontWeightBold">YOUTUBE</h4>
+
+                                <!-- slide -->
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active h100p">
+                                            <ul class="h100p">
+                                                <li>
+                                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/54qP-iXJ5vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </li>
+                                                <li>
+                                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/e5P17HnOh7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item h100p">
+                                            <ul class="h100p">
+                                                <li>
+                                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FCwhFhgCm-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </li>
+                                                <li>
+                                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vsCv7-OtY9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </li>
+                                            </ul>  
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left w100p bgImg" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right w100p bgImg" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+
+                                <!-- 유투브 바로가기 -->
+                                <div class="linkbtn youLinkbtn">
+                                    <a href="https://www.youtube.com/channel/UC3IQigWXcYpJRCFWPMqM9KQ/featured">
+                                        <button class="borderRad50 boxShadow fontWeightBold"><i class="bgImg"></i>YOUTUBE</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- instagram section -->
+                            <div class="sns_sec in_sec">
+                                <h4 class="fontWeightBold">INSTAGRAM</h4>
+
+                                <!-- Button trigger modal -->
+                                <ul class="">
+                                    <li type="button" class="" data-toggle="modal" data-target="#cont_insta01">
+                                        <div class="imgArea bgImg wh100p"></div>
+                                    </li>
+                                    <li type="button" class="" data-toggle="modal" data-target="#cont_insta02">
+                                        <div class="imgArea bgImg wh100p"></div>
+                                    </li>
+                                    <li type="button" class="" data-toggle="modal" data-target="#cont_insta03">
+                                        <div class="imgArea bgImg wh100p"></div>
+                                    </li>
+                                    <li type="button" class="" data-toggle="modal" data-target="#cont_insta04">
+                                        <div class="imgArea bgImg wh100p"></div>
+                                    </li>
+                                    <li type="button" class="" data-toggle="modal" data-target="#cont_insta05">
+                                        <div class="imgArea bgImg wh100p"></div>
+                                    </li>
+                                    <li type="button" class="" data-toggle="modal" data-target="#cont_insta06">
+                                        <div class="imgArea bgImg wh100p"></div>
+                                    </li>
+                                    <li type="button" class="marginBottom0" data-toggle="modal" data-target="#cont_insta07">
+                                        <div class="imgArea bgImg wh100p"></div>
+                                    </li>
+                                    <li type="button" class="marginBottom0" data-toggle="modal" data-target="#cont_insta08">
+                                        <div class="imgArea bgImg wh100p"></div>
+                                    </li>
+                                    <li type="button" class="marginBottom0" data-toggle="modal" data-target="#cont_insta09">
+                                        <div class="imgArea bgImg wh100p"></div>
+                                    </li>
+                                </ul>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="cont_insta01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cont_insta02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cont_insta03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cont_insta04" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cont_insta05" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cont_insta06" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cont_insta07" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cont_insta08" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cont_insta09" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 인스타그램 바로가기 -->
+                                <div class="linkbtn instaLinkbtn">
+                                    <a href="https://www.instagram.com/myrental_bike/">
+                                        <button class="borderRad50 boxShadow fontWeightBold"><i class="bgImg"></i>INSTAGRAM</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- naver blog section -->
+                            <div class="sns_sec blog_sec">
+                                <h4 class="fontWeightBold">NAVER BLOG</h4>
+
+                                <!-- naver blog list -->
+                                <div class="blog_list">
+                                    <!-- Button trigger modal -->
+                                    <ul class="borderTop">
+                                        <li type="button" class="list_box borderBottom" data-toggle="modal" data-target="#cont_blog01">
+                                            <div class="txtArea">
+                                                <div class="txtHead">
+                                                    <!-- 글제목 -->
+                                                    <h2 class="fontWeightBold">[오토바이 종류] 마이렌탈바이크와 알아보는 오토바이 종류!!</h2>
+                                                </div>
+                                                <!-- 글내용 최대 3줄 노출 -->
+                                                <div class="txtCont">
+                                                    <p class="fontWeight500">
+                                                        ˚₊· ͟͟͞͞➳ ❥ “ 마이렌탈바이크 “ 입니다. ✅ 여러분들께 질문 몇가지 드릴게요!
+                                                        ➀ 오토바이 종류와 특징에 대해서 잘 알고 있다. ➁ 클래식스쿠터나 할리데이비슨 정도는 이름을 들어본 적이 있다.
+                                                        ➂ 나는 오토바이 종류에 대해 잘 모른다. ➃ 오토바이에 대해서 관심은 있지만 어디서부터
+                                                        ˚₊· ͟͟͞͞➳ ❥ “ 마이렌탈바이크 “ 입니다. ✅ 여러분들께 질문 몇가지 드릴게요!
+                                                        ➀ 오토바이 종류와 특징에 대해서 잘 알고 있다. ➁ 클래식스쿠터나 할리데이비슨 정도는 이름을 들어본 적이 있다.
+                                                        ➂ 나는 오토바이 종류에 대해 잘 모른다. ➃ 오토바이에 대해서 관심은 있지만 어디서부터
+                                                    </p>
+                                                </div>
+                                                <div class="txtFoot">
+                                                    <!-- 글 정보 -->
+                                                    <div class="blog_info">
+                                                        <p class="name">
+                                                            <!-- 프로필사진 -->
+                                                            <i class="bgImg"></i>
+                                                            <!-- 작성자 -->
+                                                            <span class="">마이렌탈바이크</span>
+                                                            <!-- 블로그이름 -->
+                                                            <span class="borderLeft">MRB_여행자들을 위한 바이크렌탈 서비스 플랫폼</span>
+                                                        </p>
+                                                        <span class="date borderLeft">2021.08.10</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="imgArea bgImg"></div>
+                                        </li>
+                                        <li type="button" class="list_box borderBottom" data-toggle="modal" data-target="#cont_blog02">
+                                            <div class="txtArea">
+                                                <div class="txtHead">
+                                                    <!-- 글제목 -->
+                                                    <h2 class="fontWeightBold">[오토바이 종류] 마이렌탈바이크와 알아보는 오토바이 종류!!</h2>
+                                                </div>
+                                                <!-- 글내용 최대 3줄 노출 -->
+                                                <div class="txtCont">
+                                                    <p class="fontWeight500">
+                                                        ˚₊· ͟͟͞͞➳ ❥ “ 마이렌탈바이크 “ 입니다. ✅ 여러분들께 질문 몇가지 드릴게요!
+                                                        ➀ 오토바이 종류와 특징에 대해서 잘 알고 있다. ➁ 클래식스쿠터나 할리데이비슨 정도는 이름을 들어본 적이 있다.
+                                                        ➂ 나는 오토바이 종류에 대해 잘 모른다. ➃ 오토바이에 대해서 관심은 있지만 어디서부터
+                                                        ˚₊· ͟͟͞͞➳ ❥ “ 마이렌탈바이크 “ 입니다. ✅ 여러분들께 질문 몇가지 드릴게요!
+                                                        ➀ 오토바이 종류와 특징에 대해서 잘 알고 있다. ➁ 클래식스쿠터나 할리데이비슨 정도는 이름을 들어본 적이 있다.
+                                                        ➂ 나는 오토바이 종류에 대해 잘 모른다. ➃ 오토바이에 대해서 관심은 있지만 어디서부터
+                                                    </p>
+                                                </div>
+                                                <div class="txtFoot">
+                                                    <!-- 글 정보 -->
+                                                    <div class="blog_info">
+                                                        <p class="name">
+                                                            <!-- 프로필사진 -->
+                                                            <i class="bgImg"></i>
+                                                            <!-- 작성자 -->
+                                                            <span class="">마이렌탈바이크</span>
+                                                            <!-- 블로그이름 -->
+                                                            <span class="borderLeft">MRB_여행자들을 위한 바이크렌탈 서비스 플랫폼</span>
+                                                        </p>
+                                                        <span class="date borderLeft">2021.08.10</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="imgArea bgImg"></div>
+                                        </li>
+                                        <li type="button" class="list_box borderBottom" data-toggle="modal" data-target="#cont_blog03">
+                                            <div class="txtArea">
+                                                <div class="txtHead">
+                                                    <!-- 글제목 -->
+                                                    <h2 class="fontWeightBold">[오토바이 종류] 마이렌탈바이크와 알아보는 오토바이 종류!!</h2>
+                                                </div>
+                                                <!-- 글내용 최대 3줄 노출 -->
+                                                <div class="txtCont">
+                                                    <p class="fontWeight500">
+                                                        ˚₊· ͟͟͞͞➳ ❥ “ 마이렌탈바이크 “ 입니다. ✅ 여러분들께 질문 몇가지 드릴게요!
+                                                        ➀ 오토바이 종류와 특징에 대해서 잘 알고 있다. ➁ 클래식스쿠터나 할리데이비슨 정도는 이름을 들어본 적이 있다.
+                                                        ➂ 나는 오토바이 종류에 대해 잘 모른다. ➃ 오토바이에 대해서 관심은 있지만 어디서부터
+                                                        ˚₊· ͟͟͞͞➳ ❥ “ 마이렌탈바이크 “ 입니다. ✅ 여러분들께 질문 몇가지 드릴게요!
+                                                        ➀ 오토바이 종류와 특징에 대해서 잘 알고 있다. ➁ 클래식스쿠터나 할리데이비슨 정도는 이름을 들어본 적이 있다.
+                                                        ➂ 나는 오토바이 종류에 대해 잘 모른다. ➃ 오토바이에 대해서 관심은 있지만 어디서부터
+                                                    </p>
+                                                </div>
+                                                <div class="txtFoot">
+                                                    <!-- 글 정보 -->
+                                                    <div class="blog_info">
+                                                        <p class="name">
+                                                            <!-- 프로필사진 -->
+                                                            <i class="bgImg"></i>
+                                                            <!-- 작성자 -->
+                                                            <span class="">마이렌탈바이크</span>
+                                                            <!-- 블로그이름 -->
+                                                            <span class="borderLeft">MRB_여행자들을 위한 바이크렌탈 서비스 플랫폼</span>
+                                                        </p>
+                                                        <span class="date borderLeft">2021.08.10</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="imgArea bgImg"></div>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="cont_blog01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                ...
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="cont_blog02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                ...
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="cont_blog03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                ...
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pagenation & 블로그 바로가기 -->
+                                <div class="board_bt_btn">
+                                    <nav>
+                                        <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="linkbtn blogLinkbtn">
+                                        <a href="https://blog.naver.com/biz9ine">
+                                            <button class="borderRad50 boxShadow fontWeightBold"><i class="bgImg"></i>NAVER BLOG</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- facebook section -->
+                        <div class="sns_sec fb_sec marginBottom0">
+                            <div class="Container">
+                                <h4 class="fontWeightBold">FACEBOOK</h4>
+
+                                <!-- Button trigger modal -->
+                                <ul class="fb_btn_wrap">
+                                    <li class="borderBF borderRad15 boxShadow overflowHidden">
+                                        <div class="fb_cont">
+                                            <!-- <img src="images/exam/fb_ex.jpg" alt=""> -->
+                                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmyrentalbike%2Fposts%2F1238137213318833&show_text=true" width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                        </div>
+                                        <div class="fb_share borderTop">
+                                            <button class="w100p">
+                                                <i class="bgImg"></i><span class="fontWeightBold">공유하기</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="borderBF borderRad15 boxShadow overflowHidden">
+                                        <div class="fb_cont">
+                                            <!-- <img src="images/exam/fb_ex.jpg" alt=""> -->
+                                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmyrentalbike%2Fposts%2F1212056115926943&show_text=true" width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                        </div>
+                                        <div class="fb_share borderTop">
+                                            <button class="w100p">
+                                                <i class="bgImg"></i><span class="fontWeightBold">공유하기</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <!-- Modal -->
+                                <!-- <div class="modal fade" id="cont_fb01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cont_fb02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <!-- 페이스북 바로가기 -->
+                                <div class="linkbtn fbLinkbtn">
+                                    <a href="https://www.facebook.com/myrentalbike/">
+                                        <button class="borderRad50 boxShadow fontWeightBold"><i class="bgImg"></i>FACEBOOK</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+
+        <!-- footer -->
+        <div class="footer w100p margin0">
+            <div class="Container">
+                <div class="leftArea">
+                    <div class="logo_ft">
+                        <img src="images/rb_w_ft.png" alt="마이렌탈바이크">
+                    </div>
+                    <div class="txt_ft">
+                        <ul>
+                            <li class="white">맥스토크 ｜ 관리자:임성용</li>
+                            <li class="white">Tel:010-4952-0134 ｜ E-mail:admin@rentalbike.kr</li>
+                            <li class="white">주소:전북 전주시 완산구 풍남문4길 25-26 813호</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rightArea">
+                    <ul>
+                        <li><a href="https://www.instagram.com/myrental_bike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.facebook.com/myrentalbike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://blog.naver.com/biz9ine"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC3IQigWXcYpJRCFWPMqM9KQ/featured"><span class="bgImg"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
