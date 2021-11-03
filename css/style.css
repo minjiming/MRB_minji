@@ -357,24 +357,25 @@
 .mapWrap .sideArea {width: 450px;}
 .search_panel {padding: 30px 25px 20px; background-color: #f8f8ff;}
 .search_panel .sch_form {display: flex; justify-content: space-between; margin-bottom: 10px;}
+.search_panel .sch_s {flex-wrap: wrap;}
 .search_panel select, .search_panel .sch_form .search {border: 1px solid #597af4; height: 35px !important; padding: 0 15px;}
 .search_panel select, .search_panel .date input {background-image: url(../images/arrow_down.png); background-size: 9px; background-repeat: no-repeat;}
 .search_panel select {background-position: 90% center;}
 .search_panel .date input {background-position: right center;}
-.search_panel .sch_f select {width: 150px;}
-.search_panel .sch_s .search {width: 48.5%;}
+.search_panel .sch_s select {margin-bottom: 10px;}
+.search_panel .sch_s select, .search_panel .sch_s .search {width: 48.5%;}
 .search_panel .sch_t {border: 1px solid #597af4; height: 35px;}
 .search_panel .sch_t input[type="text"] {width: 79%; padding: 0 15px;}
 .search_panel .sch_t button[type="submit"] i {width: 16px; height: 16px;}
-.search_panel button[type="submit"] i {background-image: url(../images/search_icon.png);}
+.search_panel button[type="submit"] i {background-image: url(../images/search_icon.png); vertical-align: sub;}
 
 /* i - 아이콘 */
-.mapWrap i {display: inline-block; vertical-align: sub; margin-right: 5px;}
+.mapWrap i {display: inline-block; margin-right: 5px;}
 /* 초기화 버튼 */
 .sch_reset {color: #8e8e8e; margin-right: 15px;}
-.sch_reset i {background-image: url(../images/reset_icon.png); width: 18px; height: 18px;}
+.sch_reset i {color: #bfbfbf;}
 /* 필터 더보기 */
-.filter_more i {background-image: url(../images/filter_icon.png); width: 17px; height: 17px;}
+.filter_more i {width: 17px; height: 17px;}
 /* 필터 더보기 - 팝업 */
 .search_panel .modal-header h4 {font-size: 18px; text-align: center;}
 .sl_group01 {flex-wrap: wrap;}
@@ -382,9 +383,8 @@
 .sl_group01 select {margin-bottom: 10px;}
 .sl_group02 select {width: 23%;}
 .search_panel .modal-footer {border-top: 0; text-align: center; padding: 0 15px 25px;}
-.search_panel .modal-footer .sch_reset {float: left; margin-top: 9px;}
-.search_panel .modal-footer button[type="submit"] {font-size: 18px; height: 40px; width: 330px; margin-left: -90px;}
-.search_panel .modal-footer button[type="submit"] i {width: 20px; height: 20px; margin-right: 10px;}
+.search_panel .modal-footer button[type="submit"] {font-size: 18px; height: 40px; width: 330px;}
+.search_panel .modal-footer button[type="submit"] i {width: 20px; height: 20px; margin-right: 10px; vertical-align: sub;}
 /* 바이크 리스트 */
 .list_panel>p {padding: 15px 25px; color: #a0a1a2;}
 /* bike_list overflow scroll 안됨 list_panel의 고정 height값 필요한듯 */
@@ -410,14 +410,14 @@
 /* 대여소 소개 팝업 */
 .st_map {position: absolute; left: 30%; top: 72%;}
 .st_map .loca_pin img {width: 30px; height: 42px;}
-.st_map .str_card_wrap {background-color: #fff; z-index: 100; height: auto; /*border: 1px solid #bfbfbf;*/ position: absolute; top: -300px; left: -127px;}
+.st_map .str_card_wrap {background-color: #fff; z-index: 100; height: auto; /*border: 1px solid #bfbfbf;*/ position: absolute; top: -275px; left: -127px;}
 .st_map .str_card_wrap::after {content: ''; position: absolute; border-style: solid; border-width: 15px 11px 0 11.5px; border-color: #597af4 transparent; display: block; width: 0; z-index: 1; bottom: -15px; left: 44%;}
 .st_map .str_card_wrap::before {content: ''; position: absolute; border-style: solid; border-width: 15px 11px 0 11.5px; border-color: #bfbfbf transparent; display: block; width: 0; z-index: 0; bottom: -17px; left: 44%;}
-.st_map .card_head {padding: 25px 20px 15px;}
-.st_map .card_head .areaName {display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 15px;}
 /* .st_map .card_head .areaName .line {background-color: #ddd; height: 1px; width: 59%;} */
 .st_map .card_head h4 {font-size: 20px;}
-.st_map .card_cont {padding: 20px 20px 25px; font-size: 15px;}
+.st_map .card_cont {padding: 25px 20px 25px; font-size: 15px;}
+.st_map .card_cont .card_head {padding-bottom: 15px; margin-bottom: 15px;}
+.st_map .card_cont .card_head .areaName {display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 15px;}
 .st_map .card_cont .card_info p {margin-bottom: 15px;}
 .st_map .card_cont .card_info p i {width: 14px; height: 14px; text-align: center;}
 .st_map .card_cont .card_info p:nth-of-type(2) i {background-image: url(../images/time_icon.png);}

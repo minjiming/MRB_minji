@@ -114,7 +114,165 @@
                 <div class="search_panel borderBottom">
                     <div class="sch_f sch_form">
                         <!-- 초기화 버튼 -->
-                        <button class="sch_reset"><i class="bgImg"></i>초기화</button>
+                        <button class="sch_reset"><i class="fas fa-undo-alt"></i>초기화</button>
+
+                        <!-- Button trigger modal -->
+                        <button class="filter_more" data-toggle="modal" data-target="#filter_more"><i class="fas fa-filter"></i>필터 더보기</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="filter_more" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title fontWeightBold" id="myModalLabel">필터 더보기</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal_sl_group sl_group01 sch_form">
+                                            <select name="area" id="area" class="fontWeightBold bgsNoReat borderRad50">
+                                                <option value="all" selected="selected">지역 (전체)</option>
+                                                <option value="seoul">서울시</option>
+                                                <option value="jeju">제주도</option>
+                                                <option value="gyenggi">경기</option>
+                                                <option value="gangwon">강원</option>
+                                                <option value="sejong">세종</option>
+                                                <option value="chungnam">충남</option>
+                                                <option value="chungbouk">충북</option>
+                                                <option value="jeonnam">광주/전남</option>
+                                                <option value="jeonbuk">전북</option>
+                                                <option value="gyeongnam">부산/울산/경남</option>
+                                                <option value="gyeongbuk">대구/경북</option>
+                                            </select>
+                                            <!-- 종류 -->
+                                            <select name="category" id="category" class="fontWeight500 bgsNoReat borderRad50">
+                                                <option value="all" selected="selected">종류</option>
+                                                <option value="sc">스쿠터</option>
+                                                <option value="eb">전동바이크</option>
+                                                <option value="ek">전동바이크</option>
+                                                <option value="at">전동킥보드</option>
+                                                <option value="re">ATV</option>
+                                                <option value="na">네이키드/스트리트</option>
+                                                <option value="to">투어러/크루즈</option>
+                                                <option value="am">아메리칸/모던</option>
+                                                <option value="of">어드벤처/오프로드</option>
+                                                <option value="un">언더본/비즈니스</option>
+                                                <option value="po">포켓/미니</option>
+                                                <option value="etc">기타</option>
+                                            </select>
+                                            <!-- 대여일 -->
+                                            <div class="borderRad50 search03 search date start-date cursorPointer">
+                                                <input id="rent_start_date" class="rent_start_date w100p borderRad10 fontWeightBold h100p bgsNoReat" name="rent_start_date" type="text" placeholder="대여날" readonly>
+                                            </div>
+                                            <!-- 반납일 -->
+                                            <div class="borderRad50 search04 search date end-date cursorPointer">
+                                                <input id="rent_end_date" class="rent_end_date w100p borderRad10 fontWeightBold h100p bgsNoReat" name="rent_end_date" type="text" placeholder="반납날" readonly>
+                                            </div>
+                                            <!-- 대여일/반납일 bootstrap datepicker -->
+                                            <script type="text/javascript">
+                                                var rent_start_date = "+1970/01/01";
+                                                var rent_end_date = "+1970/01/02";
+                                                $.datetimepicker.setLocale('kr');
+                                                $('.rent_start_date').datetimepicker({
+                                                    // format:'unixtime',
+                                                    lang:'ko',
+                                                    timepickerScrollbar:false,
+                                                    // timepicker:true,
+                                                    allowTimes:['09:00','10:00','12:00','13:00','14:00','15:00','17:00','18:00','19:00','20:00'],
+                                                    // format:'Y/m/d',
+                                                    formatDate:'Y/m/d',
+                                                    formatTime:'H:i',
+                                                    // minDate:'-1970/01/02', //yesterday is minimum date(for today use 0 or -1970/01/01)
+                                                    // maxDate:'+1970/01/02', //tomorrow is maximum date calendar
+                                                    minDate:'0', //yesterday is minimum date(for today use 0 or -1970/01/01)
+                                                    maxDate:'+1970/03/01', //tomorrow is maximum date calendar
+                                                    // value:'+1970/01/01',
+                                                    value:rent_start_date,
+                            
+                                                    onShow:function( ct ){
+                                                        this.setOptions({
+                                                            // maxDate:'+1970/04/01',
+                                                        })
+                                                    },
+                                                    onSelectTime:function(current_time,$input){
+                                                        
+                                                    },
+                                                });
+                            
+                                                $('.rent_end_date').datetimepicker({
+                                                    lang:'ko',
+                                                    timepickerScrollbar:false,
+                                                    // timepicker:true,
+                                                    allowTimes:['09:00','10:00','12:00','13:00','14:00','15:00','17:00','18:00','19:00','20:00'],
+                                                    // format:'Y/m/d',
+                                                    formatDate:'Y/m/d',
+                                                    formatTime:'H:i',
+                                                    minDate:'0', //yesterday is minimum date(for today use 0 or -1970/01/01)
+                                                    maxDate:'0', //tomorrow is maximum date calendar
+                                                    // value:'+1970/01/02',
+                                                    value:rent_end_date,
+                            
+                                                    onShow:function( ct ){
+                                                        this.setOptions({
+                                                            minDate:$('#rent_start_date').val()?$('#rent_start_date').val():'0',
+                                                            maxDate:get_after_date(term = 6),
+                                                        })
+                                                    },
+                            
+                                                    onSelectTime:function(current_time,$input){
+                                                        
+                                                    },
+                                                });
+                                            </script>
+                                        </div>
+                                        <div class="modal_sl_group sl_group02 sch_form">
+                                            <!-- 제조사 -->
+                                            <select class="fontWeightBold borderRad50 borderBF" name="manufacturer" id="manufacturer">
+                                                <option value="all" selected="selected">제조사 (전체)</option>
+                                                <option value="da">대림</option>
+                                                <option value="km">KR/S&amp;T/효성</option>
+                                                <option value="sy">SYM</option>
+                                                <option value="ho">혼다</option>
+                                                <option value="ya">야마하</option>
+                                                <option value="su">스즈키</option>
+                                                <option value="ka">가와사키</option>
+                                                <option value="ha">할리데이비슨</option>
+                                                <option value="bm">BMW</option>
+                                                <option value="be">베스파</option>
+                                                <option value="du">두카티</option>
+                                                <option value="etc">기타</option>
+                                            </select>
+                                            <!-- 배기량 -->
+                                            <select class="fontWeightBold borderRad50 borderBF" name="cc" id="cc">
+                                                <option value="all" selected="selected">배기량 (전체)</option>
+                                                <option value="49">~ 49cc</option>
+                                                <option value="50100">50cc ~ 100cc</option>
+                                                <option value="101125">101cc ~ 125cc</option>
+                                                <option value="126260">126cc ~ 260cc</option>
+                                                <option value="261">261cc ~</option>
+                                            </select>
+                                            <!-- 변속기 -->
+                                            <select class="fontWeightBold borderRad50 borderBF" name="transmission" id="transmission">
+                                                <option value="all" selected="selected">변속기 (전체)</option>
+                                                <option value="auto">자동</option>
+                                                <option value="manual">수동</option>
+                                            </select>
+                                            <!-- 연료 -->
+                                            <select class="fontWeightBold borderRad50 borderBF" name="fuel_type" id="fuel_type">
+                                                <option value="all" selected="selected">연료 (전체)</option>
+                                                <option value="gasoline">휘발류</option>
+                                                <option value="electronic">전기</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!-- 검색버튼 -->
+                                        <button type="submit" class="backblue_btn fontWeightBold"><i class="bgImg"></i>검색</button></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sch_s sch_form">
                         <!-- 지역 select -->
                         <select class="fontWeightBold borderRad50 bgsNoReat" name="area" id="area">
                             <option value="all" selected="selected">지역 (전체)</option>
@@ -146,8 +304,6 @@
                             <option value="po">포켓/미니</option>
                             <option value="etc">기타</option>
                         </select>
-                    </div>
-                    <div class="sch_s sch_form">
                         <!-- 대여일 -->
                         <div class="borderRad50 search date start-date cursorPointer">
                             <input id="rent_start_date" class="rent_start_date w100p borderRad10 fontWeightBold h100p bgsNoReat" name="rent_start_date" type="text" placeholder="대여날" readonly>
@@ -218,163 +374,6 @@
 				        <button type="submit" class="fontWeightBold backblue_btn"><i class="bgImg"></i>검색</button></span>
                     </div>
 
-                    <!-- Button trigger modal -->
-                    <button class="filter_more" data-toggle="modal" data-target="#filter_more"><i class="bgImg"></i>필터 더보기</button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="filter_more" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title fontWeightBold" id="myModalLabel">필터 더보기</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="modal_sl_group sl_group01 sch_form">
-                                        <select name="area" id="area" class="fontWeightBold bgsNoReat borderRad50">
-                                            <option value="all" selected="selected">지역 (전체)</option>
-                                            <option value="seoul">서울시</option>
-                                            <option value="jeju">제주도</option>
-                                            <option value="gyenggi">경기</option>
-                                            <option value="gangwon">강원</option>
-                                            <option value="sejong">세종</option>
-                                            <option value="chungnam">충남</option>
-                                            <option value="chungbouk">충북</option>
-                                            <option value="jeonnam">광주/전남</option>
-                                            <option value="jeonbuk">전북</option>
-                                            <option value="gyeongnam">부산/울산/경남</option>
-                                            <option value="gyeongbuk">대구/경북</option>
-                                        </select>
-                                        <!-- 종류 -->
-                                        <select name="category" id="category" class="fontWeight500 bgsNoReat borderRad50">
-                                            <option value="all" selected="selected">종류</option>
-                                            <option value="sc">스쿠터</option>
-                                            <option value="eb">전동바이크</option>
-                                            <option value="ek">전동바이크</option>
-                                            <option value="at">전동킥보드</option>
-                                            <option value="re">ATV</option>
-                                            <option value="na">네이키드/스트리트</option>
-                                            <option value="to">투어러/크루즈</option>
-                                            <option value="am">아메리칸/모던</option>
-                                            <option value="of">어드벤처/오프로드</option>
-                                            <option value="un">언더본/비즈니스</option>
-                                            <option value="po">포켓/미니</option>
-                                            <option value="etc">기타</option>
-                                        </select>
-                                        <!-- 대여일 -->
-                                        <div class="borderRad50 search03 search date start-date cursorPointer">
-                                            <input id="rent_start_date" class="rent_start_date w100p borderRad10 fontWeightBold h100p bgsNoReat" name="rent_start_date" type="text" placeholder="대여날" readonly>
-                                        </div>
-                                        <!-- 반납일 -->
-                                        <div class="borderRad50 search04 search date end-date cursorPointer">
-                                            <input id="rent_end_date" class="rent_end_date w100p borderRad10 fontWeightBold h100p bgsNoReat" name="rent_end_date" type="text" placeholder="반납날" readonly>
-                                        </div>
-                                        <!-- 대여일/반납일 bootstrap datepicker -->
-                                        <script type="text/javascript">
-                                            var rent_start_date = "+1970/01/01";
-                                            var rent_end_date = "+1970/01/02";
-                                            $.datetimepicker.setLocale('kr');
-                                            $('.rent_start_date').datetimepicker({
-                                                // format:'unixtime',
-                                                lang:'ko',
-                                                timepickerScrollbar:false,
-                                                // timepicker:true,
-                                                allowTimes:['09:00','10:00','12:00','13:00','14:00','15:00','17:00','18:00','19:00','20:00'],
-                                                // format:'Y/m/d',
-                                                formatDate:'Y/m/d',
-                                                formatTime:'H:i',
-                                                // minDate:'-1970/01/02', //yesterday is minimum date(for today use 0 or -1970/01/01)
-                                                // maxDate:'+1970/01/02', //tomorrow is maximum date calendar
-                                                minDate:'0', //yesterday is minimum date(for today use 0 or -1970/01/01)
-                                                maxDate:'+1970/03/01', //tomorrow is maximum date calendar
-                                                // value:'+1970/01/01',
-                                                value:rent_start_date,
-                        
-                                                onShow:function( ct ){
-                                                    this.setOptions({
-                                                        // maxDate:'+1970/04/01',
-                                                    })
-                                                },
-                                                onSelectTime:function(current_time,$input){
-                                                    
-                                                },
-                                            });
-                        
-                                            $('.rent_end_date').datetimepicker({
-                                                lang:'ko',
-                                                timepickerScrollbar:false,
-                                                // timepicker:true,
-                                                allowTimes:['09:00','10:00','12:00','13:00','14:00','15:00','17:00','18:00','19:00','20:00'],
-                                                // format:'Y/m/d',
-                                                formatDate:'Y/m/d',
-                                                formatTime:'H:i',
-                                                minDate:'0', //yesterday is minimum date(for today use 0 or -1970/01/01)
-                                                maxDate:'0', //tomorrow is maximum date calendar
-                                                // value:'+1970/01/02',
-                                                value:rent_end_date,
-                        
-                                                onShow:function( ct ){
-                                                    this.setOptions({
-                                                        minDate:$('#rent_start_date').val()?$('#rent_start_date').val():'0',
-                                                        maxDate:get_after_date(term = 6),
-                                                    })
-                                                },
-                        
-                                                onSelectTime:function(current_time,$input){
-                                                    
-                                                },
-                                            });
-                                        </script>
-                                    </div>
-                                    <div class="modal_sl_group sl_group02 sch_form">
-                                        <!-- 제조사 -->
-                                        <select class="fontWeightBold borderRad50 borderBF" name="manufacturer" id="manufacturer">
-                                            <option value="all" selected="selected">제조사 (전체)</option>
-                                            <option value="da">대림</option>
-                                            <option value="km">KR/S&amp;T/효성</option>
-                                            <option value="sy">SYM</option>
-                                            <option value="ho">혼다</option>
-                                            <option value="ya">야마하</option>
-                                            <option value="su">스즈키</option>
-                                            <option value="ka">가와사키</option>
-                                            <option value="ha">할리데이비슨</option>
-                                            <option value="bm">BMW</option>
-                                            <option value="be">베스파</option>
-                                            <option value="du">두카티</option>
-                                            <option value="etc">기타</option>
-                                        </select>
-                                        <!-- 배기량 -->
-                                        <select class="fontWeightBold borderRad50 borderBF" name="cc" id="cc">
-                                            <option value="all" selected="selected">배기량 (전체)</option>
-                                            <option value="49">~ 49cc</option>
-                                            <option value="50100">50cc ~ 100cc</option>
-                                            <option value="101125">101cc ~ 125cc</option>
-                                            <option value="126260">126cc ~ 260cc</option>
-                                            <option value="261">261cc ~</option>
-                                        </select>
-                                        <!-- 변속기 -->
-                                        <select class="fontWeightBold borderRad50 borderBF" name="transmission" id="transmission">
-                                            <option value="all" selected="selected">변속기 (전체)</option>
-                                            <option value="auto">자동</option>
-                                            <option value="manual">수동</option>
-                                        </select>
-                                        <!-- 연료 -->
-                                        <select class="fontWeightBold borderRad50 borderBF" name="fuel_type" id="fuel_type">
-                                            <option value="all" selected="selected">연료 (전체)</option>
-                                            <option value="gasoline">휘발류</option>
-                                            <option value="electronic">전기</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <!-- 초기화 버튼 -->
-                                    <button class="sch_reset"><i class="bgImg"></i>초기화</button>
-                                    <!-- 검색버튼 -->
-                                    <button type="submit" class="backblue_btn fontWeightBold"><i class="bgImg"></i>검색</button></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="list_panel">
                     <!-- 검색결과 개수 -->
@@ -670,15 +669,16 @@
                     <div class="st_map">
                         <button class="loca_pin"><img src="images/pin_icon_w.png" alt=""></button>
                         <div class="str_card_wrap borderRad10 boxShadow w300">
-                            <div class="card_head borderBottom">
-                                <!-- 지역명 -->
-                                <div class="areaName">
-                                    <span>전북</span>
-                                </div>
-                                <!-- 대여소명 -->
-                                <h4 class="jalnanFont">맥스토크 대여소</h4>
-                            </div>
+                            
                             <div class="card_cont">
+                                <div class="card_head borderBottom">
+                                    <!-- 지역명 -->
+                                    <div class="areaName">
+                                        <span>전북</span>
+                                    </div>
+                                    <!-- 대여소명 -->
+                                    <h4 class="jalnanFont">맥스토크 대여소</h4>
+                                </div>
                                 <!-- 대여소 정보 -->
                                 <div class="card_info">
                                     <!-- 주소 -->
