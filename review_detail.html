@@ -42,6 +42,8 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/common.js"></script>
         <script type="text/javascript" src="js/jquery.datetimepicker.full.js"></script>
+        <!-- 어썸폰트 -->
+        <script src="https://kit.fontawesome.com/c184921f02.js" crossorigin="anonymous"></script>
 
         <!-- Naver Analytics -->
 	    <script type="text/javascript" src="js/wcslog.js"></script>
@@ -114,40 +116,51 @@
             </div>
             <div class="dtWrap notice_d">
                 <div class="titArea borderTop borderBottom">
-                    <div class="txtHead">
-                        <!-- 글제목 -->
-                        <h4 class="fontWeightBold">진짜 재밌었어요!</h4>
-                        <!-- 댓글수 -->
-                        <span class="fontWeightBold">[5]</span>
-                        <!-- 바이크/대여소 구분 : 대여소일때 클래스명 newblue_txt / 바이크일때 클래스명 newred_txt -->
-                        <!-- 대여소일때 -->
-                        <p class="newblue_txt borderLeft fontWeight500">대여소 / 전주 0000 대여소</p>
-                        <!-- 바이크일때 : 임시 display:none; -->
-                        <p class="newred_txt borderLeft fontWeight500" style="display: none;">바이크 / YZF-R6</p>
-                    </div>
-                    <ul class="re_info">
-                        <li class="name borderRight"><i class="bgImg"></i>놀라운노움</li>
-                        <li class="borderRight">21.09.10</li>
-                        <li>
-                            <div class="star-ratings">
-                                <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
-                                <!-- 별 5개 -->
-                                <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
-                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                </div>
-                                <div class="star-ratings-base space-x-2 text-lg">
-                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                </div>
+                    <div class="tit_txt">
+                        <div class="txtHead">
+                            <!-- 글제목 -->
+                            <h4 class="fontWeightBold">진짜 재밌었어요!</h4>
+                            <!-- 댓글수 -->
+                            <span class="fontWeightBold">[5]</span>
+                            <div class="labelArea">
+                                <!-- 지역 라벨 -->
+                                <span class="label label-success">전북</span>
+                                <!-- 대여소 라벨 -->
+                                <span class="label label-primary">맥스토크 대여소</span>
+                                <!-- 바이크 라벨 -->
+                                <span class="label label-danger">YZF-R6</span>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <ul class="re_info">
+                            <li class="name borderRight"><i class="bgImg"></i>놀라운노움</li>
+                            <li class="borderRight">21.09.10</li>
+                            <li>
+                                <div class="star-ratings">
+                                    <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
+                                    <!-- 별 5개 -->
+                                    <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    </div>
+                                    <div class="star-ratings-base space-x-2 text-lg">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 수정/삭제 버튼 - 권한 있는 유저에게만 노출 / 기본 - display:none; -->
+                    <div class="edtndel">
+                        <ul>
+                            <li class="borderBF"><a href="">수정</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- 대여소/바이크 정보 -->
-                <!-- 대여소일때 -->
-                <div class="shop_info snb_info">
+                <!-- 대여소일때 : 대여소 정보만 노출 : 임시 display:none; -->
+                <div class="shop_info snb_info" style="display: none;">
                     <div class="info_tit">
                         <h5 class="jalnanFont">맥스토크 대여소</h5>
-                        <a href="" class="borderLeft">대여소 상세보기</a>
+                        <a href="" class="borderLeft newblue_txt"><i class="fas fa-link"></i>대여소 상세보기</a>
                     </div>
                     <div class="info_cont">
                         <table class="w100p">
@@ -156,29 +169,23 @@
                                 <td>전북 전주시 금암대로 111 2층</td>
                                 <th>연락처</th>
                                 <td>
-                                    로그인 후 정보를 확인해주세요!
+                                    <span class="customGreen">로그인 후 정보를 확인해주세요!</span>
                                     <!-- 로그인 후 -->
                                     <a style="display: none;" href="tel:010 - 0000 - 0000">010-0000-0000</a>
                                 </td>
                             </tr>
-                            <tr class="borderBottom">
-                                <th>운영시간</th>
-                                <td>화수목금토일 (11시 ~ 20시)</td>
-                                <th>휴무일</th>
-                                <td>월요일, 공휴일</td>
-                            </tr>
                             <tr>
-                                <th>한줄인사</th>
-                                <td colspan="3">즐거운 하루를 대여하는 맥스토크 입니다~</td>
+                                <th colspan="">운영시간</th>
+                                <td colspan="">화수목금토일 (11시 ~ 20시)</td>
                             </tr>
                         </table>
                     </div>
                 </div>
-                <!-- 바이크일때 : 임시 display:none; -->
-                <div class="bike_info snb_info" style="display: none;">
+                <!-- 바이크일때 : 바이크/대여소 정보 둘다 노출-->
+                <div class="bike_info snb_info">
                     <div class="info_tit">
                         <h5 class="jalnanFont">YZF-R6</h5>
-                        <a href="" class="borderLeft">바이크 상세보기</a>
+                        <a href="" class="borderLeft newblue_txt"><i class="fas fa-link"></i>바이크 상세보기</a>
                     </div>
                     <div class="info_cont">
                         <table class="w100p">
@@ -201,29 +208,114 @@
                         </table>
                     </div>
                 </div>
+                <div class="shop_info snb_info bgcNone">
+                    <div class="info_tit">
+                        <h5 class="jalnanFont">맥스토크 대여소</h5>
+                        <a href="" class="borderLeft newblue_txt"><i class="fas fa-link"></i>대여소 상세보기</a>
+                    </div>
+                    <div class="info_cont">
+                        <table class="w100p">
+                            <tr class="borderBottom">
+                                <th>주소</th>
+                                <td>전북 전주시 금암대로 111 2층</td>
+                                <th>연락처</th>
+                                <td>
+                                    <span class="customGreen">로그인 후 정보를 확인해주세요!</span>
+                                    <!-- 로그인 후 -->
+                                    <a style="display: none;" href="tel:010 - 0000 - 0000">010-0000-0000</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="">운영시간</th>
+                                <td colspan="">화수목금토일 (11시 ~ 20시)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
                 <!-- 본문영역 -->
                 <div class="contArea borderBottom">
                     <!-- 임시본문 -->
-                    <img src="images/profile_ex_thum.png" alt="">
-                    <br>
+                    <!-- img slide area -->
+                    <div id="detailpg-carousel" class="carousel img_thum_slide slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                        <li data-target="#detailpg-carousel" data-slide-to="0" class="active item01"><div class="imgArea bgImg wh100p"></div></li>
+                        <li data-target="#detailpg-carousel" data-slide-to="1" class="item02"><div class="imgArea bgImg wh100p"></div></li>
+                        <li data-target="#detailpg-carousel" data-slide-to="2" class="item03"><div class="imgArea bgImg wh100p"></div></li>
+                        <li data-target="#detailpg-carousel" data-slide-to="3" class="item01"><div class="imgArea bgImg wh100p"></div></li>
+                        <li data-target="#detailpg-carousel" data-slide-to="4" class="item02"><div class="imgArea bgImg wh100p"></div></li>
+                        <li data-target="#detailpg-carousel" data-slide-to="5" class="item03"><div class="imgArea bgImg wh100p"></div></li>
+                        <li data-target="#detailpg-carousel" data-slide-to="6" class="item01"><div class="imgArea bgImg wh100p"></div></li>
+                        <li data-target="#detailpg-carousel" data-slide-to="7" class="item02"><div class="imgArea bgImg wh100p"></div></li>
+                        <li data-target="#detailpg-carousel" data-slide-to="8" class="item03"><div class="imgArea bgImg wh100p"></div></li>
+                        <li data-target="#detailpg-carousel" data-slide-to="9" class="item01"><div class="imgArea bgImg wh100p"></div></li>
+                        </ol>
+                    
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item wh100p active item01">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+                            <div class="item wh100p item02">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+                            <div class="item wh100p item03">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+                            <div class="item wh100p item01">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+                            <div class="item wh100p item02">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+                            <div class="item wh100p item03">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+                            <div class="item wh100p item01">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+                            <div class="item wh100p item02">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+                            <div class="item wh100p item03">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+                            <div class="item wh100p item01">
+                                <div class="imgArea bgImg wh100p"></div>
+                            </div>
+
+                        </div>
+                    
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#detailpg-carousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#detailpg-carousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    
                     <p>친절하고 꼼꼼히 확인해주셔서 기분 좋았어요! 강추입니당 두번가세요!<br>강추입니당 세번가세요!</p>
                     <!-- 본문 속 태그 영역 -->
                     <div class="tagArea">
-                        <span class="borderRad50">전주</span>
-                        <span class="borderRad50">디욜바이크</span>
-                        <span class="borderRad50">한옥마을</span>
-                        <span class="borderRad50">드라이브</span>
-                        <span class="borderRad50">관광지</span>
-                        <span class="borderRad50">라이딩</span>
+                        <a href=""># 전주</a>
+                        <a href=""># 디욜바이크</a>
+                        <a href=""># 한옥마을</a>
+                        <a href=""># 드라이브</a>
+                        <a href=""># 관광지</a>
+                        <a href=""># 라이딩</a>
                     </div>
                 </div>
+
                 <!-- 하단 버튼 영역 -->
                 <div class="bot_btnArea">
                     <!-- 수정/삭제 버튼 - 권한 있는 유저에게만 노출 / 기본 - display:none; -->
                     <div class="edtndel">
                         <ul>
-                            <li><a href="">수정</a></li>
-                            <li><a href="">삭제</a></li>
+                            <li class="borderBF"><a href="">삭제</a></li>
                         </ul>
                     </div>
                     <div class="backbtn">
@@ -231,7 +323,172 @@
                     </div>
                 </div>
             </div>
+
             <!-- 댓글영역 -->
+            <div class="coment_wrap">
+                <p class="fontWeight500">댓글<span>5</span>개</p>
+                <div class="coment_list">
+                    <div class="coment_input borderBottom coment_item">
+                        <!-- 프로필 -->
+                        <div class="imgArea bgImg"></div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 작성 input -->
+                            <form action="">
+                                <input class="borderBF" type="text" placeholder="댓글을 작성해주세요">
+                                <button type="submit">작성완료</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="borderBottom coment_item">
+                        <!-- 프로필 -->
+                        <div class="imgArea bgImg"></div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 내용 -->
+                            <p class="coment_p fontWeight500">댓글 내용입니다. 댓글 내용입니다.</p>
+                            <!-- 날짜, 답글달기 버튼 -->
+                            <div class="date_reple">
+                                <span class="borderRight">21.09.10</span>
+                                <a href="">답글달기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="borderBottom coment_item">
+                        <!-- 프로필 -->
+                        <div class="imgArea bgImg"></div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 내용 -->
+                            <p class="coment_p fontWeight500">댓글 내용입니다. 댓글 내용입니다.</p>
+                            <!-- 날짜, 답글달기 버튼 -->
+                            <div class="date_reple">
+                                <span class="borderRight">21.09.10</span>
+                                <a href="">답글달기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="borderBottom coment_item">
+                        <!-- 프로필 -->
+                        <div class="imgArea bgImg"></div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 내용 -->
+                            <p class="coment_p fontWeight500">댓글 내용입니다. 댓글 내용입니다.</p>
+                            <!-- 날짜, 답글달기 버튼 -->
+                            <div class="date_reple">
+                                <span class="borderRight">21.09.10</span>
+                                <a href="">답글달기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="borderBottom coment_item">
+                        <!-- 프로필 -->
+                        <div class="imgArea bgImg"></div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 내용 -->
+                            <p class="coment_p fontWeight500">댓글 내용입니다. 댓글 내용입니다.</p>
+                            <!-- 날짜, 답글달기 버튼 -->
+                            <div class="date_reple">
+                                <span class="borderRight">21.09.10</span>
+                                <a href="">답글달기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 답글 -->
+                    <div class="borderBottom coment_item coment_re">
+                        <!-- 프로필 -->
+                        <div class="imgArea">
+                            <img src="images/coment_re_icon.png" alt="답글">
+                        </div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 내용 -->
+                            <p class="coment_p fontWeight500">댓글 내용입니다. 댓글 내용입니다.</p>
+                            <!-- 날짜, 답글달기 버튼 -->
+                            <div class="date_reple">
+                                <span class="borderRight">21.09.10</span>
+                                <a href="">답글달기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="borderBottom coment_item coment_re">
+                        <!-- 프로필 -->
+                        <div class="imgArea">
+                            <img src="images/coment_re_icon.png" alt="답글">
+                        </div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 내용 -->
+                            <p class="coment_p fontWeight500">댓글 내용입니다. 댓글 내용입니다.</p>
+                            <!-- 날짜, 답글달기 버튼 -->
+                            <div class="date_reple">
+                                <span class="borderRight">21.09.10</span>
+                                <a href="">답글달기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 답글의 답글 -->
+                    <div class="borderBottom coment_item coment_re coment_re_re">
+                        <!-- 프로필 -->
+                        <div class="imgArea">
+                            <img src="images/coment_re_icon.png" alt="답글">
+                        </div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 내용 -->
+                            <p class="coment_p fontWeight500">댓글 내용입니다. 댓글 내용입니다.</p>
+                            <!-- 날짜, 답글달기 버튼 -->
+                            <div class="date_reple">
+                                <span class="borderRight">21.09.10</span>
+                                <a href="">답글달기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 답글의 답글의 답글 -->
+                    <div class="borderBottom coment_item coment_re coment_re_re_re">
+                        <!-- 프로필 -->
+                        <div class="imgArea">
+                            <img src="images/coment_re_icon.png" alt="답글">
+                        </div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 내용 -->
+                            <p class="coment_p fontWeight500">댓글 내용입니다. 댓글 내용입니다.</p>
+                            <!-- 날짜, 답글달기 버튼 -->
+                            <div class="date_reple">
+                                <span class="borderRight">21.09.10</span>
+                                <a href="">답글달기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="borderBottom coment_item">
+                        <!-- 프로필 -->
+                        <div class="imgArea bgImg"></div>
+                        <div class="txtArea">
+                            <!-- 닉네임 -->
+                            <p class="name fontWeightBold">놀라운 노움</p>
+                            <!-- 댓글 내용 -->
+                            <p class="coment_p fontWeight500">댓글 내용입니다. 댓글 내용입니다.</p>
+                            <!-- 날짜, 답글달기 버튼 -->
+                            <div class="date_reple">
+                                <span class="borderRight">21.09.10</span>
+                                <a href="">답글달기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <!-- footer -->

@@ -114,13 +114,21 @@
             </div>
             <div class="dtWrap notice_d">
                 <div class="titArea borderTop borderBottom">
-                    <div class="txtHead">
-                        <h4 class="fontWeightBold">마렌바 공지사항 입니다.</h4>
+                    <div class="tit_txt">
+                        <div class="txtHead">
+                            <h4 class="fontWeightBold">마렌바 공지사항 입니다.</h4>
+                        </div>
+                        <ul>
+                            <li class="borderRight">21.09.10</li>
+                            <li><i class="bgImg"></i>100</li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li class="borderRight">21.09.10</li>
-                        <li><i class="bgImg"></i>100</li>
-                    </ul>
+                    <!-- 수정/삭제 버튼 - 권한 있는 유저에게만 노출 / 기본 - display:none; -->
+                    <div class="edtndel">
+                        <ul>
+                            <li class="borderBF"><a href="">수정</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- 첨부파일 영역 / 첨부파일 없을 시 노출 x -->
                 <div class="fileArea borderBottom">
@@ -151,8 +159,7 @@
                     <!-- 수정/삭제 버튼 - 권한 있는 유저에게만 노출 / 기본 - display:none; -->
                     <div class="edtndel">
                         <ul>
-                            <li><a href="">수정</a></li>
-                            <li><a href="">삭제</a></li>
+                            <li class="borderBF"><a href="">삭제</a></li>
                         </ul>
                     </div>
                     <div class="backbtn">

@@ -344,9 +344,6 @@
 /* common btns */
 .backblue_btn {background-color: #597af4; color: #fff; padding:8px 18px; border-radius: 50px;}
 .lineblue_btn {background-color: #fff; border: 1px solid #3d66ff; color: #3d66ff; padding: 8px 18px; border-radius: 50px;}
-.edtndel ul {display: flex;}
-.edtndel ul li {border: 1px solid #bfbfbf;}
-.edtndel ul li:first-of-type {border-right: 0;}
 .edtndel ul li a {color: #8b8b8b; padding: 3px 10px; display: inline-block;}
 
 
@@ -539,20 +536,59 @@
 .blog_sec .blog_list ul li.list_box .txtArea .txtFoot .name i {display: inline-block; vertical-align: sub; background-image: url(../images/rb_blog_thum.jpg) !important; width: 20px; height: 20px; border-radius: 50%; margin-right: 5px;}
 
 
+/* 콘텐츠 > 지역별 여행지 상세 */
+.area_trip_detail {margin-bottom: 70px;}
+.area_trip_detail .titArea {background-color: #f2f9ff; border-top-left-radius: 20px; border-top-right-radius: 20px; padding: 20px 25px;}
+.area_trip_detail .titArea h2 {font-size: 25px;}
+.area_trip_detail .contArea {padding: 25px 20px;}
+.img_thum_slide {margin-bottom: 120px;}
+.img_thum_slide .carousel-indicators {bottom: -16.5%; width: 85%; left: 0; right: 0; margin: auto;}
+.img_thum_slide .carousel-indicators li {width: 9%; height: 55px; margin: 0 2px; border: none; background-color: transparent; border-radius: 0;}
+.img_thum_slide .carousel-indicators .active {border: 2px solid #8298ee;}
+.img_thum_slide .carousel-inner {width: 100%; height: 450px;}
+.img_thum_slide .carousel-control .glyphicon-chevron-left, .img_thum_slide .carousel-control .glyphicon-chevron-right {top: 108%; margin-left: 0; margin-right: 0;}
+.img_thum_slide .carousel-control span i {color: #6d89ec; font-size: 40px;}
+.area_trip_detail .txtArea {font-size: 1.15em; line-height: 1.6;}
+.area_trip_detail .infoArea {background-color: #f7f7f7; margin-top: 20px;}
+.area_trip_detail .infoArea p {font-size: 17px; padding: 15px 25px;}
+.area_trip_detail .infoArea p i {margin-right: 7px;}
+.area_trip_detail .infoArea p i.fa-clone {margin-left: 7px; color: #8298ee;}
+.area_trip_detail .tagArea {padding-left: 25px;}
+.area_trip_detail .around_recom {margin-top: 80px;}
+.area_trip_detail .around_recom h4 {font-size: 22px; margin-bottom: 20px;}
+.area_trip_detail .around_recom ul {display: flex;}
+.area_trip_detail .around_recom ul li {width: 24%; margin-right: 15px;}
+.area_trip_detail .around_rental ul li {height: 320px;}
+.area_trip_detail .around_rental ul li .imgArea {height: 240px;}
+.area_trip_detail .around_recom ul li .txtArea {padding: 15px 20px;}
+.area_trip_detail .around_rental ul li .txtArea .tagArea {padding: 0; margin-top: 4px;}
+.area_trip_detail .around_trip ul li {height: 210px;}
+.area_trip_detail .around_trip ul li .imgArea {height: 130px;}
+.area_trip_detail .around_trip ul li .txtArea p.txt {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.area_trip_detail .backbtn {text-align: center; margin-top: 70px;}
+
+/* 지역별 여행지 임시 img slide */
+.img_thum_slide .item01 .imgArea {background-image: url(../images/exam/insta_ex_thum02.jpg);}
+.img_thum_slide .item02 .imgArea {background-image: url(../images/exam/review_ex_thum01.jpg);}
+.img_thum_slide .item03 .imgArea {background-image: url(../images/exam/slide_exthum02.png);} 
+/* 주변 대여소 임시 썸네일 */
+.area_trip_detail .around_rental ul li .imgArea .imgChild {background-image: url(../images/exam/review_ex_thum03.jpg);}
+/* 주변 관광지 임시 썸네일 */
+.area_trip_detail .around_trip ul li .imgArea .imgChild {background-image: url(../images/exam/slide_exthum01.png);} 
 
 
 
 /* 커뮤니티 > 공지사항 리스트, 디테일 */
-.commu_notice_page .comm_titArea {display: flex; justify-content: space-between; align-items: end;}
-.dtWrap .titArea {padding: 25px 20px;}
-.dtWrap .titArea .txtHead {margin-bottom: 17px; display: flex; align-items: center;} 
-.dtWrap .titArea .txtHead h4 {font-size: 22px;}
-.dtWrap .titArea .txtHead span {font-size: 22px; margin-left: 5px;}
-.dtWrap .titArea .txtHead p {font-size: 16px; padding-left: 15px; margin-left: 15px;}
-.dtWrap .titArea ul {display: flex;}
-.dtWrap .titArea ul li {color: #a3a3a3; font-size: 15px; padding-right: 15px; margin-right: 13px;}
-.dtWrap .titArea ul li i {background-image: url(../images/view_icon.png); display: inline-block; width: 18px; height: 18px; vertical-align: top; margin-right: 4px;}
-.dtWrap .titArea ul li.name i {border-radius: 50%;}
+.commu_notice_page .comm_titArea {display: flex; justify-content: space-between;}
+.dtWrap .titArea {padding: 25px 20px; display: flex; justify-content: space-between; align-items: center;}
+.dtWrap .titArea .tit_txt .txtHead {margin-bottom: 17px; display: flex; align-items: center; align-items: center;} 
+.dtWrap .titArea .tit_txt .txtHead h4 {font-size: 22px;}
+.dtWrap .titArea .tit_txt .txtHead span {font-size: 22px; margin-left: 5px;}
+.dtWrap .titArea .tit_txt .txtHead p {font-size: 16px; padding-left: 15px; margin-left: 15px;}
+.dtWrap .titArea .tit_txt ul {display: flex;}
+.dtWrap .titArea .tit_txt ul li {color: #a3a3a3; font-size: 15px; padding-right: 15px; margin-right: 13px;}
+.dtWrap .titArea .tit_txt ul li i {background-image: url(../images/view_icon.png); display: inline-block; width: 18px; height: 18px; vertical-align: top; margin-right: 4px;}
+.dtWrap .titArea .tit_txt ul li.name i {border-radius: 50%;}
 .dtWrap .fileArea {padding: 15px 20px; display: flex;}
 .dtWrap .fileArea p {width: 12%; font-size: 15px;}
 .dtWrap .fileArea p i {display: inline-block; background-image: url(../images/file_icon.png); width: 14px; height: 16px; vertical-align: top; margin-left: 10px;}
@@ -563,10 +599,12 @@
 .dtWrap .snb_info .info_tit {display: flex; align-items: baseline; width: 30%;}
 .dtWrap .snb_info .info_tit h5 {font-size: 18px; max-width: 66%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .dtWrap .snb_info .info_tit a {margin-left: 12px; padding-left: 12px; color: #a3a3a3;}
+.dtWrap .snb_info .info_tit a i {color: #6d89ec; margin-right: 5px;}
 .dtWrap .snb_info .info_cont {width: 66%;}
 .dtWrap .snb_info .info_cont table th { color: #a3a3a3; padding: 10px 0; width: 12%;}
 .dtWrap .snb_info .info_cont table tr:first-of-type th {padding-top: 0;}
 .dtWrap .snb_info .info_cont table tr:last-of-type th {padding-bottom: 0;}
+.dtWrap .snb_info .info_cont table td {font-weight: bold;}
 .dtWrap .bike_info .info_cont table td {width: 21%;}
 .dtWrap .contArea {padding: 25px 20px; line-height: 1.6; font-size: 1.15em;}
 .dtWrap .contArea img {max-width: 100%;}
@@ -575,14 +613,39 @@
 .bot_btnArea {margin-top: 30px; overflow: hidden;}
 .bot_btnArea .edtndel {float: left;}
 .bot_btnArea .backbtn {float: right;}
+/* 댓글영역 */
+.coment_wrap {margin-top: 70px;}
+.coment_list .coment_item {padding: 20px 0; display: flex; align-items: center;}
+.coment_list .coment_item .imgArea {border-radius: 50%; width: 55px; height: 55px; margin-right: 20px;}
+.coment_list .coment_item .txtArea {width: 94%;}
+.coment_list .coment_item .txtArea .name {font-size: 16px; margin-bottom: 10px;}
+.coment_list .coment_item .txtArea form {display: flex; justify-content: space-between; width: 100%;}
+.coment_list .coment_item .txtArea form input[type="text"] {padding: 10px; height: 36px; width: 92%;}
+.coment_list .coment_item .txtArea form button {height: 36px; background-color: #808080; color: #fff; width: 80px;}
+.coment_list .coment_item .txtArea p.coment_p {font-size: 16px;}
+.coment_list .coment_item .txtArea .date_reple {margin-top: 8px;}
+.coment_list .coment_item .txtArea .date_reple span, .coment_list .coment_item .txtArea .date_reple a {color: #bfbfbf; padding-right: 10px; margin-right: 8px;}
+.coment_list .coment_re {background-color: #fbfbfb; padding-left: 60px;}
+.coment_list .coment_re .imgArea {background-image: none !important;}
+.coment_list .coment_re .imgArea img {width: 47px; margin-top: 9px;}
+.coment_list .coment_re_re {padding-left: 120px;}
+.coment_list .coment_re_re_re {padding-left: 180px;}
+/* 임시 프로필 */
+.coment_list .coment_item .imgArea {background-image: url(../images/exam/profile_ex_thum.png);}
+
+
+
  
 /* 커뮤니티 > 공지사항 글쓰기 페이지 */
 .edit_wrap {margin-bottom: 35px;}
 .edit_wrap input[type="text"] {padding: 18px 20px; font-size: 18px;}
 .edit_wrap input[type="text"]::placeholder {font-size: 18px;}
 .up_file {padding-bottom: 30px; margin-bottom: 30px;}
-.up_edit h5 {font-size: 20px;}
+.up_edit h5 {font-size: 20px; margin-bottom: 15px;}
 .up_file h5 span {font-size: 14px; font-weight: normal; color: #a3a3a3; margin-left: 25px;}
+.edit_btn {text-align: center; margin-top: 50px;}
+.edit_btn a {margin: 0 5px;}
+.edit_btn button {width: 110px;}
 
 /* multifile 플러그인 사용 / 기본 태그 형태 변형시키려구 노력한것의 발자취 */
 /* .MultiFile-wrap {position: absolute; top: 0; height: 100%; left: 0; width: 100%;}
@@ -622,6 +685,7 @@
 .loginWrap .lg_cont .lg_btns .leftArea label {display: block; font-size: 15px; font-weight: normal; color: #989898;}
 .loginWrap .lg_cont .lg_btns .leftArea label input[type="checkbox"] {vertical-align: bottom; margin-right: 5px;}
 .loginWrap .lg_cont .lg_btns .rightArea a {opacity: .6; font-size: 15px; display: block;}
+.loginWrap .lg_cont .lg_btns .rightArea a i {color: #6d89ec; margin-right: 5px;}
 .loginWrap .lg_cont>p {text-align: left; color: #9a9a9a; font-weight: 500; margin-bottom: 20px; margin-left: 13px; font-size: 16px; line-height: 1.4; margin-top: 30px;}
 .loginWrap .lg_cont .lg_btns a:hover {opacity: 1; color: #3c3c3c;} 
 .loginWrap .lg_cont .lg_btns button {padding: 12px; font-size: 17px; background-color: #4e6bd3; width: 42%;}
