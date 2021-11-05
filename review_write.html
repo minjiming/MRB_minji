@@ -128,16 +128,23 @@
         <!-- content -->
         <div class="Container">
             <div class="comm_titArea">
-                <h2 class="fontWeightBold">MRB 공지사항</h2>
-                <p>새롭고, 즐거운 소식을 알려드려요!</p>
+                <h2 class="fontWeightBold">바이크/대여소 이용후기</h2>
+                <p>마.렌.바와 함께한 여러분의 이야기를 들려주세요!</p>
             </div>
             <div class="edit_wrap boxShadow borderBF">
-                <input type="text" placeholder="제목을 입력하세요" class="w100p borderBottom">
+                <div class="editHead w100p borderBottom">
+                    <div class="search_group">
+                        <label for="re_bike" class="cursorPointer"><input type="radio" name="re_cate" id="re_bike" value="바이크 후기" class="marginTB0">바이크 후기</label>
+                        <label for="re_center" class="cursorPointer"><input type="radio" name="re_cate" id="re_center" value="대여소별 후기" class="marginTB0">대여소별 후기</label>
+                    </div>
+                    <input type="text" placeholder="제목을 입력하세요" class="">
+                </div>
                 <!-- !!임시!! 에디터 캡쳐 이미지 -->
                 <img class="w100p" src="images/exam/ex_editter.jpg" alt="">
             </div>
+            <!-- 이미지 업로드 -->
             <div class="up_file borderBottom up_edit">
-                <h5 class="fontWeight500">첨부파일<span>첨부파일은 10개까지 업로드할 수 있습니다.</span></h5>
+                <h5 class="fontWeight500">이미지<span>첨부파일은 10개까지 업로드할 수 있습니다.</span></h5>
                 <div class="filebox">
                     <!-- multifile 플러그인 사용 / 기본 태그 형태 변형시키려구 노력한것-->
                     <!-- <span class="btn btn-default btn-file">
@@ -151,6 +158,76 @@
                     <!-- <input type="file" id="fileUpload" multiple />
                     <ul id="fileList"></ul> -->
                 </div>
+            </div>
+            <!-- 대여정보 선택 -->
+            <div class="up_edit rental_info">
+                <h5 class="fontWeight500">대여정보</h5>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn borderRad50" data-toggle="modal" data-target="#rental_center">
+                    대여소 선택
+                </button>
+                <button type="button" class="btn borderRad50" data-toggle="modal" data-target="#rental_bike">
+                    바이크 선택
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="rental_center" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                            ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="rental_bike" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                            ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 만족도 선택 -->
+            <div class="up_edit rental_star">
+                <h5 class="fontWeight500">만족도</h5>
+                <!-- 별점 선택 -->
+                <div class="starpoint_wrap">
+                    <div class="starpoint_box">
+                        <label for="starpoint_1" class="label_star" title="1"><span class="blind">1점</span></label>
+                        <label for="starpoint_2" class="label_star" title="2"><span class="blind">2점</span></label>
+                        <label for="starpoint_3" class="label_star" title="3"><span class="blind">3점</span></label>
+                        <label for="starpoint_4" class="label_star" title="4"><span class="blind">4점</span></label>
+                        <label for="starpoint_5" class="label_star" title="5"><span class="blind">5점</span></label>
+                        <input type="radio" name="starpoint" id="starpoint_1" class="star_radio">
+                        <input type="radio" name="starpoint" id="starpoint_2" class="star_radio">
+                        <input type="radio" name="starpoint" id="starpoint_3" class="star_radio">
+                        <input type="radio" name="starpoint" id="starpoint_4" class="star_radio">
+                        <input type="radio" name="starpoint" id="starpoint_5" class="star_radio">
+                        <span class="starpoint_bg"></span>
+                        <span class="star_txt">별점을 선택해주세요!</span>
+                        <span class="star_num star_num_1">1점</span>
+                        <span class="star_num star_num_2">2점</span>
+                        <span class="star_num star_num_3">3점</span>
+                        <span class="star_num star_num_4">4점</span>
+                        <span class="star_num star_num_5">5점</span>
+                    </div>
+                  </div>
+            </div>
+            <!-- 태그 입력 -->
+            <div class="up_edit rental_tag">
+                <h5 class="fontWeight500">태그</h5>
+                <input type="text" placeholder="#을 붙여 태그를 입력해주세요. 10개까지 추가할 수 있어요!" class="w100p borderBF">
             </div>
             <div class="edit_btn">
                 <a href="notice.html"><button class="lineblue_btn">취소</button></a>
