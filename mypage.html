@@ -85,7 +85,7 @@
                         <!-- 로그인 전 노출 -->
                         <div class="loginBox">
                             <ul>
-                                <li class="on"><a href="login.html">로그인</a></li> 
+                                <li><a href="login.html">로그인</a></li> 
                                 <li><a href="signin.html">회원가입</a></li> 
                             </ul>
                         </div>
@@ -106,55 +106,67 @@
         </nav>
 
         <!-- content -->
-        <div class="Container600">
-            <div class="loginWrap boxShadow borderRad15 borderBF">
-                <h2 class="borderBottom fontWeightBold">로그인</h2>
-                <div class="lg_cont">
-                    <div class="input_text">
-                        <input class="borderRad50 w100p" type="text" placeholder="이메일">
-                        <input class="borderRad50 w100p" type="password" placeholder="비밀번호">
-                    </div>
-                    <div class="lg_btns">
-                        <div class="leftArea">
-                            <label class="cursorPointer" for="">
-                                <input type="checkbox" name="remember" checked>로그인 기억하기
-                            </label>
+        <div class="my_bgback">
+            <div class="Container600">
+                <div class="loginWrap boxShadow borderRad15 borderBF">
+                    <h2 class="borderBottom fontWeightBold">회원정보</h2>
+                    <div class="lg_cont">
+                        <!-- 프로필 -->
+                        <div class="pro_name">
+                            <div class="imgArea bgImg"></div>
+                            <p class="fontWeightBold">홍길동<br><span>라이더(일반회원)</span></p>
                         </div>
-                        <div class="rightArea">
-                            <a href="remind.html"><i class="fas fa-key"></i>비밀번호 재설정</a>
+                        <!-- 회원정보 -->
+                        <div class="pro_info borderRad20">
+                            <table class="w100p">
+                                <tr>
+                                    <th>회원 계정</th>
+                                    <td>email@email.com</td>
+                                </tr>
+                                <tr>
+                                    <th>닉네임</th>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th>휴대폰번호</th>
+                                    <td>010 - 1234 - 5678 <span>(인증완료)</span></td>
+                                </tr>
+                                <tr>
+                                    <th>지역</th>
+                                    <td>전라북도</td>
+                                </tr>
+                                <tr>
+                                    <th>성별</th>
+                                    <td>남성</td>
+                                </tr>
+                                <tr>
+                                    <th>나이</th>
+                                    <td>20 세</td>
+                                </tr>
+                                <tr>
+                                    <th>생일</th>
+                                    <td>1월 1일</td>
+                                </tr>
+                            </table>
+                            <p>2021-09-10 18:00:51 가입</p>
+                        </div>
+                        <!-- 회원정보 수정으로 이동 버튼 -->
+                        <div class="right_edit_btn">
+                            <a href="user_edit.html"><button class="borderRad50 white">회원정보 수정</button></a>
                         </div>
                     </div>
-                </div>
-                <div class="lg_foot paddingTop0">
-                    <button type="submit" class="white w100p borderRad50 fontWeightBold">로그인</button>
-                    <div class="sns_lg">
-                        <p>또는<br>SNS계정으로 간편 로그인하기</p>
-    
-                        <!-- sns login -->
-                                            
-                        <div class="sns_login_w">
-                            <div class="login_ka_w" onclick="location.href=&#39;https://kauth.kakao.com/oauth/authorize?response_type=code&amp;client_id=bac8f63718ac7cba9f4517f4727797e1&amp;redirect_uri=https://rentalbike.kr/oauth_kakao&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&#39;">
-                                <span>카카오 계정으로 로그인</span>
-                            </div>
-                            <div class="login_na_w" onclick="location.href=&#39;https://nid.naver.com/oauth2.0/authorize?response_type=code&amp;client_id=Cn2f6p9tUI6L9SIDdm8j&amp;redirect_uri=https://rentalbike.kr/oauth_naver&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&#39;">
-                                <span class="white">네이버 아이디로 로그인</span>
-                            </div>
-                            <div class="login_go_w" onclick="location.href=&#39;https://accounts.google.com/o/oauth2/auth?response_type=code&amp;client_id=12833546004-jgoou3aenc3kbaedsoilqne8b3120kkb.apps.googleusercontent.com&amp;redirect_uri=https://rentalbike.kr/oauth_google&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&amp;access_type=offline&amp;scope=https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email&#39;">
-                                <span>Google 계정으로 로그인</span>
-                            </div>
-                            <div class="login_ap_w" onclick="location.href=&#39;https://appleid.apple.com/auth/authorize?response_type=code&amp;response_mode=form_post&amp;client_id=myrentalbike.rentalbike.kr&amp;redirect_uri=https%3A%2F%2Frentalbike.kr%2Foauth_apple&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&amp;scope=name+email&#39;">
-                                <span class="white">Sign in with Apple</span>
-                            </div>
-                            <div class="login_fa_w" onclick="location.href=&#39;https://www.facebook.com/v9.0/dialog/oauth?client_id=632754617663455&amp;redirect_uri=https%3A%2F%2Frentalbike.kr%2Foauth_facebook&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&amp;scope=email&#39;">
-                                <span class="white">페이스북 계정으로 로그인</span>
-                            </div>
+                    <div class="lg_foot borderTop">
+                        <!-- 이용내역 -->
+                        <h4 class="fontWeightBold history_tit">이용내역</h4>
+                        <div class="history_box borderRad20">
+                            <p class="history_x">아직 이용내역이 없습니다.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- footer -->
-        <div class="footer w100p">
+        <div class="footer w100p margin0">
             <div class="Container">
                 <div class="leftArea">
                     <div class="logo_ft">

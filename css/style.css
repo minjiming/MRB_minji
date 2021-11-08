@@ -710,7 +710,7 @@
 
 
 /* 로그인/회원가입/비밀번호 재설정 */
-.loginWrap {margin-top: 25%; text-align: center;}
+.loginWrap {margin-top: 25%; text-align: center; background-color: #fff;}
 .loginWrap h2 {padding: 15px; font-size: 20px;}
 .loginWrap .lg_cont, .loginWrap .lg_foot {padding: 40px 40px;}
 .user-btn-group {margin-bottom: 30px;}
@@ -744,6 +744,47 @@
 
 
 
+
+/* 마이페이지 > 회원정보 */
+.my_bgback {background-color: #f9f9f9; padding-top: 10%; padding-bottom: 70px;}
+.my_bgback .loginWrap {margin-top: 0;}
+.loginWrap .lg_cont .pro_name .imgArea {width: 120px; height: 120px; border-radius: 50%; margin: auto;}
+.loginWrap .lg_cont .pro_name p {font-size: 16px; line-height: 1.5; margin-top: 15px;}
+.loginWrap .lg_cont .pro_name p span {color: #bfbfbf;}
+.loginWrap .lg_cont .pro_info {background-color: #f9f9f9; padding: 40px 30px; margin: 25px 0; text-align: left;}
+.loginWrap .lg_cont .pro_info table {font-size: 16px;}
+.loginWrap .lg_cont .pro_info table th {color: #999; padding-bottom: 35px; width: 25%;}
+.loginWrap .lg_cont .pro_info p {color: #999;}
+.right_edit_btn {text-align: right;}
+.right_edit_btn button {width: 160px; height: 34px; background-color: #4e6bd3;}
+.loginWrap .lg_foot h4.history_tit, .loginWrap .lg_cont h4.re_pw_tit {text-align: left; font-size: 17px; margin-bottom: 15px;}
+.loginWrap .lg_foot .history_box {background-color: #f4f4f4; padding: 30px; font-size: 15px;}
+.loginWrap .lg_foot .history_box p.history_x {color: #9a9a9a;}
+/* 회원 임시 프로필 */
+.loginWrap .lg_cont .pro_name .imgArea {background-image: url(../images/exam/profile_ex_thum.png);}
+
+/* 마이페이지 > 회원정보수정 */
+.loginWrap .lg_cont .input_text label {text-align: left; color: #999999; font-size: 16px; margin-bottom: 10px; display: block;}
+.loginWrap .lg_cont .input_text .tel_form {display: flex; justify-content: space-between;}
+.loginWrap .lg_cont .input_text .tel_form input:first-of-type {width: 20%;}
+.loginWrap .lg_cont .input_text .tel_form input {width: 30%;}
+.loginWrap .lg_cont .input_text .tel_form span {font-size: 16px; font-weight: bold; margin-top: 14px;}
+.loginWrap .lg_cont .input_text .gender_form .user-btn-group {display: flex; justify-content: space-between;}
+.loginWrap .lg_cont .input_text .gender_form .user-btn-group .btn {width: 50%; height: 38px; border: 1px solid #4e6bd3; padding: 0; display: flex; align-items: center; justify-content: center;}
+.loginWrap .lg_cont .input_text .gender_form .user-btn-group .btn p {color: #4e6bd3; margin-top: 0;}
+.loginWrap .lg_cont .input_text .gender_form .user-btn-group .btn.active p {color: #Fff;}
+.loginWrap .lg_cont .input_text .agenbirth_form {display: flex; justify-content: space-between;}
+.loginWrap .lg_cont .input_text .agenbirth_form .age_form {width: 30%;}
+.loginWrap .lg_cont .input_text .agenbirth_form .age_form input {width: 100%;}
+.loginWrap .lg_cont .input_text .agenbirth_form .birth_form {width: 67%;}
+.loginWrap .lg_cont .input_text .agenbirth_form .birth_form select {width: 48%;}
+.loginWrap .lg_cont .input_text>p {text-align: right; color: #999;}
+.loginWrap .lg_cont .input_text>button {background-color: #4e6bd3; height: 42px; margin-top: 40px;}
+.loginWrap .lg_cont .re_pw_link {margin-top: 50px;}
+.loginWrap .lg_cont .re_pw_link p {color: #bfbfbf; text-align: left;}
+.loginWrap .lg_cont .re_pw_link button {border: 1px solid #4e6bd3; color: #4e6bd3; height: 42px; margin: 15px 0 25px;}
+.loginWrap .mem_out_btn {padding: 20px 40px; text-align: left;}
+.loginWrap .mem_out_btn button {margin-bottom: 0; background-color: #fff; color: #bfbfbf; font-size: 14px; padding: 5px 15px;}
 
 
 

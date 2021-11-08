@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- 오픈 그래프 -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="마이렌탈바이크">
+        <meta property="og:description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta property="og:image" content="images/common/rbicon.png">
+        <meta property="og:url" content="https://rentalbike.kr/">
+
+        <!-- bing은 xml로 대체 -->
+        <meta name="naver-site-verification" content="02805b5edd23aab251aa712194a9829b44f6a633"> <!-- naver -->
+        <meta name="google-site-verification" content="QuRSeSM0JKaS8OeovUQYa1hDRHgPJDaRTXz67ov3w-0"> <!-- google -->
+        <meta name="description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta name="keywords" content="맥스토크, 마이렌탈바이크, 당빠, 홈페이지, IT, 이륜차, 오토바이, 바이크, 라이더, 전국, 모터사이클, 중고, 신차, 구매, 관광지, 리스, 대여, 렌탈, 렌트, mrb">
+        <!-- 모바일용 화면크기 비율고정 -->
+        <meta id="mobileMeta" name="viewport" content="width=device-width">
+
+        <title>마이렌탈바이크</title>
+
+        <!-- 서비스 아이콘 -->
+        <link rel="canonical" href="https://rentalbike.kr/">
+        <link rel="shortcut icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+        <link rel="apple-touch-icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/jquery.datetimepicker.full.js"></script>
+
+        <!-- Naver Analytics -->
+	    <script type="text/javascript" src="js/wcslog.js"></script>
+        <script type="text/javascript">
+            if(!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "8b08b84b8b1f38";
+            if(window.wcs) {
+                wcs_do();
+            }
+        </script>
+
+        <!-- nav 스크롤시 배경색 변경 -->
+        <script> 
+        $(document).scroll(function () { 
+            var $nav = $("#navHeader"); 
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height()); }); 
+            </script>
+    </head>
+    <body>
+        <!-- nav -->
+		<nav  id="navHeader" class="navbar-default navbar-fixed-top">
+            <div class="Container h100p">
+                <div class="navbar-head wh100p">
+                    <!-- navbar-left -->
+                    <div class="navbar-logo w100">
+                        <a href="main.html">
+                            <img class="w100p logonormal" src="images/rb_w_rv.png" alt="마이렌탈바이크">
+                            <img class="w100p logohover" src="images/rb_w.png" alt="마이렌탈바이크">
+                        </a>
+                    </div>
+                    <!-- navbar-right -->
+                    <div class="navbar-btns">
+                        <ul>
+                            <li><a href="guide.html">이용안내</a></li>
+                            <li><a href="searchs.html">바이크검색</a></li>
+                            <li><a href="contens.html">콘텐츠</a></li>
+                            <li><a href="community.html">커뮤니티</a></li>
+                        </ul>
+                        <!-- 로그인 전 노출 -->
+                        <div class="loginBox">
+                            <ul>
+                                <li><a href="login.html">로그인</a></li> 
+                                <li class="on"><a href="signin.html">회원가입</a></li> 
+                            </ul>
+                        </div>
+                        <!-- 로그인 후 노출 -->
+                        <!-- navbar-right-dropdown -->
+                        <div class="dropdown" style="display: none;">
+                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                사용자 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a class="newblue" href="mypage.html">마이페이지</a></li>
+                                <li><a class="newblue" href="">로그아웃</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- content -->
+        <div class="my_bgback">
+            <div class="Container600">
+                <div class="loginWrap boxShadow borderRad15 borderBF">
+                    <h2 class="borderBottom fontWeightBold">회원정보</h2>
+                    <div class="lg_cont">
+                        <div class="btn-group btn-group-toggle user-btn-group" data-toggle="buttons">
+                            <label class="btn active borderRad20">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> 
+                                <img class="off" src="images/user_type_01.png" alt="라이더(일반회원)">
+                                <img class="on" src="images/user_type_01_active.png" alt="라이더(일반회원)">
+                                <p>라이더<br>(일반회원)</p>
+                            </label>
+                            <label class="btn borderRad20">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> 
+                                <img class="off" src="images/user_type_02.png" alt="대여소관리자">
+                                <img class="on" src="images/user_type_02_active.png" alt="대여소관리자">
+                                <p>대여소관리자</p>
+                            </label>
+                        </div>
+                        <div class="input_text">
+                            <label for="email">회원 계정</label>
+                            <input class="borderRad50 w100p" id="email" type="text" value="email@email.com">
+                            <label for="nickname">닉네임</label>
+                            <input class="borderRad50 w100p" id="nickname" type="text" value="홍길동">
+                            <label for="tel">휴대푠번호</label>
+                            <div id="tel" class="tel_form">
+                                <input type="text" class="borderRad50" id="tel1" value="010" maxlength="3" readonly>
+                                <span>-</span>
+                                <input type="text" class="borderRad50" id="tel2" minlength="3" maxlength="4" value="">
+                                <span>-</span>
+                                <input type="text" class="borderRad50" id="tel3" minlength="3" maxlength="4" value="">
+                            </div>
+                            <select class="borderRad50 w100p borderBF bgsNoReat" name="area" id="area">
+                                <option value="" selected>지역</option>
+                                <option value="seoul">서울시</option>
+                                <option value="jeju">제주도</option>
+                                <option value="gyeonggi">인천/경기</option>
+                                <option value="gangwon">강원</option>
+                                <option value="sejong">세종시</option>
+                                <option value="chungnam">대전/충남</option>
+                                <option value="chungbuk">충북</option>
+                                <option value="jeonnam">광주/전남</option>
+                                <option value="jeonbuk">전북</option>
+                                <option value="gyeongnam">부산/울산/경남</option>
+                                <option value="gyeongbuk">대구/경북</option>
+                            </select>
+                            <div class="gender_form">
+                                <label for="gender">성별</label>
+                                <div class="btn-group btn-group-toggle user-btn-group" id="gender" data-toggle="buttons">
+                                    <label class="btn active borderRad20">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> 
+                                        <p>남성</p>
+                                    </label>
+                                    <label class="btn borderRad20">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> 
+                                        <p>여성</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="agenbirth_form">
+                                <div class="age_form">
+                                    <label for="age">나이</label>
+                                    <input type="text" class="borderRad50 w100p" value="" placeholder="20세">
+                                </div>
+                                <div class="birth_form">
+                                    <label for="birthday">생일</label>
+                                    <select name="birthday_month" id="birthday_month" class="marginRigth10 borderBF bgsNoReat borderRad50">
+                                        <option value="00" selected>월</option>
+                                        <option value="01">1월</option>
+                                        <option value="02">2월</option>
+                                        <option value="03">3월</option>
+                                        <option value="04">4월</option>
+                                        <option value="05">5월</option>
+                                        <option value="06">6월</option>
+                                        <option value="07">7월</option>
+                                        <option value="08">8월</option>
+                                        <option value="09">9월</option>
+                                        <option value="10">10월</option>
+                                        <option value="11">11월</option>
+                                        <option value="12">12월</option>
+                                    </select>
+                                    <select name="birthday_day" id="birthday_day" class="borderBF bgsNoReat borderRad50">
+                                        <option value="00" selected>일</option>
+                                        <option value="01">1일</option>
+                                        <option value="02">2일</option>
+                                        <option value="03">3일</option>
+                                        <option value="04">4일</option>
+                                        <option value="05">5일</option>
+                                        <option value="06">6일</option>
+                                        <option value="07">7일</option>
+                                        <option value="08">8일</option>
+                                        <option value="09">9일</option>
+                                        <option value="10">10일</option>
+                                        <option value="11">11일</option>
+                                        <option value="12">12일</option>
+                                        <option value="">...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p>2021-09-10 18:00:51 가입</p>
+                            <button type="submit" class="white w100p borderRad50 fontWeightBold">변경 사항 저장</button>
+                        </div> 
+                    </div>
+                    <div class="lg_cont borderTop">
+                        <h4 class="fontWeightBold re_pw_tit">비밀번호 재설정</h4>
+                        <div class="input_text">
+                            <input class="borderRad50 w100p" type="password" placeholder="현재 비밀번호">
+                            <input class="borderRad50 w100p" type="password" placeholder="새 비밀번호">
+                            <input class="borderRad50 w100p" type="password" placeholder="새 비밀번호 확인">
+                        </div>
+                        <div class="right_edit_btn">
+                            <a href=""><button class="borderRad50 white">비밀번호 재설정</button></a>
+                        </div>
+                        <div class="re_pw_link">
+                            <p>현재 비밀번호를 모르는 경우,<br>메일을 통해 비밀번호를 재설정 해주세요.</p>
+                            <a href=""><button class="w100p borderRad50">비밀번호 재설정 링크 발송</button></a>
+                            <p>email@email.com으로 발송됩니다.</p>
+                        </div>
+                    </div>
+                    <div class="lg_foot borderTop mem_out_btn">
+                        <a href=""><button class="borderBF borderRad50 fontWeightBold">회원탍퇴</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer w100p margin0">
+            <div class="Container">
+                <div class="leftArea">
+                    <div class="logo_ft">
+                        <img src="images/rb_w_ft.png" alt="마이렌탈바이크">
+                    </div>
+                    <div class="txt_ft">
+                        <ul>
+                            <li class="white">맥스토크 ｜ 관리자:임성용</li>
+                            <li class="white">Tel:010-4952-0134 ｜ E-mail:admin@rentalbike.kr</li>
+                            <li class="white">주소:전북 전주시 완산구 풍남문4길 25-26 813호</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rightArea">
+                    <ul>
+                        <li><a href="https://www.instagram.com/myrental_bike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.facebook.com/myrentalbike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://blog.naver.com/biz9ine"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC3IQigWXcYpJRCFWPMqM9KQ/featured"><span class="bgImg"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
