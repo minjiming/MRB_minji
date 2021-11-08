@@ -1,1 +1,1 @@
-# MyRentalBike
+# MRB_minji project
