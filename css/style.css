@@ -720,7 +720,7 @@
 .user-btn-group .btn img.on {display: none;}
 .user-btn-group .btn img.off {display: block;}
 .user-btn-group .btn p {font-size: 16px; font-weight: 500; line-height: 1.2; margin-top: 5px;}
-.user-btn-group .btn:last-of-type p {margin-top: 13px;}
+.user-btn-group .btn:last-of-type p {margin-top: 8px;}
 .user-btn-group .active {background-color: #4e6bd3;}
 .user-btn-group .active img.off {display: none;}
 .user-btn-group .active img.on {display: block;}
@@ -765,6 +765,16 @@
 
 /* 마이페이지 > 회원정보수정 */
 .loginWrap .lg_cont .input_text label {text-align: left; color: #999999; font-size: 16px; margin-bottom: 10px; display: block;}
+
+.loginWrap .lg_cont .input_text .filebox {display: flex; align-items: end; margin-bottom: 25px;}
+.loginWrap .lg_cont .input_text .filebox .upload-display .upload-thumb-wrap {margin-right: 20px; width: 100px; height: 100px; border: 1px solid #bfbfbf;}
+.loginWrap .lg_cont .input_text .filebox .upload-display .upload-thumb-wrap img.upload-thumb {width: 100%;}
+.loginWrap .lg_cont .input_text .filebox input[type="file"] {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;}
+.loginWrap .lg_cont .input_text .filebox label {display: flex; justify-content: center; align-items: center; background-color: #404040; width: 100px; height: 40px;} 
+.loginWrap .lg_cont .input_text .filebox label i {color: #Fff; margin-left: 5px;}
+/* named upload */
+.loginWrap .lg_cont .input_text .filebox .upload-name {margin-bottom: 0; background-color: #fff; font-size: 14px; color: #999; -webkit-appearance: none; /* 네이티브 외형 감추기 */ -moz-appearance: none; appearance: none;}
+
 .loginWrap .lg_cont .input_text .tel_form {display: flex; justify-content: space-between;}
 .loginWrap .lg_cont .input_text .tel_form input:first-of-type {width: 20%;}
 .loginWrap .lg_cont .input_text .tel_form input {width: 30%;}
