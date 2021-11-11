@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- 오픈 그래프 -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="마이렌탈바이크">
+        <meta property="og:description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta property="og:image" content="images/common/rbicon.png">
+        <meta property="og:url" content="https://rentalbike.kr/">
+
+        <!-- bing은 xml로 대체 -->
+        <meta name="naver-site-verification" content="02805b5edd23aab251aa712194a9829b44f6a633"> <!-- naver -->
+        <meta name="google-site-verification" content="QuRSeSM0JKaS8OeovUQYa1hDRHgPJDaRTXz67ov3w-0"> <!-- google -->
+        <meta name="description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta name="keywords" content="맥스토크, 마이렌탈바이크, 당빠, 홈페이지, IT, 이륜차, 오토바이, 바이크, 라이더, 전국, 모터사이클, 중고, 신차, 구매, 관광지, 리스, 대여, 렌탈, 렌트, mrb">
+        <!-- 모바일용 화면크기 비율고정 -->
+        <meta id="mobileMeta" name="viewport" content="width=device-width">
+
+        <title>마이렌탈바이크</title>
+
+        <!-- 서비스 아이콘 -->
+        <link rel="canonical" href="https://rentalbike.kr/">
+        <link rel="shortcut icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+        <link rel="apple-touch-icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/jquery.datetimepicker.full.js"></script>
+        <!-- 어썸폰트 -->
+        <script src="https://kit.fontawesome.com/c184921f02.js" crossorigin="anonymous"></script>
+
+        <!-- Naver Analytics -->
+	    <script type="text/javascript" src="js/wcslog.js"></script>
+        <script type="text/javascript">
+            if(!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "8b08b84b8b1f38";
+            if(window.wcs) {
+                wcs_do();
+            }
+        </script>
+
+        <!-- nav 스크롤시 배경색 변경 -->
+        <script> 
+        $(document).scroll(function () { 
+            var $nav = $("#navHeader"); 
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height()); }); 
+        </script>
+
+    </head>
+    <body>
+        <!-- nav -->
+		<nav  id="navHeader" class="navbar-default navbar-fixed-top">
+            <div class="Container h100p">
+                <div class="navbar-head wh100p">
+                    <!-- navbar-left -->
+                    <div class="navbar-logo w100">
+                        <a href="main.html">
+                            <img class="w100p logonormal" src="images/rb_w_rv.png" alt="마이렌탈바이크">
+                            <img class="w100p logohover" src="images/rb_w.png" alt="마이렌탈바이크">
+                        </a>
+                    </div>
+                    <!-- navbar-right -->
+                    <div class="navbar-btns">
+                        <ul>
+                            <li><a href="guide.html">이용안내</a></li>
+                            <li><a href="searchs.html">바이크검색</a></li>
+                            <li><a href="contens.html">콘텐츠</a></li>
+                            <li><a href="community.html">커뮤니티</a></li>
+                        </ul>
+                        <!-- 로그인 전 노출 -->
+                        <div class="loginBox" style="display: none;">
+                            <ul>
+                                <li><a href="login.html">로그인</a></li> 
+                                <li><a href="signin.html">회원가입</a></li> 
+                            </ul>
+                        </div>
+                        <!-- 로그인 후 노출 -->
+                        <!-- navbar-right-dropdown -->
+                        <div class="dropdown">
+                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                사용자 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a class="newblue" href="mypage.html">마이페이지</a></li>
+                                <li><a class="newblue" href="management_shop.html">대여소 관리</a></li>
+                                <li><a class="newblue" href="management_bike.html">바이크 관리</a></li>
+                                <li><a class="newblue" href="">로그아웃</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- content -->
+        <div class="Container">
+            <div class="rent_detail_wrap">
+                <div class="up_product head_space">
+                    <a href=""><button class="borderRad15 fontWeightBold">대여소 수정</button></a>
+                    <a href=""><button class="borderRad15 white fontWeightBold">대여소 등록</button></a>
+                </div>
+                <!-- info box -->
+                <div class="w100p boxShadow borderRad15 borderBF shop_detail_box rent_detail_box">
+                    <div class="leftArea">
+                        <div class="card_cont">
+                            <div class="card_head borderBottom">
+                                <!-- 지역명 -->
+                                <div class="areaName">
+                                    <span>전북</span>
+                                </div>
+                                <!-- 대여소명 -->
+                                <h4 class="jalnanFont">맥스토크 대여소</h4>
+                            </div>
+                            <!-- 대여소 정보 -->
+                            <div class="card_info">
+                                <!-- 주소 -->
+                                <p><i class="fas fa-map-marker-alt verticalMid"></i>전북 전주시 금암대로 111 2층</p>
+                                <!-- 연락처 -->
+                                <p class="customGreen"><i class="fas fa-phone-alt"></i>로그인 후 정보를 확인해주세요!</p>
+                                <!-- 운영시간 -->
+                                <p><i class="bgImg"></i>화수목금토일 (11시 ~ 20시)</p>
+                                <!-- 홈페이지 -->
+                                <p><i class="fas fa-home"></i><a href="" class="newblue_txt fontWeightBold">https://rentalbike.kr</a></p>
+                                <span class="newred_txt fontWeightBold">※ 전화예약만 가능합니다.<br>(예약시 마이렌탈바이크를 보고 전화했다고 꼭! 말씀해주세요!)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightArea borderBF">
+                        <!-- 임시 지도 -->
+                        <img class="wh100p" src="images/exam/ex_result_map.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="s_d_tab_cont" role="tabpanel">
+    
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs find-tabs" role="tablist">
+                      <li role="presentation" class="active"><a href="#have-bike" aria-controls="have-bike" role="tab" data-toggle="tab"><i class="fas fa-motorcycle"></i>보유 바이크</a></li>
+                      <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab"><i class="fas fa-file-signature"></i>이용후기</a></li>
+                      <li role="presentation"><a href="#guide" aria-controls="guide" role="tab" data-toggle="tab">대여안내</a></li>
+                    </ul>
+                  
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <!-- 보유바이크 -->
+                      <div role="tabpanel" class="tab-pane active" id="have-bike">
+                        <div class="mg_cont">
+                            <div class="contCont">
+                                <a href="bike_detail.html">
+                                    <div class="borderBF borderRad10 bike_pd_box">
+                                        <!-- 이미지 -->
+                                        <div class="imgArea borderRad15 bgImg borderBF"></div>
+                                        <!-- 정보 -->
+                                        <div class="infoArea">
+                                            <div class="tit borderBottom">
+                                                <!-- 바이크이름 -->
+                                                <p class="fontWeightBold">YZF-R6</p>
+                                                <!-- 종류 -->
+                                                <span class="borderRad50 newblue_txt fontWeightBold">레플리카</span>
+                                            </div>
+                                            <div class="txt">
+                                                <div class="b_filter">
+                                                    <!-- 제조사 -->
+                                                    <span class="fontWeightBold">야마하</span>
+                                                    <!-- 배기량 -->
+                                                    <span class="fontWeightBold">599cc</span>
+                                                    <!-- 변속기 -->
+                                                    <span class="fontWeightBold">수동</span>
+                                                    <!-- 연료 -->
+                                                    <span class="fontWeightBold">휘발유</span>
+                                                </div>
+                                                <!-- 대여소 -->
+                                                <p class="ad_store fontWeight500"><i class="bgImg"></i>전북 전주시 백스토크 대여소</p>
+                                                <!-- 가격 -->
+                                                <div class="price_txt">
+                                                    <p class="price newblue_txt fontWeightBold">1시간 <span class="newblue_txt">40,000 ₩</span></p>
+                                                    <p class="price newblue_txt fontWeightBold">1일 <span class="newblue_txt">150,000 ₩</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="bike_detail.html">
+                                    <div class="borderBF borderRad10 bike_pd_box">
+                                        <!-- 이미지 -->
+                                        <div class="imgArea borderRad15 bgImg borderBF"></div>
+                                        <!-- 정보 -->
+                                        <div class="infoArea">
+                                            <div class="tit borderBottom">
+                                                <!-- 바이크이름 -->
+                                                <p class="fontWeightBold">YZF-R6</p>
+                                                <!-- 종류 -->
+                                                <span class="borderRad50 newblue_txt fontWeightBold">레플리카</span>
+                                            </div>
+                                            <div class="txt">
+                                                <div class="b_filter">
+                                                    <!-- 제조사 -->
+                                                    <span class="fontWeightBold">야마하</span>
+                                                    <!-- 배기량 -->
+                                                    <span class="fontWeightBold">599cc</span>
+                                                    <!-- 변속기 -->
+                                                    <span class="fontWeightBold">수동</span>
+                                                    <!-- 연료 -->
+                                                    <span class="fontWeightBold">휘발유</span>
+                                                </div>
+                                                <!-- 대여소 -->
+                                                <p class="ad_store fontWeight500"><i class="bgImg"></i>전북 전주시 백스토크 대여소</p>
+                                                <!-- 가격 -->
+                                                <div class="price_txt">
+                                                    <p class="price newblue_txt fontWeightBold">1시간 <span class="newblue_txt">40,000 ₩</span></p>
+                                                    <p class="price newblue_txt fontWeightBold">1일 <span class="newblue_txt">150,000 ₩</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="bike_detail.html">
+                                    <div class="borderBF borderRad10 bike_pd_box">
+                                        <!-- 이미지 -->
+                                        <div class="imgArea borderRad15 bgImg borderBF"></div>
+                                        <!-- 정보 -->
+                                        <div class="infoArea">
+                                            <div class="tit borderBottom">
+                                                <!-- 바이크이름 -->
+                                                <p class="fontWeightBold">YZF-R6</p>
+                                                <!-- 종류 -->
+                                                <span class="borderRad50 newblue_txt fontWeightBold">레플리카</span>
+                                            </div>
+                                            <div class="txt">
+                                                <div class="b_filter">
+                                                    <!-- 제조사 -->
+                                                    <span class="fontWeightBold">야마하</span>
+                                                    <!-- 배기량 -->
+                                                    <span class="fontWeightBold">599cc</span>
+                                                    <!-- 변속기 -->
+                                                    <span class="fontWeightBold">수동</span>
+                                                    <!-- 연료 -->
+                                                    <span class="fontWeightBold">휘발유</span>
+                                                </div>
+                                                <!-- 대여소 -->
+                                                <p class="ad_store fontWeight500"><i class="bgImg"></i>전북 전주시 백스토크 대여소</p>
+                                                <!-- 가격 -->
+                                                <div class="price_txt">
+                                                    <p class="price newblue_txt fontWeightBold">1시간 <span class="newblue_txt">40,000 ₩</span></p>
+                                                    <p class="price newblue_txt fontWeightBold">1일 <span class="newblue_txt">150,000 ₩</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <!-- 이용후기 -->
+                      <div role="tabpanel" class="tab-pane" id="review">
+                        <div class="review_list">
+                            <div class="list_group">
+                                <a href="review_detail.html">
+                                    <div class="list_box borderBottom borderTop">
+                                        <div class="txtArea">
+                                            <div class="txtHead">
+                                                <!-- 글제목 -->
+                                                <h2 class="fontWeightBold">진짜 재밌었어요!</h2>
+                                                <!-- 댓글수 -->
+                                                <span class="fontWeightBold">[5]</span>
+                                                <div class="labelArea">
+                                                    <!-- 지역 라벨 -->
+                                                    <span class="label label-success">전북</span>
+                                                    <!-- 대여소 라벨 -->
+                                                    <span class="label label-primary">맥스토크 대여소</span>
+                                                </div>
+                                            </div>
+                                            <!-- 글내용 최대 2줄 노출 -->
+                                            <div class="txtCont">
+                                                <p class="fontWeight500">친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요! 친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요</p>
+                                            </div>
+                                            <div class="txtFoot">
+                                                <!-- 글 정보 -->
+                                                <div class="re_info">
+                                                    <p class="name"><i class="bgImg"></i>놀라운노움</p>
+                                                    <span class="date">오늘</span>
+                                                    <div class="star-ratings">
+                                                        <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
+                                                        <!-- 별 5개 -->
+                                                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                        <div class="star-ratings-base space-x-2 text-lg">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <!-- 태그 -->
+                                                 <div class="tagArea">
+                                                    <a href=""># 드라이브</a>
+                                                    <a href=""># 관광지</a>
+                                                    <a href=""># 식당</a>
+                                                    <a href=""># 카페</a>
+                                                    <a href=""># 공원</a>
+                                                    <a href=""># 주차장</a>
+                                                    <a href=""># 숙박</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgArea bgImg"></div>
+                                    </div>
+                                </a>
+                                <a href="review_detail.html">
+                                    <div class="list_box borderBottom">
+                                        <div class="txtArea">
+                                            <div class="txtHead">
+                                                <!-- 글제목 -->
+                                                <h2 class="fontWeightBold">진짜 재밌었어요!</h2>
+                                                <!-- 댓글수 -->
+                                                <span class="fontWeightBold">[5]</span>
+                                                <div class="labelArea">
+                                                    <!-- 지역 라벨 -->
+                                                    <span class="label label-success">전북</span>
+                                                    <!-- 대여소 라벨 -->
+                                                    <span class="label label-primary">맥스토크 대여소</span>
+                                                    <!-- 바이크 라벨 -->
+                                                    <span class="label label-danger">YZF-R6</span>
+                                                </div>
+                                            </div>
+                                            <!-- 글내용 최대 2줄 노출 -->
+                                            <div class="txtCont">
+                                                <p class="fontWeight500">친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요! 친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요</p>
+                                            </div>
+                                            <div class="txtFoot">
+                                                <!-- 글 정보 -->
+                                                <div class="re_info">
+                                                    <p class="name"><i class="bgImg"></i>놀라운노움</p>
+                                                    <span class="date">오늘</span>
+                                                    <div class="star-ratings">
+                                                        <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
+                                                        <!-- 별 5개 -->
+                                                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                        <div class="star-ratings-base space-x-2 text-lg">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <!-- 태그 -->
+                                                 <div class="tagArea">
+                                                    <a href=""># 드라이브</a>
+                                                    <a href=""># 관광지</a>
+                                                    <a href=""># 식당</a>
+                                                    <a href=""># 카페</a>
+                                                    <a href=""># 공원</a>
+                                                    <a href=""># 주차장</a>
+                                                    <a href=""># 숙박</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgArea bgImg"></div>
+                                    </div>
+                                </a>
+                                <a href="review_detail.html">
+                                    <div class="list_box borderBottom">
+                                        <div class="txtArea">
+                                            <div class="txtHead">
+                                                <!-- 글제목 -->
+                                                <h2 class="fontWeightBold">진짜 재밌었어요!</h2>
+                                                <!-- 댓글수 -->
+                                                <span class="fontWeightBold">[5]</span>
+                                                <div class="labelArea">
+                                                    <!-- 지역 라벨 -->
+                                                    <span class="label label-success">전북</span>
+                                                    <!-- 대여소 라벨 -->
+                                                    <span class="label label-primary">맥스토크 대여소</span>
+                                                    <!-- 바이크 라벨 -->
+                                                    <span class="label label-danger">YZF-R6</span>
+                                                </div>
+                                            </div>
+                                            <!-- 글내용 최대 2줄 노출 -->
+                                            <div class="txtCont">
+                                                <p class="fontWeight500">친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요! 친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요</p>
+                                            </div>
+                                            <div class="txtFoot">
+                                                <!-- 글 정보 -->
+                                                <div class="re_info">
+                                                    <p class="name"><i class="bgImg"></i>놀라운노움</p>
+                                                    <span class="date">오늘</span>
+                                                    <div class="star-ratings">
+                                                        <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
+                                                        <!-- 별 5개 -->
+                                                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                        <div class="star-ratings-base space-x-2 text-lg">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <!-- 태그 -->
+                                                 <div class="tagArea">
+                                                    <a href=""># 드라이브</a>
+                                                    <a href=""># 관광지</a>
+                                                    <a href=""># 식당</a>
+                                                    <a href=""># 카페</a>
+                                                    <a href=""># 공원</a>
+                                                    <a href=""># 주차장</a>
+                                                    <a href=""># 숙박</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgArea bgImg"></div>
+                                    </div>
+                                </a>
+                                <a href="review_detail.html">
+                                    <div class="list_box borderBottom">
+                                        <div class="txtArea">
+                                            <div class="txtHead">
+                                                <!-- 글제목 -->
+                                                <h2 class="fontWeightBold">진짜 재밌었어요!</h2>
+                                                <!-- 댓글수 -->
+                                                <span class="fontWeightBold">[5]</span>
+                                                <div class="labelArea">
+                                                    <!-- 지역 라벨 -->
+                                                    <span class="label label-success">전북</span>
+                                                    <!-- 대여소 라벨 -->
+                                                    <span class="label label-primary">맥스토크 대여소</span>
+                                                </div>
+                                            </div>
+                                            <!-- 글내용 최대 2줄 노출 -->
+                                            <div class="txtCont">
+                                                <p class="fontWeight500">친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요! 친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요</p>
+                                            </div>
+                                            <div class="txtFoot">
+                                                <!-- 글 정보 -->
+                                                <div class="re_info">
+                                                    <p class="name"><i class="bgImg"></i>놀라운노움</p>
+                                                    <span class="date">오늘</span>
+                                                    <div class="star-ratings">
+                                                        <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
+                                                        <!-- 별 5개 -->
+                                                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                        <div class="star-ratings-base space-x-2 text-lg">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <!-- 태그 -->
+                                                 <div class="tagArea">
+                                                    <a href=""># 드라이브</a>
+                                                    <a href=""># 관광지</a>
+                                                    <a href=""># 식당</a>
+                                                    <a href=""># 카페</a>
+                                                    <a href=""># 공원</a>
+                                                    <a href=""># 주차장</a>
+                                                    <a href=""># 숙박</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgArea bgImg"></div>
+                                    </div>
+                                </a>
+                                <a href="review_detail.html">
+                                    <div class="list_box borderBottom">
+                                        <div class="txtArea">
+                                            <div class="txtHead">
+                                                <!-- 글제목 -->
+                                                <h2 class="fontWeightBold">진짜 재밌었어요!</h2>
+                                                <!-- 댓글수 -->
+                                                <span class="fontWeightBold">[5]</span>
+                                                <div class="labelArea">
+                                                    <!-- 지역 라벨 -->
+                                                    <span class="label label-success">전북</span>
+                                                    <!-- 대여소 라벨 -->
+                                                    <span class="label label-primary">맥스토크 대여소</span>
+                                                </div>
+                                            </div>
+                                            <!-- 글내용 최대 2줄 노출 -->
+                                            <div class="txtCont">
+                                                <p class="fontWeight500">친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요! 친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요</p>
+                                            </div>
+                                            <div class="txtFoot">
+                                                <!-- 글 정보 -->
+                                                <div class="re_info">
+                                                    <p class="name"><i class="bgImg"></i>놀라운노움</p>
+                                                    <span class="date">오늘</span>
+                                                    <div class="star-ratings">
+                                                        <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
+                                                        <!-- 별 5개 -->
+                                                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                        <div class="star-ratings-base space-x-2 text-lg">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <!-- 태그 -->
+                                                 <div class="tagArea">
+                                                    <a href=""># 드라이브</a>
+                                                    <a href=""># 관광지</a>
+                                                    <a href=""># 식당</a>
+                                                    <a href=""># 카페</a>
+                                                    <a href=""># 공원</a>
+                                                    <a href=""># 주차장</a>
+                                                    <a href=""># 숙박</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgArea bgImg"></div>
+                                    </div>
+                                </a>
+                                <a href="review_detail.html">
+                                    <div class="list_box borderBottom">
+                                        <div class="txtArea">
+                                            <div class="txtHead">
+                                                <!-- 글제목 -->
+                                                <h2 class="fontWeightBold">진짜 재밌었어요!</h2>
+                                                <!-- 댓글수 -->
+                                                <span class="fontWeightBold">[5]</span>
+                                                <div class="labelArea">
+                                                    <!-- 지역 라벨 -->
+                                                    <span class="label label-success">전북</span>
+                                                    <!-- 대여소 라벨 -->
+                                                    <span class="label label-primary">맥스토크 대여소</span>
+                                                    <!-- 바이크 라벨 -->
+                                                    <span class="label label-danger">YZF-R6</span>
+                                                </div>
+                                            </div>
+                                            <!-- 글내용 최대 2줄 노출 -->
+                                            <div class="txtCont">
+                                                <p class="fontWeight500">친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요! 친절하고 꼼꼼히 확인해주셔서 기분 좋았어요 강추입니다 두번 가세요 세번 가세요</p>
+                                            </div>
+                                            <div class="txtFoot">
+                                                <!-- 글 정보 -->
+                                                <div class="re_info">
+                                                    <p class="name"><i class="bgImg"></i>놀라운노움</p>
+                                                    <span class="date">오늘</span>
+                                                    <div class="star-ratings">
+                                                        <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
+                                                        <!-- 별 5개 -->
+                                                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                        <div class="star-ratings-base space-x-2 text-lg">
+                                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <!-- 태그 -->
+                                                 <div class="tagArea">
+                                                    <a href=""># 드라이브</a>
+                                                    <a href=""># 관광지</a>
+                                                    <a href=""># 식당</a>
+                                                    <a href=""># 카페</a>
+                                                    <a href=""># 공원</a>
+                                                    <a href=""># 주차장</a>
+                                                    <a href=""># 숙박</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgArea bgImg"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pagenation & write btn -->
+                            <div class="board_bt_btn">
+                                <nav>
+                                    <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                </nav>
+                                <div class="writebtn">
+                                    <a href="review_write.html"><button class="lineblue_btn">글쓰기</button></a>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <!-- 대여안내 -->
+                      <div role="tabpanel" class="tab-pane" id="guide">
+                          <div class="guideWrap">
+                            <div class="box box05 overflowHidden">
+                                <div class="rightArea">
+                                    <table class="w100p borderRad15 overflowHidden">
+                                        <tr>
+                                            <th>01</th>
+                                            <td>운전시 고객님의 안전을 보호하기 위하여 항상 헬멧을 착용하여 주세요.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>02</th>
+                                            <td>초기 운행에 필요한 연료는 제공해 드리며 이 후 운행에 필요한 연료는 본인 부담입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>03</th>
+                                            <td>반납시 대여할 때의 연료량을 맞추지 않으셔도 되며 초과된 연료에 대한 비용은 환불되지 않습니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>04</th>
+                                            <td>대여시 제공된 모든 물품(스마트폰 거치대 및 기타 물품)은 파손 없이 사용하시고 반납 부탁드립니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>05</th>
+                                            <td>대여중 발생한 교통법규 위반은 모두 고객님께서 책임을 지셔야 합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>06</th>
+                                            <td>대여중 바이크의 파손(외관 흠집, 타이어 펑크, 장치의 작동 불량)에 대해서는 유상으로 처리 됩니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>07</th>
+                                            <td>
+                                                고객님의 귀책사유로 사고가 발생시,<br>
+                                                사고차량의 수리비와 수리 기간동안의 휴차보상료가 청구될 수 있니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>08</th>
+                                            <td>고객님 과실로 운행 불가에 따른 운송료는 고객님 부담이 될 수 있습니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>09</th>
+                                            <td>
+                                                무더운 여름철 장시간 주행은 엔진에 많은 무리를 주게됩니다.<br>
+                                                안전한 운행을 위해 장시간 연속주행을 삼가해주세요.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>10</th>
+                                            <td>
+                                                너무 무거운 짐을 싣거나 노면의 요철, 과속방지턱 등을 빠른 속도로 통과 할 경우<br>
+                                                쇼바가 파손 될 우려가 있습니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>11</th>
+                                            <td>자차 보험에 대해서는 렌탈업체에서 자체적으로 운영중인 보험에 별도로 가입하실 수 있습니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>12</th>
+                                            <td>긴급출동 및 견인 서비스 등 용달로 픽업이 필요한 경우 별도의 비용이 청구 될 수 있습니다.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer w100p">
+            <div class="Container">
+                <div class="leftArea">
+                    <div class="logo_ft">
+                        <img src="images/rb_w_ft.png" alt="마이렌탈바이크">
+                    </div>
+                    <div class="txt_ft">
+                        <ul>
+                            <li class="white">맥스토크 ｜ 관리자:임성용</li>
+                            <li class="white">Tel:010-4952-0134 ｜ E-mail:admin@rentalbike.kr</li>
+                            <li class="white">주소:전북 전주시 완산구 풍남문4길 25-26 813호</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rightArea">
+                    <ul>
+                        <li><a href="https://www.instagram.com/myrental_bike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.facebook.com/myrentalbike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://blog.naver.com/biz9ine"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC3IQigWXcYpJRCFWPMqM9KQ/featured"><span class="bgImg"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

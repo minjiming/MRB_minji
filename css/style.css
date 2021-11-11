@@ -468,7 +468,7 @@
 /* 목적지 찾기 */
 /* 목적지 찾기 - tab */
 .find-tabs {border-bottom: 1px solid #bfbfbf;}
-.find-tabs>li>a {font-size: 16px; width: 230px; height: 42px; border: 1px solid #bfbfbf; border-radius: 0; margin-right: 0; color: #bfbfbf;}
+.find-tabs>li>a {font-size: 16px; width: 230px; height: 42px; padding: 10px 20px; border: 1px solid #bfbfbf; border-radius: 0; margin-right: 0; color: #bfbfbf;}
 .find-tabs>li.active>a, .find-tabs>li.active>a:focus, .find-tabs>li.active>a:hover {font-weight: bold; border: 1px solid #bfbfbf; border-bottom-color: transparent;}
 .find-tabs>li:first-of-type.active>a, .find-tabs>li:first-of-type.active .fa-map-marker-alt:before {color: #ff7e7e;}
 .find-tabs>li>a i {margin-right: 20px; opacity: .3; font-size: 20px;}
@@ -602,17 +602,17 @@
 .dtWrap .fileArea ul li {margin-bottom: 15px;}
 .dtWrap .fileArea ul li:last-of-type {margin-bottom: 0;}
 .dtWrap .fileArea ul li span {color: #bfbfbf; margin-left: 15px;}
-.dtWrap .snb_info {background-color: #f7f8fa; padding: 20px 25px; margin-top: 20px; display: flex; justify-content: space-between;}
-.dtWrap .snb_info .info_tit {display: flex; align-items: baseline; width: 30%;}
-.dtWrap .snb_info .info_tit h5 {font-size: 18px; max-width: 66%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-.dtWrap .snb_info .info_tit a {margin-left: 12px; padding-left: 12px; color: #a3a3a3;}
-.dtWrap .snb_info .info_tit a i {color: #6d89ec; margin-right: 5px;}
-.dtWrap .snb_info .info_cont {width: 66%;}
-.dtWrap .snb_info .info_cont table th { color: #a3a3a3; padding: 10px 0; width: 12%;}
-.dtWrap .snb_info .info_cont table tr:first-of-type th {padding-top: 0;}
-.dtWrap .snb_info .info_cont table tr:last-of-type th {padding-bottom: 0;}
-.dtWrap .snb_info .info_cont table td {font-weight: bold;}
-.dtWrap .bike_info .info_cont table td {width: 21%;}
+.snb_info_box {background-color: #f7f8fa; padding: 20px 25px; margin-top: 20px; display: flex; justify-content: space-between;}
+.snb_info_box .info_tit {display: flex; align-items: baseline; width: 30%;}
+.snb_info_box .info_tit h5 {font-size: 18px; max-width: 66%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.snb_info_box .info_tit a {margin-left: 12px; padding-left: 12px; color: #a3a3a3;}
+.snb_info_box .info_tit a i {color: #6d89ec; margin-right: 5px;}
+.snb_info_box .info_cont {width: 66%;}
+.snb_info_box .info_cont table th { color: #a3a3a3; padding: 10px 0; width: 12%;}
+.snb_info_box .info_cont table tr:first-of-type th {padding-top: 0;}
+.snb_info_box .info_cont table tr:last-of-type th {padding-bottom: 0;}
+.snb_info_box .info_cont table td {font-weight: bold;}
+.bike_info_box .info_cont table td {width: 21%;}
 .dtWrap .contArea {padding: 25px 20px; line-height: 1.6; font-size: 1.15em;}
 .dtWrap .contArea img {max-width: 100%;}
 .dtWrap .contArea .tagArea {margin-top: 35px;}
@@ -807,7 +807,7 @@
 .loginWrap .mg_cont .contHead .check_del {display: flex; align-items: center;}
 .loginWrap .mg_cont .contHead .check_del label {margin-left: 5px; margin-right: 15px;}
 .loginWrap .mg_cont .contHead .check_del button {color: #bfbfbf; padding: 3px 10px;}
-.loginWrap .mg_cont .contHead .up_product button {height: 42px; width: 120px; font-size: 15px; background-color: #4e6bd3;}
+.up_product button {height: 42px; width: 120px; font-size: 15px; background-color: #4e6bd3;}
 .contCont {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;}
 .contCont .shop_info_wrap {width: 315px; text-align: left; margin-top: 15px;}
 .contCont i {display: inline-block; margin-right: 5px;}
@@ -816,12 +816,75 @@
 
 /* 바이크 관리 */
 .ContainerMybike {width: 880px; margin: auto;}
-.loginWrap .mg_cont .contHead .up_product {display: flex; align-items: center;}
-.loginWrap .mg_cont .contHead .up_product select {width: 180px; height: 42px; border: 1px solid #3c3c3c; font-weight: bold; padding: 0 20px; font-size: 15px; background-image: url(../images/arrow_down.png); background-position: 90% center; background-size: 9px; opacity: .4; margin-right: 8px;}
-.loginWrap .mg_cont .bike_pd_box {width: 405px; margin-top: 15px;}
-.loginWrap .mg_cont .bike_pd_box .infoArea {width: 56%; text-align: left;}
-.loginWrap .mg_cont .bike_pd_box .infoArea .tit span {padding: 0px 10px 2px; margin-right: 5px;}
-.loginWrap .mg_cont .bike_pd_box .infoArea i {vertical-align: middle;}
+.up_product {display: flex; align-items: center;}
+.up_product select {width: 180px; height: 42px; border: 1px solid #3c3c3c; font-weight: bold; padding: 0 20px; font-size: 15px; background-image: url(../images/arrow_down.png); background-position: 90% center; background-size: 9px; opacity: .4; margin-right: 8px;}
+.mg_cont .bike_pd_box {width: 405px; margin-top: 15px;}
+.mg_cont .bike_pd_box .infoArea {width: 56%; text-align: left;}
+.mg_cont .bike_pd_box .infoArea .tit p {font-size: 16px;}
+.mg_cont .bike_pd_box .infoArea .tit span {padding: 0px 10px 2px; margin-right: 5px;}
+.mg_cont .bike_pd_box .infoArea i {vertical-align: middle;}
+.mg_cont .bike_pd_box .infoArea .txt {margin-top: 10px;}
+.mg_cont .bike_pd_box .infoArea .txt .b_filter span {font-size: 13px;}
+.mg_cont .bike_pd_box .infoArea .txt .ad_store {font-size: 13px;}
+.mg_cont .bike_pd_box .infoArea .txt .price_txt {font-size: 15px;}
+
+
+
+/* 대여소 상세보기 */
+.rent_detail_wrap {margin-top: 13%; background-color: #fff;}
+.up_product.head_space {justify-content: space-between;}
+.up_product.head_space a:first-of-type button {background-color: #fff; border: 1px solid #4e6bd3; color: #4e6bd3;}
+.rent_detail_box {display: flex; justify-content: space-between; padding: 50px 40px; margin: 15px 0 100px;}
+.shop_detail_box .leftArea {width: 45%;}
+.shop_detail_box .leftArea i {display: inline-block; margin-right: 15px;}
+.shop_detail_box .leftArea .card_cont {padding: 0;}
+.shop_detail_box .leftArea .card_cont .card_info p:nth-of-type(3) i {background-image: url(../images/time_icon.png);}
+.shop_detail_box .leftArea .card_cont .card_head {padding-bottom: 17px; margin-bottom: 30px;}
+.shop_detail_box .leftArea .card_cont .card_head .areaName {font-size: 18px;}
+.shop_detail_box .leftArea .card_cont .card_head h4 {font-size: 28px;}
+.shop_detail_box .leftArea .card_cont .card_info {font-size: 16px;}
+.shop_detail_box .leftArea .card_cont .card_info p {margin-bottom: 25px;}
+.shop_detail_box .leftArea .card_cont .card_info span {padding-left: 25px; display: block; line-height: 1.4; font-size: 15px;}
+.shop_detail_box .rightArea {width: 510px; height: 345px;}
+/* 대여소 상세보기 - tab */
+.s_d_tab_cont .find-tabs>li>a i {margin-right: 15px;} 
+.s_d_tab_cont .find-tabs>li.active>a, .s_d_tab_cont .find-tabs>li.active i {color: #597af4;}
+/* 대여소 상세보기 - content */
+.s_d_tab_cont .tab-pane .bike_pd_box {width: 550px; margin-top: 40px;}
+.s_d_tab_cont .tab-pane .bike_pd_box .imgArea {width: 150px; height: 150px;}
+.s_d_tab_cont .tab-pane .bike_pd_box .infoArea {width: 64%;}
+.s_d_tab_cont .tab-pane .bike_pd_box .infoArea .tit {padding-bottom: 10px;}
+.s_d_tab_cont .tab-pane .bike_pd_box .infoArea .tit span {padding: 3px 10px 4px;}
+.s_d_tab_cont .tab-pane .bike_pd_box .infoArea .txt {margin-top: 13px;}
+.s_d_tab_cont .tab-pane .bike_pd_box .infoArea .ad_store {margin-top: 10px;}
+.s_d_tab_cont .tab-pane .bike_pd_box .infoArea .txt .price_txt {margin-top: 15px;}
+.s_d_tab_cont .guideWrap {margin-top: 50px;}
+.s_d_tab_cont .guideWrap .box .rightArea {float: none; margin: auto;}
+
+
+
+/* 바이크 상세보기 */
+.bike_detail_box {margin: 15px 0 30px;}
+.rent_detail_wrap .snb_info_box {margin-bottom: 100px;}
+.s_d_tab_cont h4 {font-size: 22px; padding-bottom: 20px;}
+.bike_detail_box .leftArea {width: 500px; height: 500px;}
+.bike_detail_box .rightArea {width: 48%;}
+.bike_detail_box .rightArea .boxHead .shopName {margin-bottom: 3px;}
+.bike_detail_box .rightArea .boxHead .shopName span {color: #bfbfbf;}
+.bike_detail_box .rightArea .boxHead .tit {display: flex; align-items: center;}
+.bike_detail_box .rightArea .boxHead .tit h4 {font-size: 25px;}
+.bike_detail_box .rightArea .boxHead .tit span {border: 1px solid #4a69de; padding: 4px 10px; font-size: 13px; margin-left: 15px;}
+.bike_detail_box .rightArea .boxCont {background-color: #f9f9f9; margin-top: 30px; padding: 30px 40px;}
+.bike_detail_box .rightArea .boxCont table {line-height: 2;}
+.bike_detail_box .rightArea .boxCont table th {color: #bfbfbf; width: 22%;}
+.bike_detail_box .rightArea .boxCont .ad_explan {margin-top: 40px; line-height: 1.4;}
+.bike_detail_box .rightArea .boxCont .ad_explan h5 {margin-bottom: 15px;}
+.bike_detail_box .rightArea .boxCont .ad_explan span {display: block; margin-top: 20px;}
+.bike_detail_box .rightArea .boxCont .price_txt {text-align: right; font-size: 18px; line-height: 1.5; padding-top: 13px; margin-top: 20px;}
+/* 바이크 임시 썸네일 */
+.bike_detail_box .leftArea .imgArea {background-image: url(../images/exam/ex_bike.jpg);}
+
+
 
 
 
