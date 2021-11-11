@@ -83,7 +83,7 @@
                             <li><a href="community.html">커뮤니티</a></li>
                         </ul>
                         <!-- 로그인 전 노출 -->
-                        <div class="loginBox">
+                        <div class="loginBox" style="display: none;">
                             <ul>
                                 <li><a href="login.html">로그인</a></li> 
                                 <li><a href="signin.html">회원가입</a></li> 
@@ -91,12 +91,12 @@
                         </div>
                         <!-- 로그인 후 노출 -->
                         <!-- navbar-right-dropdown -->
-                        <div class="dropdown" style="display: none;">
+                        <div class="dropdown">
                             <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 사용자 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                <li><a class="newblue" href="mypage.html">마이페이지</a></li>
+                                <li class="on"><a class="newblue" href="mypage.html">마이페이지</a></li>
                                 <li><a class="newblue" href="management_shop.html">대여소 관리</a></li>
                                 <li><a class="newblue" href="management_bike.html">바이크 관리</a></li>
                                 <li><a class="newblue" href="">로그아웃</a></li>

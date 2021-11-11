@@ -24,11 +24,12 @@
 .navbar-btns .loginBox ul li.on a {color: #19b39b; font-weight: bold;}
 .navbar-btns .dropdown {padding-left: 50px;}
 .navbar-btns .open>.dropdown-menu {margin: 15px 0 0; text-align: center; padding: 0; min-width: 120px; border-radius: 7px;}
-.navbar-btns .open>.dropdown-menu li:first-of-type {border-bottom: 1px solid #ddd;}
+.navbar-btns .open>.dropdown-menu li {border-bottom: 1px solid #ddd;}
+.navbar-btns .open>.dropdown-menu li:last-of-type {border-bottom: 0;}
 .navbar-btns .open>.dropdown-menu>li>a {padding: 10px 20px; font-size: 13px;}
 .navbar-btns .open>.dropdown-menu li:first-of-type a {border-top-left-radius: 7px; border-top-right-radius: 7px;}
 .navbar-btns .open>.dropdown-menu li:last-of-type a {border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;}
-.navbar-btns .open>.dropdown-menu>li>a:hover, .navbar-btns .open>.dropdown-menu>li>a:hover {background-color: #3d66ff; background-image: none; color: #fff !important;}
+.navbar-btns .open>.dropdown-menu>li.on>a, .navbar-btns .open>.dropdown-menu>li>a:hover, .navbar-btns .open>.dropdown-menu>li>a:hover {background-color: #3d66ff; background-image: none; color: #fff !important;}
 
 
 
@@ -393,20 +394,20 @@
 .list_panel>p {padding: 15px 25px; color: #a0a1a2;}
 /* bike_list overflow scroll 안됨 list_panel의 고정 height값 필요한듯 */
 /* .list_panel .bike_list {height: 100%;} */
-.list_panel .bike_list .pd_box {padding: 20px 25px; display: flex; justify-content: space-between;}
-.list_panel .bike_list .pd_box:hover {background-color: #e7f1ff;}
-.list_panel .bike_list .pd_box .imgArea {width: 130px; height: 130px;}
-.list_panel .bike_list .pd_box .infoArea {width: 62%;}
-.list_panel .bike_list .pd_box .infoArea .tit {display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px;}
-.list_panel .bike_list .pd_box .infoArea .tit p {font-size: 18px;}
-.list_panel .bike_list .pd_box .infoArea .tit span {font-size: 12px; border: 1px solid #597af4; padding: 4px 10px;}
-.list_panel .bike_list .pd_box .infoArea .txt {margin-top: 8px;}
-.list_panel .bike_list .pd_box .infoArea .txt .b_filter span {margin: 0 3px; font-size: 15px;}
-.list_panel .bike_list .pd_box .infoArea .txt .ad_store {color: #aaa; margin-top: 6px;}
-.list_panel .bike_list .pd_box .infoArea .txt .ad_store i {background-image: url(../images/store_icon.png); width: 20px; height: 20px;}
-.list_panel .bike_list .pd_box .infoArea .txt .price_txt {font-size: 16px; text-align: right; line-height: 1.3; margin-top: 11px;}
+.bike_pd_box {padding: 20px 25px; display: flex; justify-content: space-between;}
+.bike_pd_box:hover {background-color: #e7f1ff;}
+.bike_pd_box .imgArea {width: 130px; height: 130px;}
+.bike_pd_box .infoArea {width: 62%;}
+.bike_pd_box .infoArea .tit {display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px;}
+.bike_pd_box .infoArea .tit p {font-size: 18px;}
+.bike_pd_box .infoArea .tit span {font-size: 12px; border: 1px solid #597af4; padding: 4px 10px;}
+.bike_pd_box .infoArea .txt {margin-top: 8px;}
+.bike_pd_box .infoArea .txt .b_filter span {margin: 0 3px; font-size: 15px;}
+.bike_pd_box .infoArea .txt .ad_store {color: #aaa; margin-top: 6px;}
+.bike_pd_box .infoArea .txt .ad_store i {background-image: url(../images/store_icon.png); width: 20px; height: 20px;}
+.bike_pd_box .infoArea .txt .price_txt {font-size: 16px; text-align: right; line-height: 1.3; margin-top: 11px;}
 /* 바이크 임시 썸네일 */
-.list_panel .bike_list .imgArea {background-image: url(../images/exam/ex_bike.jpg);}
+.bike_pd_box .imgArea {background-image: url(../images/exam/ex_bike.jpg);}
 
 /* 지도 영역 */
 /* 임시 지도 */
@@ -418,15 +419,14 @@
 .st_map .str_card_wrap::after {content: ''; position: absolute; border-style: solid; border-width: 15px 11px 0 11.5px; border-color: #597af4 transparent; display: block; width: 0; z-index: 1; bottom: -15px; left: 44%;}
 .st_map .str_card_wrap::before {content: ''; position: absolute; border-style: solid; border-width: 15px 11px 0 11.5px; border-color: #bfbfbf transparent; display: block; width: 0; z-index: 0; bottom: -17px; left: 44%;}
 /* .st_map .card_head .areaName .line {background-color: #ddd; height: 1px; width: 59%;} */
-.st_map .card_head h4 {font-size: 20px;}
-.st_map .card_cont {padding: 25px 20px 25px; font-size: 15px;}
-.st_map .card_cont .card_head {padding-bottom: 15px; margin-bottom: 15px;}
-.st_map .card_cont .card_head .areaName {display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 15px;}
-.st_map .card_cont .card_info p {margin-bottom: 15px;}
-.st_map .card_cont .card_info p i {width: 14px; height: 14px; text-align: center;}
-.st_map .card_cont .card_info p:nth-of-type(2) i {background-image: url(../images/time_icon.png);}
-.st_map .card_cont .card_info p:nth-of-type(3) i {background-image: url(../images/off_icon.png);}
-.st_map .card_foot {background-color: #597af4; text-align: center; padding: 15px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
+.card_head h4 {font-size: 20px;}
+.card_cont {padding: 25px 20px 25px; font-size: 15px;}
+.card_cont .card_head {padding-bottom: 15px; margin-bottom: 15px;}
+.card_cont .card_head .areaName {display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 15px;}
+.card_cont .card_info p {margin-bottom: 15px;}
+.card_cont .card_info p i {width: 14px; height: 14px; text-align: center;}
+.card_cont .card_info p:nth-of-type(2) i {background-image: url(../images/time_icon.png);}
+.card_foot {background-color: #597af4; text-align: center; padding: 15px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
 
 
 
@@ -795,6 +795,33 @@
 .loginWrap .lg_cont .re_pw_link button {border: 1px solid #4e6bd3; color: #4e6bd3; height: 42px; margin: 15px 0 25px;}
 .loginWrap .mem_out_btn {padding: 20px 40px; text-align: left;}
 .loginWrap .mem_out_btn button {margin-bottom: 0; background-color: #fff; color: #bfbfbf; font-size: 14px; padding: 5px 15px;}
+
+
+
+
+/* 대여소 관리 */
+.ContainerMyshop {width: 700px; margin: auto;}
+.loginWrap .mg_cont {padding: 25px;}
+.loginWrap .mg_cont input[type="checkbox"] {width: 14px; height: 14px; margin-top: 0;}
+.loginWrap .mg_cont .contHead {display: flex; justify-content: space-between; align-items: center; margin-top: 10px;}
+.loginWrap .mg_cont .contHead .check_del {display: flex; align-items: center;}
+.loginWrap .mg_cont .contHead .check_del label {margin-left: 5px; margin-right: 15px;}
+.loginWrap .mg_cont .contHead .check_del button {color: #bfbfbf; padding: 3px 10px;}
+.loginWrap .mg_cont .contHead .up_product button {height: 42px; width: 120px; font-size: 15px; background-color: #4e6bd3;}
+.contCont {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;}
+.contCont .shop_info_wrap {width: 315px; text-align: left; margin-top: 15px;}
+.contCont i {display: inline-block; margin-right: 5px;}
+
+
+
+/* 바이크 관리 */
+.ContainerMybike {width: 880px; margin: auto;}
+.loginWrap .mg_cont .contHead .up_product {display: flex; align-items: center;}
+.loginWrap .mg_cont .contHead .up_product select {width: 180px; height: 42px; border: 1px solid #3c3c3c; font-weight: bold; padding: 0 20px; font-size: 15px; background-image: url(../images/arrow_down.png); background-position: 90% center; background-size: 9px; opacity: .4; margin-right: 8px;}
+.loginWrap .mg_cont .bike_pd_box {width: 405px; margin-top: 15px;}
+.loginWrap .mg_cont .bike_pd_box .infoArea {width: 56%; text-align: left;}
+.loginWrap .mg_cont .bike_pd_box .infoArea .tit span {padding: 0px 10px 2px; margin-right: 5px;}
+.loginWrap .mg_cont .bike_pd_box .infoArea i {vertical-align: middle;}
 
 
 
