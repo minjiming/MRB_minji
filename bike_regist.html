@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- 오픈 그래프 -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="마이렌탈바이크">
+        <meta property="og:description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta property="og:image" content="images/common/rbicon.png">
+        <meta property="og:url" content="https://rentalbike.kr/">
+
+        <!-- bing은 xml로 대체 -->
+        <meta name="naver-site-verification" content="02805b5edd23aab251aa712194a9829b44f6a633"> <!-- naver -->
+        <meta name="google-site-verification" content="QuRSeSM0JKaS8OeovUQYa1hDRHgPJDaRTXz67ov3w-0"> <!-- google -->
+        <meta name="description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta name="keywords" content="맥스토크, 마이렌탈바이크, 당빠, 홈페이지, IT, 이륜차, 오토바이, 바이크, 라이더, 전국, 모터사이클, 중고, 신차, 구매, 관광지, 리스, 대여, 렌탈, 렌트, mrb">
+        <!-- 모바일용 화면크기 비율고정 -->
+        <meta id="mobileMeta" name="viewport" content="width=device-width">
+
+        <title>마이렌탈바이크</title>
+
+        <!-- 서비스 아이콘 -->
+        <link rel="canonical" href="https://rentalbike.kr/">
+        <link rel="shortcut icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+        <link rel="apple-touch-icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/jquery.datetimepicker.full.js"></script>
+        <!-- 어썸폰트 -->
+        <script src="https://kit.fontawesome.com/c184921f02.js" crossorigin="anonymous"></script>
+
+        <!-- Naver Analytics -->
+	    <script type="text/javascript" src="js/wcslog.js"></script>
+        <script type="text/javascript">
+            if(!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "8b08b84b8b1f38";
+            if(window.wcs) {
+                wcs_do();
+            }
+        </script>
+
+        <!-- nav 스크롤시 배경색 변경 -->
+        <script> 
+        $(document).scroll(function () { 
+            var $nav = $("#navHeader"); 
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height()); }); 
+        </script>
+
+        <!-- 이미지 업로드 -->
+        <script>
+            $(document).ready(function(){
+                var fileTarget = $('.filebox .upload-hidden');
+
+                    fileTarget.on('change', function(){
+                        if(window.FileReader){
+                            // 파일명 추출
+                            var filename = $(this)[0].files[0].name;
+                        } 
+
+                        else {
+                            // Old IE 파일명 추출
+                            var filename = $(this).val().split('/').pop().split('\\').pop();
+                        };
+
+                        $(this).siblings('.upload-name').val(filename);
+                    });
+
+                    //preview image 
+                    var imgTarget = $('.preview-image .upload-hidden');
+
+                    imgTarget.on('change', function(){
+                        var parent = $(this).parent();
+                        parent.children('.upload-display').remove();
+
+                        if(window.FileReader){
+                            //image 파일만
+                            if (!$(this)[0].files[0].type.match(/image\//)) return;
+                            
+                            var reader = new FileReader();
+                            reader.onload = function(e){
+                                var src = e.target.result;
+                                parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img src="'+src+'" class="upload-thumb"></div></div>');
+                            }
+                            reader.readAsDataURL($(this)[0].files[0]);
+                        }
+
+                        else {
+                            $(this)[0].select();
+                            $(this)[0].blur();
+                            var imgSrc = document.selection.createRange().text;
+                            parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img class="upload-thumb"></div></div>');
+
+                            var img = $(this).siblings('.upload-display').find('img');
+                            img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")";        
+                        }
+                    });
+                });
+
+        </script>
+    </head>
+    <body>
+        <!-- nav -->
+		<nav  id="navHeader" class="navbar-default navbar-fixed-top">
+            <div class="Container h100p">
+                <div class="navbar-head wh100p">
+                    <!-- navbar-left -->
+                    <div class="navbar-logo w100">
+                        <a href="main.html">
+                            <img class="w100p logonormal" src="images/rb_w_rv.png" alt="마이렌탈바이크">
+                            <img class="w100p logohover" src="images/rb_w.png" alt="마이렌탈바이크">
+                        </a>
+                    </div>
+                    <!-- navbar-right -->
+                    <div class="navbar-btns">
+                        <ul>
+                            <li><a href="guide.html">이용안내</a></li>
+                            <li><a href="searchs.html">바이크검색</a></li>
+                            <li><a href="contens.html">콘텐츠</a></li>
+                            <li><a href="community.html">커뮤니티</a></li>
+                        </ul>
+                        <!-- 로그인 전 노출 -->
+                        <div class="loginBox" style="display: none;">
+                            <ul>
+                                <li><a href="login.html">로그인</a></li> 
+                                <li class="on"><a href="signin.html">회원가입</a></li> 
+                            </ul>
+                        </div>
+                        <!-- 로그인 후 노출 -->
+                        <!-- navbar-right-dropdown -->
+                        <div class="dropdown">
+                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                사용자 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a class="newblue" href="mypage.html">마이페이지</a></li>
+                                <li><a class="newblue" href="management_shop.html">대여소 관리</a></li>
+                                <li><a class="newblue" href="management_bike.html">바이크 관리</a></li>
+                                <li><a class="newblue" href="">로그아웃</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- content -->
+        <div class="my_bgback">
+            <div class="Container600">
+                <div class="loginWrap boxShadow borderRad15 borderBF">
+                    <h2 class="borderBottom fontWeightBold">바이크 등록</h2>
+                    <div class="lg_cont">
+                        <div class="input_text">
+                            <!-- 바이크 분류 -->
+                            <div class="gender_form">
+                                <label for="bike_cate">바이크 분류</label>
+                                <div class="btn-group btn-group-toggle user-btn-group" id="bike_cate" data-toggle="buttons">
+                                    <label class="btn active borderRad20">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> 
+                                        <p>모터사이클</p>
+                                    </label>
+                                    <label class="btn borderRad20">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> 
+                                        <p>전기바이크</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 바이크 이미지 -->
+                            <label for="bike-image">바이크 이미지</label>
+                            <div class="filebox bike_thumb_filebox bs3-primary preview-image">
+                                <label for="input_file" class="borderRad20 white">업로드<i class="fas fa-arrow-up"></i></label> 
+                                <input type="file" id="input_file" class="upload-hidden"> 
+                                <input class="upload-name" value="선택된 이미지 없음" disabled="disabled">
+                            </div>
+                            <!-- 바이크 정보 -->
+                            <!-- 모터사이클 일 때 -->
+                            <div class="bikeInfo motorinfo">
+                                <!-- 모델명 -->
+                                <div class="bikeName_form bikeInfo_form">
+                                    <label for="bike_name">모델명</label>
+                                    <input type="text" id="bike_name" class="borderRad15 borderBF w100p" placeholder="디오">
+                                </div>
+                                <!-- 카테고리 -->
+                                <div class="bikeCate_form bikeInfo_form">
+                                    <label for="category">카테고리</label>
+                                    <select name="category" id="category" class="bgsNoReat w100p borderBF borderRad15">
+                                        <option value="all" selected="selected">종류</option>
+                                        <option value="sc">스쿠터</option>
+                                        <option value="eb">전동바이크</option>
+                                        <option value="ek">전동바이크</option>
+                                        <option value="at">전동킥보드</option>
+                                        <option value="re">ATV</option>
+                                        <option value="na">네이키드/스트리트</option>
+                                        <option value="to">투어러/크루즈</option>
+                                        <option value="am">아메리칸/모던</option>
+                                        <option value="of">어드벤처/오프로드</option>
+                                        <option value="un">언더본/비즈니스</option>
+                                        <option value="po">포켓/미니</option>
+                                        <option value="etc">기타</option>
+                                    </select>
+                                </div>
+                                <!-- 제조사 -->
+                                <div class="manufac_form bikeInfo_form">
+                                    <label for="manufacturer">제조사</label>
+                                    <select class="bgsNoReat w100p borderRad15 borderBF" name="manufacturer" id="manufacturer">
+                                        <option value="all" selected="selected">제조사 (전체)</option>
+                                        <option value="da">대림</option>
+                                        <option value="km">KR/S&amp;T/효성</option>
+                                        <option value="sy">SYM</option>
+                                        <option value="ho">혼다</option>
+                                        <option value="ya">야마하</option>
+                                        <option value="su">스즈키</option>
+                                        <option value="ka">가와사키</option>
+                                        <option value="ha">할리데이비슨</option>
+                                        <option value="bm">BMW</option>
+                                        <option value="be">베스파</option>
+                                        <option value="du">두카티</option>
+                                        <option value="etc">기타</option>
+                                    </select>
+                                </div>
+                                <!-- 변속기 -->
+                                <div class="trans_form bikeInfo_form">
+                                    <label for="transmission">변속기</label>
+                                    <select class="bgsNoReat w100p borderRad15 borderBF" name="transmission" id="transmission">
+                                        <option value="all" selected="selected">변속기 (전체)</option>
+                                        <option value="auto">자동</option>
+                                        <option value="manual">수동</option>
+                                    </select>
+                                </div>
+                                <!-- 연료 -->
+                                <div class="fuel_form bikeInfo_form">
+                                    <label for="fuel_type">연료</label>
+                                    <select class="bgsNoReat borderRad15 w100p borderBF" name="fuel_type" id="fuel_type">
+                                        <option value="all" selected="selected">연료 (전체)</option>
+                                        <option value="gasoline">휘발류</option>
+                                        <option value="electronic">전기</option>
+                                    </select>
+                                </div>
+                                <!-- 배기량 -->
+                                <div class="cc_form bikeInfo_form">
+                                    <label for="cc"> 배기량</label>
+                                    <select class="bgsNoReat borderRad15 borderBF w100p" name="cc" id="cc">
+                                        <option value="all" selected="selected">배기량 (전체)</option>
+                                        <option value="49">~ 49cc</option>
+                                        <option value="50100">50cc ~ 100cc</option>
+                                        <option value="101125">101cc ~ 125cc</option>
+                                        <option value="126260">126cc ~ 260cc</option>
+                                        <option value="261">261cc ~</option>
+                                    </select>
+                                </div>
+                            </div>
+                             <!-- 전기바이크 일 때 / 임시 display: none; -->
+                            <div class="bikeInfo elecInfo" style="display: none;">
+                                <!-- 모델명 -->
+                                <div class="bikeName_form w100p bikeInfo_form">
+                                    <label for="bike_name">모델명</label>
+                                    <input type="text" id="bike_name" class="borderRad15 borderBF" placeholder="디오">
+                                </div>
+                                <!-- 제조사 -->
+                                <div class="manufac_form bikeInfo_form">
+                                    <label for="manufacturer">제조사</label>
+                                    <select class="bgsNoReat w100p borderRad15 borderBF" name="manufacturer" id="manufacturer">
+                                        <option value="all" selected="selected">제조사 (전체)</option>
+                                        <option value="da">대림</option>
+                                        <option value="km">KR/S&amp;T/효성</option>
+                                        <option value="sy">SYM</option>
+                                        <option value="ho">혼다</option>
+                                        <option value="ya">야마하</option>
+                                        <option value="su">스즈키</option>
+                                        <option value="ka">가와사키</option>
+                                        <option value="ha">할리데이비슨</option>
+                                        <option value="bm">BMW</option>
+                                        <option value="be">베스파</option>
+                                        <option value="du">두카티</option>
+                                        <option value="etc">기타</option>
+                                    </select>
+                                </div>
+                                <!-- 변속기 -->
+                                <div class="trans_form bikeInfo_form">
+                                    <label for="transmission">변속기</label>
+                                    <select class="bgsNoReat w100p borderRad15 borderBF" name="transmission" id="transmission">
+                                        <option value="all" selected="selected">변속기 (전체)</option>
+                                        <option value="auto">자동</option>
+                                        <option value="manual">수동</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- 대여가격 (1시간) -->
+                            <div class="rental_check_form rental_check_hour">
+                                <label class="newblue_txt fontWeightBold" for="rental_check_hour">
+                                    <input id="rental_check_hour" class="borderRad15" name="rental_check_hour" type="checkbox">대여가격 (1시간)
+                                </label>
+                                <input type="text" class="borderBF w100p borderRad15" placeholder="20,000 (원/시간)">
+                            </div>
+                            <!-- 대여가격 (1일) -->
+                            <div class="rental_check_form rental_check_day">
+                                <label class="newblue_txt fontWeightBold" class="borderRad15" for="rental_check_day">
+                                    <input id="rental_check_day" name="rental_check_day" type="checkbox">대여가격 (1일)
+                                </label>
+                                <input type="text" class="borderBF w100p borderRad15" placeholder="100,000 (원/시간)">
+                            </div>
+                            <!-- 추가설명 -->
+                            <div class="ad_explan_form">
+                                <label for="ad_explan">추가설명 (최대 5줄)</label>
+                                <textarea class="noResize borderBF w100p borderRad15" name="ad_explan" id="ad_explan" onkeyup="limitTextarea(this, 5, 400)" rows="5" maxlength="400" wrap="soft"></textarea>
+                            </div>
+                            <div class="guide_edit guide_edit_form">
+                                <!-- 대여안내 -->
+                                <label for="edit_info" class="newblue_txt fontWeightBold"><i class="bgImg"></i>대여안내</label>
+                                <p id="edit_info" class="fontWeightBold">
+                                    대여소의 안내 정보가 표기 됩니다.<br>
+                                    내용은 <a href="management_shop.html" class="newblue_txt">(대여소 관리 > 대여안내)</a>에서 편집 가능합니다.</p>
+                            </div>
+                        </div>
+                        <div class="submitbtn">
+                            <button class="backblue_btn">바이크 등록</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer w100p margin0">
+            <div class="Container">
+                <div class="leftArea">
+                    <div class="logo_ft">
+                        <img src="images/rb_w_ft.png" alt="마이렌탈바이크">
+                    </div>
+                    <div class="txt_ft">
+                        <ul>
+                            <li class="white">맥스토크 ｜ 관리자:임성용</li>
+                            <li class="white">Tel:010-4952-0134 ｜ E-mail:admin@rentalbike.kr</li>
+                            <li class="white">주소:전북 전주시 완산구 풍남문4길 25-26 813호</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rightArea">
+                    <ul>
+                        <li><a href="https://www.instagram.com/myrental_bike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.facebook.com/myrentalbike/"><span class="bgImg"></span></a></li>
+                        <li><a href="https://blog.naver.com/biz9ine"><span class="bgImg"></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC3IQigWXcYpJRCFWPMqM9KQ/featured"><span class="bgImg"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
