@@ -183,6 +183,7 @@ div {display: block;}
 .w45 {width: 45px !important;}
 .w50 {width: 50px;}
 .w60 {width: 60px !important;}
+.w70 {width: 70px !important;}
 .w80 {width: 80px;}
 .w100 {width: 100px !important;}
 .w110 {width: 110px;}
@@ -222,7 +223,7 @@ div {display: block;}
 .h30 {height: 30px;}
 .h40 {height: 40px !important;}
 .h50 {height: 50px;}
-.h60 {height: 60px;}
+.h60 {height: 60px !important;}
 .h70 {height: 70px;}
 .h90 {height: 90px;}
 .h100 {height: 100px;}

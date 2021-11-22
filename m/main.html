@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- 오픈 그래프 -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="마이렌탈바이크">
+        <meta property="og:description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta property="og:image" content="../images/common/rbicon.png">
+        <meta property="og:url" content="https://rentalbike.kr/">
+
+        <!-- bing은 xml로 대체 -->
+        <meta name="naver-site-verification" content="02805b5edd23aab251aa712194a9829b44f6a633"> <!-- naver -->
+        <meta name="google-site-verification" content="QuRSeSM0JKaS8OeovUQYa1hDRHgPJDaRTXz67ov3w-0"> <!-- google -->
+        <meta name="description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta name="keywords" content="맥스토크, 마이렌탈바이크, 당빠, 홈페이지, IT, 이륜차, 오토바이, 바이크, 라이더, 전국, 모터사이클, 중고, 신차, 구매, 관광지, 리스, 대여, 렌탈, 렌트, mrb">
+        <!-- 모바일용 화면크기 비율고정 -->
+        <meta id="mobileMeta" name="viewport" content="width=device-width">
+
+        <title>마이렌탈바이크</title>
+
+        <!-- 서비스 아이콘 -->
+        <link rel="canonical" href="https://rentalbike.kr/">
+        <link rel="shortcut icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+        <link rel="apple-touch-icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css">
+        <link rel="stylesheet" type="text/css" href="../css/common.css">
+        <link rel="stylesheet" type="text/css" href="../css/m_style.css">
+
+        <!-- JS -->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/jquery.datetimepicker.full.js"></script>
+        <!-- 어썸폰트 -->
+        <script src="https://kit.fontawesome.com/c184921f02.js" crossorigin="anonymous"></script>
+
+        <!-- Naver Analytics -->
+	    <script type="text/javascript" src="js/wcslog.js"></script>
+        <script type="text/javascript">
+            if(!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "8b08b84b8b1f38";
+            if(window.wcs) {
+                wcs_do();
+            }
+        </script>
+
+    </head>
+    <body>
+        <!-- nav -->
+		<nav  id="navHeader" class="navbar-default navbar-fixed-top">
+            <div class="navbar-head wh100p Container">
+                <!-- navbar-left -->
+                <div class="navbar-logo w70">
+                    <a href="main.html">
+                        <img class="w100p logonormal" src="../images/rb_w_rv.png" alt="마이렌탈바이크">
+                        <img class="w100p logohover" src="../images/rb_w.png" alt="마이렌탈바이크">
+                    </a>
+                </div>
+                <!-- navbar-right -->
+                <button type="button" class="navbar-toggle collapsd" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- 로그인 전 임시 display:none -->
+                    <ul class="nav navbar-nav navbar-right nav-before-login" style="display: none;">
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                    </ul>
+                    <!-- 로그인 후 -->
+                    <ul class="nav navbar-nav navbar-right nav-after-login">
+                        <li><a href="" class="fontWeight500">마이페이지</a></li>
+                        <li><a href="" class="fontWeight500">대여소 관리</a></li>
+                        <li><a href="" class="fontWeight500">바이크 관리</a></li>
+                        <li class="borderTop"><a href="">로그아웃</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </nav>
+
+        <!-- main section01 -->
+        <div class="sec01 bgImg">
+            <!-- title area -->
+            <div class="titArea">
+                <p class="jalnanFont title">
+                    바이크가 필요할 땐 <br><span class="newblue">마이렌탈바이크</span>
+                </p>
+                <p class="Y_Font sub marginTop20">쉽고 빠르게 온라인으로 바이크 대여하세요!</p>
+            </div>
+            <!-- search area -->
+            <div class="mainBikeSearch Container">
+                <div class="searchWrap w100p">
+                    <!-- search Select -->
+                    <div class="searchSelect w100p borderRad10 boxShadow overflowHidden">
+                        <!-- 지역 -->
+                        <div class="Search01 search cursorPointer borderBottom">
+                            <select name="area" id="area" class="w100p fontWeight500 h100p bgsNoReat">
+                                <option value="all" selected="selected">지역 (전체)</option>
+                                <option value="seoul">서울시</option>
+                                <option value="jeju">제주도</option>
+                                <option value="gyenggi">경기</option>
+                                <option value="gangwon">강원</option>
+                                <option value="sejong">세종</option>
+                                <option value="chungnam">충남</option>
+                                <option value="chungbouk">충북</option>
+                                <option value="jeonnam">광주/전남</option>
+                                <option value="jeonbuk">전북</option>
+                                <option value="gyeongnam">부산/울산/경남</option>
+                                <option value="gyeongbuk">대구/경북</option>
+                            </select>
+                        </div>
+                        <!-- 종류 -->
+                        <div class="search02 search cursorPointer borderBottom">
+                            <select name="category" id="category" class="w100p fontWeight500 h100p bgsNoReat">
+                                <option value="all" selected="selected">종류</option>
+                                <option value="sc">스쿠터</option>
+                                <option value="eb">전동바이크</option>
+                                <option value="ek">전동바이크</option>
+                                <option value="at">전동킥보드</option>
+                                <option value="re">ATV</option>
+                                <option value="na">네이키드/스트리트</option>
+                                <option value="to">투어러/크루즈</option>
+                                <option value="am">아메리칸/모던</option>
+                                <option value="of">어드벤처/오프로드</option>
+                                <option value="un">언더본/비즈니스</option>
+                                <option value="po">포켓/미니</option>
+                                <option value="etc">기타</option>
+                            </select>
+                        </div>
+                        <!-- 대여일 -->
+                        <div class="search03 search date start-date cursorPointer borderBottom">
+                            <input id="rent_start_date" class="rent_start_date w100p fontWeight500 h100p bgsNoReat" name="rent_start_date" type="text" placeholder="대여날" readonly>
+                        </div>
+                        <!-- 반납일 -->
+                        <div class="search04 search date end-date cursorPointer">
+                            <input id="rent_end_date" class="rent_end_date w100p fontWeight500 h100p bgsNoReat" name="rent_end_date" type="text" placeholder="반납날" readonly>
+                        </div>
+                        <!-- 대여일/반납일 bootstrap datepicker -->
+                        <script type="text/javascript">
+                            var rent_start_date = "+1970/01/01";
+                            var rent_end_date = "+1970/01/02";
+                            $.datetimepicker.setLocale('kr');
+                            $('.rent_start_date').datetimepicker({
+                                // format:'unixtime',
+                                lang:'ko',
+                                timepickerScrollbar:false,
+                                // timepicker:true,
+                                allowTimes:['09:00','10:00','12:00','13:00','14:00','15:00','17:00','18:00','19:00','20:00'],
+                                // format:'Y/m/d',
+                                formatDate:'Y/m/d',
+                                formatTime:'H:i',
+                                // minDate:'-1970/01/02', //yesterday is minimum date(for today use 0 or -1970/01/01)
+                                // maxDate:'+1970/01/02', //tomorrow is maximum date calendar
+                                minDate:'0', //yesterday is minimum date(for today use 0 or -1970/01/01)
+                                maxDate:'+1970/03/01', //tomorrow is maximum date calendar
+                                // value:'+1970/01/01',
+                                value:rent_start_date,
+        
+                                onShow:function( ct ){
+                                    this.setOptions({
+                                        // maxDate:'+1970/04/01',
+                                    })
+                                },
+                                onSelectTime:function(current_time,$input){
+                                    
+                                },
+                            });
+        
+                            $('.rent_end_date').datetimepicker({
+                                lang:'ko',
+                                timepickerScrollbar:false,
+                                // timepicker:true,
+                                allowTimes:['09:00','10:00','12:00','13:00','14:00','15:00','17:00','18:00','19:00','20:00'],
+                                // format:'Y/m/d',
+                                formatDate:'Y/m/d',
+                                formatTime:'H:i',
+                                minDate:'0', //yesterday is minimum date(for today use 0 or -1970/01/01)
+                                maxDate:'0', //tomorrow is maximum date calendar
+                                // value:'+1970/01/02',
+                                value:rent_end_date,
+        
+                                onShow:function( ct ){
+                                    this.setOptions({
+                                        minDate:$('#rent_start_date').val()?$('#rent_start_date').val():'0',
+                                        maxDate:get_after_date(term = 6),
+                                    })
+                                },
+        
+                                onSelectTime:function(current_time,$input){
+                                    
+                                },
+                            });
+                        </script>
+                    </div>
+                    <div class="searchbtn">
+                        <button class="newbackblue fontWeightBold borderRad10"><span class="bgImg marginRigth10"></span>대여 바이크 검색</button>
+                    </div>
+                </div>
+                <div class="searchTag w100p">
+                    <div class="tagBtns">
+                        <button class=""><a class="fontWeight500" href="">#초보자_추천</a></button>
+                        <button class=""><a class="fontWeight500" href="">#렌탈_회수_최다</a></button>
+                        <button class=""><a class="fontWeight500" href="">#짐_수납가능</a></button>
+                        <button class=""><a class="fontWeight500" href="">#장거리_추천</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- main section02 -->
+        <div class="sec02">
+            <!-- title area -->
+            <div class="comtit">
+                <p class="tit jalnanFont textShadow newblue_txt"># 바이크 타기 좋은 <span class="halfHL newblue_txt">여행지</span></p>
+                <p class="txt Y_Font newblue_txt">마.렌.바 이용자의 <span class="newyellow_txt">원픽</span> 여행코스!</p>
+            </div>
+            <!-- content area -->
+            <div class="sec02_cont Container">
+                <!-- slide area -->
+                <div id="carousel-example-generic" class="carousel slide tourSlide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner marginAuto" role="listbox">
+                        <div class="item active">
+                            <ul>
+                                <li class="boxShadow borderRad10 overflowHidden borderBF">
+                                    <a href="contens_detail.html">
+                                        <div class="imgArea w100p">
+                                            <div class="bgImg imgChild wh100p"></div>
+                                        </div>
+                                        <div class="txtArea">
+                                            <p class="tit jalnanFont">전주 한옥마을</p>
+                                            <p class="txt">한국을 대표하는 문화관광 도시 눈요기도 하고 맛있는 것도 먹자!</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <ul>
+                                <li class="boxShadow borderRad10 overflowHidden borderBF">
+                                    <a href="contens_detail.html">
+                                        <div class="imgArea w100p">
+                                            <div class="bgImg imgChild wh100p"></div>
+                                        </div>
+                                        <div class="txtArea">
+                                            <p class="tit jalnanFont">전주 한옥마을</p>
+                                            <p class="txt">한국을 대표하는 문화관광 도시 눈요기도 하고 맛있는 것도 먹자!</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <ul>
+                                <li class="boxShadow borderRad10 overflowHidden borderBF">
+                                    <a href="contens_detail.html">
+                                        <div class="imgArea w100p">
+                                            <div class="bgImg imgChild wh100p"></div>
+                                        </div>
+                                        <div class="txtArea">
+                                            <p class="tit jalnanFont">전주 한옥마을</p>
+                                            <p class="txt">한국을 대표하는 문화관광 도시 눈요기도 하고 맛있는 것도 먹자!</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left w100p bgImg" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right w100p bgImg" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- main section03 -->
+        <div class="sec03 Container">
+            <!-- title area -->
+            <div class="comtit">
+                <p class="tit jalnanFont textShadow newblue_txt"># <span class="halfHL newblue_txt">마.렌.바의 소식</span>을 만나보세요!<i class="bgImg"></i></p>
+                <p class="txt Y_Font newblue_txt">SNS로 <span class="newyellow_txt">바이크 팁, 여행지 정보</span> 등을 알려드려요!</p>
+            </div>
+            <!-- content area -->
+            <div class="snsWrap">
+                <!-- youtube -->
+                <div class="leftArea">
+                    <div class="videoBox w100p">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/54qP-iXJ5vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="linkbtn youLinkbtn"><a href="https://www.youtube.com/channel/UC3IQigWXcYpJRCFWPMqM9KQ/featured"><button class="borderRad10 fontWeightBold"><i class="bgImg"></i>YOUTUBE</button></a></div>
+                </div>
+                <!-- instagram -->
+                <div class="rightArea">
+                    <div class="instaBox w100p">
+                        <ul>
+                            <li>
+                                <!-- Button trigger modal #insta01 -->
+                                <button type="button" class="bgImg wh100p" data-toggle="modal" data-target="#insta01"></button>
+                                <!-- Modal #insta01 -->
+                                <div class="modal fade" id="insta01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- Button trigger modal #insta02 -->
+                                <button type="button" class="bgImg wh100p" data-toggle="modal" data-target="#insta02"></button>
+                            </li>
+                            <li>
+                                <!-- Button trigger modal #insta03 -->
+                                <button type="button" class="bgImg wh100p" data-toggle="modal" data-target="#insta03"></button>
+                            </li>
+                            <li>
+                                <!-- Button trigger modal #insta04 -->
+                                <button type="button" class="bgImg wh100p" data-toggle="modal" data-target="#insta04"></button>
+                            </li>
+                            <li>
+                                <!-- Button trigger modal #insta05 -->
+                                <button type="button" class="bgImg wh100p" data-toggle="modal" data-target="#insta05"></button>
+                            </li>
+                            <li>
+                                <!-- Button trigger modal #insta06 -->
+                                <button type="button" class="bgImg wh100p" data-toggle="modal" data-target="#insta06"></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="linkbtn instaLinkbtn"><a href="https://www.instagram.com/myrental_bike/"><button class="borderRad10 fontWeightBold"><i class="bgImg"></i>INSTAGRAM</button></a></div>
+                </div>
+            </div>
+        </div> 
+
+        <!-- main section04 -->
+        <div class="sec04 bgImg">
+            <div class="Container">
+                <!-- title area -->
+                <div class="comtit">
+                    <p class="tit jalnanFont textShadow newblue_txt"># <span class="halfHL newblue_txt">마.렌.바</span>와 즐거움 가득!<i class="bgImg"></i></p>
+                    <p class="txt Y_Font newblue_txt">여러분의 <span class="newyellow_txt">여행스팟</span>을 공유해보세요!</p>
+                </div>
+                <!-- content area -->
+                <div class="commuWrap">
+                    <ul class="review_area w100p">
+                        <li class="reviewBox boxShadow borderRad10 overflowHidden">
+                            <a href="review_detail.html">
+                                <div class="contbox wh100p">
+                                    <div class="boxhead">
+                                        <p class="name"><i class="bgImg"></i>놀라운노움</p>
+                                        <div class="starndate">
+                                            <div class="star-ratings">
+                                                <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
+                                                <!-- 별 5개 -->
+                                                <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
+                                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                </div>
+                                                <div class="star-ratings-base space-x-2 text-lg">
+                                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                </div>
+                                            </div>
+                                            <span class="date">오늘</span>
+                                        </div>
+                                    </div>
+                                    <div class="boxcont">
+                                        <div class="imgArea w100p">
+                                            <div class="bgImg imgChild wh100p"></div>
+                                        </div>
+                                        <div class="txtArea">
+                                            <p>상태 좋고 매장직원분이 친절했어요~</p>
+                                            <div class="tagArea borderTop">
+                                                <a href=""># 전주</a>
+                                                <a href=""># 디욜바이크</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="reviewBox boxShadow borderRad10 overflowHidden">
+                            <a href="review_detail.html">
+                                <div class="contbox wh100p">
+                                    <div class="boxhead">
+                                        <p class="name"><i class="bgImg"></i>놀라운노움</p>
+                                        <div class="starndate">
+                                            <div class="star-ratings">
+                                                <!-- full star 개수 width로 조정 / 5개:100%, 4개:80%, 3개:60%, 2개:40%, 1개:20% -->
+                                                <!-- 별 5개 -->
+                                                <div class="star-ratings-fill space-x-2 text-lg" style="width: 100%">
+                                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                </div>
+                                                <div class="star-ratings-base space-x-2 text-lg">
+                                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                                </div>
+                                            </div>
+                                            <span class="date">오늘</span>
+                                        </div>
+                                    </div>
+                                    <div class="boxcont">
+                                        <div class="imgArea w100p">
+                                            <div class="bgImg imgChild wh100p"></div>
+                                        </div>
+                                        <div class="txtArea">
+                                            <p>상태 좋고 매장직원분이 친절했어요~</p>
+                                            <div class="tagArea borderTop">
+                                                <a href=""># 전주</a>
+                                                <a href=""># 디욜바이크</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="morebtn">
+                        <a href=""><button class="boxShadow borderRad50 fontWeightBold w100p">VIEW MORE</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer w100p">
+            <div class="Container">
+                <div class="txt_ft">
+                    <ul>
+                        <li class="white">맥스토크 ｜ 관리자:임성용</li>
+                        <li class="white">Tel:010-4952-0134 ｜ E-mail:admin@rentalbike.kr</li>
+                        <li class="white">주소:전북 전주시 완산구 풍남문4길 25-26 813호</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom nav -->
+        <div class="w100p h60 borderTop" id="footerMobSpace">
+            <nav id="footerMob" class="navbar navbar-default navbar-fixed-bottom bottom-nav h60">
+                <ul>
+                    <li>
+                        <a href="main.html" class="wh100p">
+                            <!-- <img class="pgNormal" src="../images/mobile/bottom-nav/home_off_icon.png" alt="홈"> -->
+                            <img class="pgFocus" src="../images/mobile/bottom-nav/home_on_icon.png" alt="홈">
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/guide_off_icon.png" alt="이용안내">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/guide_on_icon.png" alt="이용안내"> -->
+                            <p>이용안내</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/search_off_icon.png" alt="바이크검색">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/search_on_icon.png" alt="바이크검색"> -->
+                            <p>바이크검색</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/cont_off_icon.png" alt="콘텐츠">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/cont_on_icon.png" alt="콘텐츠"> -->
+                            <p>콘텐츠</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/commu_off_icon.png" alt="커뮤니티">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/commu_on_icon.png" alt="커뮤니티"> -->
+                            <p>커뮤니티</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </body>
+</html>
