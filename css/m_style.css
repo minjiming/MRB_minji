@@ -96,11 +96,11 @@
 .sec04 {background-image: url(../images/bg/main_back_bottom.jpg); padding-top: 150px; height: 700px;}
 .sec04 .comtit p.tit i {width: 40px; height: 39px; background-image: url(../images/sec04_title_icon.png); margin-left: 15px;}
 .commuWrap {margin-top: 30px;}
-.commuWrap .review_area {display: flex; justify-content: space-between; align-items: center;}
-.commuWrap .review_area li {width: 48%; background-color: #fff; margin-bottom: 20px; border: 1px solid #e2e2e2ef}
-.commuWrap .review_area li .contbox .boxhead {padding: 15px 15px;}
-.commuWrap .review_area li .contbox p {font-size: 15px; font-weight: 500;}
-.commuWrap .review_area li .contbox span {font-size: 13px;}
+.review_area {display: flex; justify-content: space-between; align-items: center;}
+.review_area li {width: 48%; background-color: #fff; margin-bottom: 20px; border: 1px solid #e2e2e2ef}
+.review_area li .contbox .boxhead {padding: 15px 15px;}
+.review_area li .contbox p {font-size: 15px; font-weight: 500;}
+.review_area li .contbox span {font-size: 13px;}
 
 .contbox .boxhead .name i {display: inline-block; width: 18px; height: 18px; border-radius: 50%; vertical-align: middle; margin-right: 8px;}
 .contbox .boxhead .starndate {display: flex; margin-top: 7px; padding-left: 25px;}
@@ -187,6 +187,105 @@
 .guideWrap .box07 .rightArea table tr th {padding: 15px 5px;}
 .g_green {background-color: #f5f9f3 !important;}
 .g_red {background-color: #fff3f3 !important;}
+
+
+
+
+/* common btns */
+.backblue_btn {background-color: #597af4; color: #fff; width: 100%; height: 38px; font-weight: bold; border-radius: 10px;}
+.lineblue_btn {background-color: #fff; border: 1px solid #3d66ff; color: #3d66ff; width: 100%; height: 38px; border-radius: 10px;}
+.edtndel ul li a {color: #8b8b8b; padding: 3px 10px; display: inline-block;}
+
+
+/* 커뮤니티 */
+/* title area */
+.comm_titArea {margin-bottom: 20px;}
+.comm_titArea h2 {font-size: 20px;}
+.comm_titArea p {margin-top: 10px;}
+
+/* notice */
+.commu_notice {margin-bottom: 100px; margin-top: 80px;}
+/* netice list */
+.noticeTable table {border-top: 1px solid #898989; text-align: center; font-size: 16px;}
+.noticeTable table tr th {display: none;}
+.noticeTable table tr td {display: inline-block; text-align: left; color: #BFBFBF; margin: 15px 0; padding: 0 16px; float: left;}
+.noticeTable table tr td:first-of-type {display: none;}
+.noticeTable table tr td:nth-of-type(2) {width: 100%; display: block; color: #333; margin-bottom: 0; float: none;}
+.noticeTable table tr td:last-of-type {margin-left: 0; padding-left: 13px;}
+.noticeTable table tr td a:hover {color: #4a69de;}
+.noticeTable table tr td i.newIcon {display: inline-block; background-image: url(../images/new_icon.png); width: 10px; height: 10px; vertical-align: super; margin-left: 3px;}
+.noticeTable table tr td:last-of-type i {display: inline-block; background-image: url(../images/view_icon.png); width: 18px; height: 18px; margin-right: 5px; vertical-align: top;}
+.commu_notice .morebtn {text-align: right; margin-top: 20px;}
+/* review */
+.comm_review {margin-bottom: 60px;}
+/* best riview */
+.best_re {display: flex; justify-content: space-between; height: 300px; margin-bottom: 50px;}
+.best_re .banner_tit {width: 400px; padding: 30px 25px; background-image: url(../images/bg/best_re_bg.jpg);}
+.best_re .banner_tit p:first-of-type {font-size: 32px; line-height: 1.5; border-bottom: 2px solid #fff; width: 65%; padding-bottom: 6px; margin-bottom: 13px;}
+.best_re .banner_tit p:last-of-type {font-size: 16px; line-height: 1.4;}
+.best_review_area {padding: 25px 0;}
+.best_review_area ul.review_area {width: 100%; display: block; height: 300px; white-space: nowrap;}
+.best_review_area ul.review_area li {display: inline-block; height: 280px; width: 155px; margin-right: 10px;}
+.best_review_area ul.review_area li:first-of-type {margin-left: 16px;}
+.best_review_area ul.review_area li:last-of-type {margin-right: 16px;}
+.best_review_area ul.review_area li .contbox .boxcont .txtArea p {white-space: normal;}
+/* search_group */
+.review_list .search_group {border-top: 1px solid #a8a8a8; border-bottom: 1px solid #a8a8a8; background-color: #f7f7f7; padding: 20px 16px;}
+.review_list .search_group .label_group {display: flex; justify-content: space-between;}
+.review_list .search_group .label_group label input[type="radio"] {display: none;}
+.review_list .search_group .label_group label input[type="radio"] + span {display: flex; justify-content: center; align-items: center; border: 1px solid #bfbfbf; height: 38px; width: 100px; background-color: #fff; color: #bfbfbf;}
+.review_list .search_group .label_group label input[type="radio"]:checked + span {border: 1px solid #7690ED; color: #333;}
+.review_list .search_group .search_box {display: flex; justify-content: center; align-items: center; margin-top: 10px;}
+.review_list .search_group .search_box input[type="text"] {width: 85%; height: 38px; padding: 10px;}
+.review_list .search_group .search_box button {background-color: #4E6BD3; height: 38px; width: 15%;}
+.review_list .search_group .search_box button i {color: #fff; font-size: 17px;}
+.review_list .search_group .search_box button span {display: none;}
+/* review list */
+.review_list {margin-top: 30px;}
+.review_list .list_box {padding: 25px; display: flex; justify-content: space-between;}
+.review_list .list_box .txtArea {width: 77%;}
+.review_list .list_box .txtArea .txtHead {width: 85%; display: flex;}
+.review_list .list_box .txtArea .txtHead h2 {font-size: 17px; max-width: 65%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.review_list .list_box .txtArea .txtHead span {margin-left: 5px; font-size: 17px;}
+.labelArea {margin-left: 10px;}
+.labelArea span.label {font-size: 12px !important; font-weight: normal; padding: 0.05em .6em 0.3em;}
+.label-seccess {background-color: #4bcfba;}
+.label-primary {background-color: #6d89ec;}
+.label-danger {background-color: #ff7e7e;}
+.review_list .list_box .txtArea .txtHead {padding-bottom: 12px;}
+.review_list .list_box .txtArea .txtHead .re_info {display: flex; align-items: center;}
+.review_list .list_box .txtArea .txtHead .re_info i.profile_img {width: 40px; height: 40px; display: inline-block; border-radius: 50%; margin-right: 6px;}
+.review_list .list_box .txtArea .txtHead .re_info .name {font-size: 16px; margin-bottom: 4px;}
+.review_list .list_box .txtArea .txtHead .re_info .star-ratings {display: inline-block;}
+.review_list .list_box .txtArea .txtHead .re_info .star-ratings span {margin-left: 0; font-size: 16px;}
+.review_list .list_box .txtArea .txtHead .re_info .date {color: #bfbfbf; margin-left: 6px; font-size: 12px;}
+.review_list .list_box .txtArea .txtCont {margin-top: 12px; margin-bottom: 15px;}
+.review_list .list_box .txtArea .txtCont h2 {display: inline-block; font-size: 17px;}
+.review_list .list_box .txtArea .txtCont span {font-size: 16px;}
+.review_list .list_box .txtArea .txtFoot {margin-left: 0;}
+.review_list .list_box .txtArea .txtFoot .label {font-size: 14px !important;}
+.review_list .list_box .imgArea {width: 100px; height: 100px;}
+/* pagenation & write btn */
+.board_bt_btn {text-align: center; margin-top: 10px;}
+/* pagenation */
+.pagination, 
+.pagination>li:first-child>a, .pagination>li:first-child>span,
+.pagination>li:last-child>a, .pagination>li:last-child>span {border-radius: 0;}
+.pagination>li:first-child>a, .pagination>li:first-child>span {margin-right: 18px;}
+.pagination>li:last-child>a, .pagination>li:last-child>span {margin-left: 18px;}
+.pagination>li:first-child>a>span, .pagination>li:last-child>a>span {color: #bfbfbf; font-size: 20px;}
+.pagination li:nth-of-type(n+2):nth-of-type(-n+4) a {border: none; font-size: 16px; margin-top: 5px;}
+.pagination>li>a, .pagination>li>span {padding: 2px 8px 6px; margin-left: 5px; margin-right: 5px; color: #3c3c3c; line-height: 1em;}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {color: #4b6adf; font-weight: bold; background-color: #fff; border-color: none;}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, 
+.pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {color: #4b6adf; font-weight: bold; background-color: #fff;}
+/* writhe btn */
+
+
+/* review list 임시 썸네일 */
+.review_list .list_box .imgArea {background-image: url(../images/exam/review_ex_thum02.jpg);}
+/* 임시 프로필 이미지 */
+.review_list .list_box .txtArea .txtHead .re_info i.profile_img {background-image: url(../images/exam/profile_ex_thum.png);}
 
 
 
