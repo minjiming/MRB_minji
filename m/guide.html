@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- 오픈 그래프 -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="마이렌탈바이크">
+        <meta property="og:description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta property="og:image" content="../images/common/rbicon.png">
+        <meta property="og:url" content="https://rentalbike.kr/">
+
+        <!-- bing은 xml로 대체 -->
+        <meta name="naver-site-verification" content="02805b5edd23aab251aa712194a9829b44f6a633"> <!-- naver -->
+        <meta name="google-site-verification" content="QuRSeSM0JKaS8OeovUQYa1hDRHgPJDaRTXz67ov3w-0"> <!-- google -->
+        <meta name="description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta name="keywords" content="맥스토크, 마이렌탈바이크, 당빠, 홈페이지, IT, 이륜차, 오토바이, 바이크, 라이더, 전국, 모터사이클, 중고, 신차, 구매, 관광지, 리스, 대여, 렌탈, 렌트, mrb">
+        <!-- 모바일용 화면크기 비율고정 -->
+        <meta id="mobileMeta" name="viewport" content="width=device-width">
+
+        <title>마이렌탈바이크</title>
+
+        <!-- 서비스 아이콘 -->
+        <link rel="canonical" href="https://rentalbike.kr/">
+        <link rel="shortcut icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+        <link rel="apple-touch-icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css">
+        <link rel="stylesheet" type="text/css" href="../css/common.css">
+        <link rel="stylesheet" type="text/css" href="../css/m_style.css">
+
+        <!-- JS -->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/jquery.datetimepicker.full.js"></script>
+        <!-- 어썸폰트 -->
+        <script src="https://kit.fontawesome.com/c184921f02.js" crossorigin="anonymous"></script>
+
+        <!-- Naver Analytics -->
+	    <script type="text/javascript" src="js/wcslog.js"></script>
+        <script type="text/javascript">
+            if(!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "8b08b84b8b1f38";
+            if(window.wcs) {
+                wcs_do();
+            }
+        </script>
+
+    </head>
+    <body>
+        <!-- nav -->
+		<nav  id="navHeader" class="navbar-default navbar-fixed-top">
+            <div class="navbar-head wh100p Container">
+                <!-- navbar-left -->
+                <div class="navbar-logo w70">
+                    <a href="main.html">
+                        <img class="w100p logonormal" src="../images/rb_w_rv.png" alt="마이렌탈바이크">
+                        <img class="w100p logohover" src="../images/rb_w.png" alt="마이렌탈바이크">
+                    </a>
+                </div>
+                <!-- navbar-right -->
+                <button type="button" class="navbar-toggle collapsd" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- 로그인 전 임시 display:none -->
+                    <ul class="nav navbar-nav navbar-right nav-before-login" style="display: none;">
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                    </ul>
+                    <!-- 로그인 후 -->
+                    <ul class="nav navbar-nav navbar-right nav-after-login">
+                        <li><a href="" class="fontWeight500">마이페이지</a></li>
+                        <li><a href="" class="fontWeight500">대여소 관리</a></li>
+                        <li><a href="" class="fontWeight500">바이크 관리</a></li>
+                        <li class="borderTop"><a href="">로그아웃</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </nav>
+
+        <!-- content -->
+        <!-- top intro -->
+        <div class="introWrap bgImg">
+            <div class="Container">
+                <div class="sec_intro boxShadow borderRad10">
+                    <ul>
+                        <li>
+                            <img src="../images/map_icon.png" alt="전국 어디서나">
+                            <div class="txtArea">
+                                <h2 class="fontWeightBold">전국 어디서나</h2>
+                                <p>
+                                    관광지, 터미널, 기차역, 대학교 등 내가 있는 장소나 원하는 지역에서<br>
+                                    가까운 바이크 렌트샵을 검색!
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/bike_icon.png" alt="다양한 바이크">
+                            <div class="txtArea">
+                                <h2 class="fontWeightBold">다양한 바이크</h2>
+                                <p>
+                                    스쿠터, 레플리카, CT, 투어러, 전기바이크, 스마트 모빌리티까지!<br>
+                                    원하는 바이크를 선택!
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/good_icon.png" alt="편리한 대여">
+                            <div class="txtArea">
+                                <h2 class="fontWeightBold">편리한 대여</h2>
+                                <p>
+                                    모바일 앱과 웹에서<br>
+                                    선택 몇번으로 보험까지 간편하게 예약!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="marginBottom0">
+                            <img src="../images/cost_icon.png" alt="합리적인 대여비용">
+                            <div class="txtArea">
+                                <h2 class="fontWeightBold">합리적인 대여비용</h2>
+                                <p>
+                                    차종과 시간에 맞게 장기 대여까지!<br>
+                                    필요한만큼 비교하고 선택하여 결제!
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 스토어 바로가기 버튼 / display:none; -->
+        <div class="app_btn">
+            <p class="fontWeightBold">지금 스토어에서 다운 받아보세요!</p>
+             <a href="">
+                <button><img src="../images/google_btn.png" alt="구글스토어 바로가기"></button>
+             </a>
+             <a href="">
+                 <button><img src="../images/apple_btn.png" alt="앱스토어 바로가기"></button>
+             </a>
+        </div> 
+
+        <div class="Container guideWrap"> 
+            <!-- 대여안내 -->
+            <div class="box box01 overflowHidden">
+                <div class="leftArea">
+                    <h2>대여안내</h2>
+                    <p>쉽고 편리한 마.렌.바 대여정보!</p>
+                </div>
+                <div class="rightArea">
+                    <div class="gd_box w100p borderRad10 marginBottom20">
+                        <p class="fontWeightBold">※ 이용방법</p>
+                        <p>현재 전화를 이용한 대여소별 예약만 가능합니다.<br>
+                            바이크 검색 후 해당 대여소의 안내된 전화번호를 통해 예약 부탁드립니다.<br>
+                            보다 나은 기능과 서비스로 찾아뵙겠습니다. 감사합니다.
+                        </p>
+                    </div>
+                    <div class="gd_box w100p borderRad10">
+                        <p class="fontWeightBold">※ 대여정책</p>
+                        <p>각각의 대여소 정책이 우선 시행되며, 그에 따라 요금이 부과됩니다.<br>
+                            대여소의 정책이 없을 경우 아래 제시된 예시가 적용됩니다.<br>
+                            대여소 정보에 있는 대여소 전화번호를 통해 직접 예약하셔도 좋습니다.<br> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 서비스요금 -->
+            <div class="box box02 overflowHidden">
+                <div class="leftArea">
+                    <h2>서비스요금</h2>
+                    <p>합리적인 요금으로 부담없이!</p>
+                </div>
+                <div class="rightArea">
+                    <p class="sv_cate_tit">※ 예약시 결제</p>
+                    <div class="sv_box01 sv_box">
+                        <div class="sv_tit borderRad10">
+                            <img src="../images/service_icon01.png" alt="대여요금">
+                            <p>대여요금</p>
+                        </div>
+                        <div class="sv_txt borderRad10">
+                            <p>선택하신 차종과 시간, 옵션에 따라<br>바이크를 대여하시는 요금이 상이합니다.</p>
+                        </div>
+                    </div>
+                    <div class="sv_box02 sv_box">
+                        <div class="sv_tit borderRad10">
+                            <img src="../images/service_icon02.png" alt="보혐료">
+                            <p>보혐료</p>
+                        </div>
+                        <div class="sv_txt borderRad10">
+                            <p>최대 자기부담금을 선택하실 수 있으며, 렌탈업체의 보험정책과<br>
+                                선택하신 보험료에 따라 보험료가 상이합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="sv_cate_tit">※ 반납시 결제</p>
+                    <div class="sv_box03 sv_box">
+                        <div class="sv_tit borderRad10">
+                            <img src="../images/service_icon03.png" alt="주행료">
+                            <p>주행료</p>
+                        </div>
+                        <div class="sv_txt borderRad10">
+                            <p>
+                                ㅇ 1박2일(24시간) 500km<br>
+                                ㅇ 2박3일(48시간) 800km<br>
+                                ㅇ 3박4일(72시간) 1100km<br><br>
+                                제한 초과시 10km 당 3,000원씩 추가됩니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- 자차보험 -->
+             <div class="box box03 overflowHidden">
+                <div class="leftArea">
+                    <h2>자차보험</h2>
+                    <p>보험 내용을 확인해주세요!</p>
+                </div>
+                <div class="rightArea">
+                    <table class="w100p borderRad10 overflowHidden">
+                        <tr>
+                            <th>책임보험<br>(보험회사 상품 가입)</th>
+                            <td>마이렌탈바이크는 전 차량이 대여용 보험(대인, 대물)에<br>
+                                가입되어 있으며 사고시 보험 처리가 가능합니다.<br>
+                                <br>
+                                대인배상 : 자배법 시행령에서 정한 금액(1억원)<br>
+                                <br>
+                                대물배상 : 사고 1건당 최대 2천만원
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>자차보험 (고객 선택 가입)</th>
+                            <td>
+                                보상한도 초과시 본인부담 (휴차보상료는 1일(100%) 대여료로 함)<br>
+                                <br>
+                                보험은 1회성이므로 사고시 모든 보험사항 및 계약이 실효됩니다.<br>
+                                <br>
+                                <br>
+
+                                <일반자차><br>
+                                <br>
+                                - 50cc 일반자차 : 보험료 8,000원, 보상한도 50만원,<br>
+                                면책금 5만원(보상한도 초과시 본인부담)<br>
+                                <br>
+                                - 125cc 일반자차 : 보험료 10,000원, 보상한도 50만원,<br>
+                                면책금 5만원(보상한도 초과시 본인부담)<br>
+                                <br>
+                                - PCX스쿠터 일반자차 : 보험료 13,000원, 보상한도 70만원,<br>
+                                면책금 5만원(보상한도 초과시 본인부담)<br>
+                                <br>
+                                - 메뉴얼 코멧125, CBR125 일반자차 : 보험료 20,000원,<br>
+                                보상한도 80만원<br>
+                                <br>
+                                <br>
+
+                                <완전자차><br>
+                                <br>
+                                - 50cc 완전자차 : 보험료 13,000원, 보상한도 무한, 면책금 0원<br>
+                                <br>
+                                - 125cc 완전자차 : 보험료 15,000원, 보상한도 무한, 면책금 0원<br>
+                                <br>
+                                - PCX스쿠터 완전자차 : 보험료 18,000원, 보상한도 무한, 면책금 0원<br>
+                                <br>
+                                * 250cc이상 빅바이크 완전자차불가
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>자손보험</th>
+                            <td>
+                                자기신체보험 : 본인부담<br>
+                                <br>
+                                민사 합의금 : 본인부담
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>특이사항</th>
+                            <td>
+                                * 모든 보험적용은 사고 1건에 대해서만 적용됩니다.<br>
+                                <br>
+                                * 키분실, 타이어펑크는 자차보험에 적용되지 않으며 본인부담입니다.<br>
+                                <br>
+                                * 고의적인 사고, 침수, 분실 및 도난<br>
+                                그리고 계약서상 주행 불가능 지역은 자차보험 대상이 아닙니다.<br>
+                                <br>
+                                * 사고 시 견인비, 휴차비는 별도 입니다.<br>
+                                <br>
+                                * 같은 일행간의 접촉사고는 보험처리 불가입니다.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 취소 및 환불규정 -->
+            <div class="box box04 overflowHidden">
+                <div class="leftArea">
+                    <h2>취소 및 환불규정</h2>
+                    <p>취소, 환불 전 꼭 확인해주세요!</p>
+                </div>
+                <div class="rightArea">
+                    <table class="w100p borderRad10 overflowHidden">
+                        <tr>
+                            <th></th>
+                            <th>~5<br>일전</th>
+                            <th>4~3<br>일전</th>
+                            <th>2~1<br>일전</th>
+                            <th>당일<br>취소</th>
+                        </tr>
+                        <tr>
+                            <td class="fontWeightBold">비수기<br>(9월 1일 ~ 6월 31일)</td>
+                            <td>100%<br>환불</td>
+                            <td>70%<br>환불</td>
+                            <td>50%<br>환불</td>
+                            <td>환불<br>불가</td>
+                        </tr>
+                        <tr>
+                            <td class="fontWeightBold">성수기<br>(7월 1일 ~ 8월 31일)</td>
+                            <td>100%<br>환불</td>
+                            <td>50%<br>환불</td>
+                            <td>환불<br>불가</td>
+                            <td>환불<br>불가</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">단, 천재지변, 항공, 선박 운행 불가 시 100% 환불<br>
+                                강우량 12~3월 20mm,<br>4~11월 30mm 이상 시 100% 환불
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 대여 주의사항 -->
+            <div class="box box05 overflowHidden">
+                <div class="leftArea">
+                    <h2>대여 주의사항</h2>
+                    <p>대여 전 반드시 확인하시고, 안전운행 하세요!</p>
+                </div>
+                <div class="rightArea">
+                    <table class="w100p borderRad10 overflowHidden">
+                        <tr>
+                            <th>01</th>
+                            <td>운전시 고객님의 안전을 보호하기 위하여 항상 헬멧을 착용하여 주세요.</td>
+                        </tr>
+                        <tr>
+                            <th>02</th>
+                            <td>초기 운행에 필요한 연료는 제공해 드리며 이 후 운행에 필요한 연료는 본인 부담입니다.</td>
+                        </tr>
+                        <tr>
+                            <th>03</th>
+                            <td>반납시 대여할 때의 연료량을 맞추지 않으셔도 되며 초과된 연료에 대한 비용은 환불되지 않습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>04</th>
+                            <td>대여시 제공된 모든 물품(스마트폰 거치대 및 기타 물품)은 파손 없이 사용하시고 반납 부탁드립니다.</td>
+                        </tr>
+                        <tr>
+                            <th>05</th>
+                            <td>대여중 발생한 교통법규 위반은 모두 고객님께서 책임을 지셔야 합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>06</th>
+                            <td>대여중 바이크의 파손(외관 흠집, 타이어 펑크, 장치의 작동 불량)에 대해서는 유상으로 처리 됩니다.</td>
+                        </tr>
+                        <tr>
+                            <th>07</th>
+                            <td>
+                                고객님의 귀책사유로 사고가 발생시,<br>
+                                사고차량의 수리비와 수리 기간동안의 휴차보상료가 청구될 수 있니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>08</th>
+                            <td>고객님 과실로 운행 불가에 따른 운송료는 고객님 부담이 될 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>09</th>
+                            <td>
+                                무더운 여름철 장시간 주행은 엔진에 많은 무리를 주게됩니다.<br>
+                                안전한 운행을 위해 장시간 연속주행을 삼가해주세요.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>10</th>
+                            <td>
+                                너무 무거운 짐을 싣거나 노면의 요철, 과속방지턱 등을 빠른 속도로 통과 할 경우<br>
+                                쇼바가 파손 될 우려가 있습니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>11</th>
+                            <td>자차 보험에 대해서는 렌탈업체에서 자체적으로 운영중인 보험에 별도로 가입하실 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>12</th>
+                            <td>긴급출동 및 견인 서비스 등 용달로 픽업이 필요한 경우 별도의 비용이 청구 될 수 있습니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 이용약관 -->
+            <div class="box box06 overflowHidden">
+                <div class="leftArea">
+                    <h2>이용약관</h2>
+                    <p>마이렌탈바이크의 애용약관입니다.</p>
+                </div>
+                <div class="rightArea">
+                    <div class="w100p grbtns" role="grp" aria-label="...">
+                        <button type="button" class="btn grbtn textToShort boxShadow borderRad15" data-toggle="modal" data-target="#clause_service">마이렌탈바이크 서비스, 회원이용 약관</button>
+                        <button type="button" class="btn grbtn textToShort boxShadow borderRad15" data-toggle="modal" data-target="#clause_individual">개인정보 수집/이용 약관, 처리방침</button>
+                    </div>
+                    <!-- 마이렌탈바이크 서비스, 회원이용 약관 -->
+                    <div class="modal fade" id="clause_service" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">마이렌탈바이크 서비스, 회원이용 약관</h4>
+                                </div>
+                                <div class="modal-body overflowYScroll h500">
+                                    <h4 style="text-align:center; color: #0AAEBA; padding:10px 0px;font-size:20px;">서비스 이용약관</h4>
+        
+                                    <h5>제1조 (목적)</h5>
+                                    <ol>
+                                        본 약관은 맥스토크(이하 "마이렌탈바이크")가 제공하는 서비스의 이용과 관련하여 "마이렌탈바이크"와 회원과의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정하는 것을 목적으로 합니다.
+                                    </ol>
+        
+                                    <h5>제2조 (용어의 정의)</h5>
+                                    <ol>
+                                        <li>"마이렌탈바이크"라 함은 제12조에 명기된 서비스를 회원에게 제공하기 위하여 구축한 온라인 오토바이대여 예약 대행 및 결제 홈페이지와 mobile의 형태로 서비스를 제공하는 사업 및 향후 회사가 영위하게 될 제반 사업 일체 등을 운영하는 사업자의 의미로 사용합니다.</li>
+                                        <li>회원이라 함은 본 약관에 따라 "마이렌탈바이크"와 이용계약을 체결하고 "마이렌탈바이크"가 제공하는 "서비스"를 이용할 수 있는 권한을 부여 받은 고객을 말합니다.</li>
+                                        <li>"예약 사이트"라 함은 계정(ID 및 비밀번호)을 이용하여 "마이렌탈바이크"의 "서비스"를 제공받을 수 있도록 "마이렌탈바이크"가 운영하는 https://rentalbike.kr 의 홈페이지와 앱(App)을 말합니다.</li>
+                                        <li>"바이크 대여 사업자" 또는 "대여업체"라 함은 "마이렌탈바이크" 및 "마이렌탈바이크"와 예약 및 결제 대행 계약을 통해 회원에게 바이크 대여 서비스를 제공하는 사업자를 말합니다.</li>
+                                        <li>제2조에서 정의되지 않은 이 약관상의 용어의 의미는 일반적인 거래관행에 의합니다.</li>
+                                    </ol>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-sm pull-right w100" data-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 개인정보 수집/이용 약관, 처리방침 -->
+                    <div class="modal fade" id="clause_individual" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">개인정보 수집/이용 약관, 처리방침</h4>
+                                </div>
+                                <div class="modal-body overflowYScroll h500">
+                                    <h4 style="text-align:center; color: #0AAEBA; padding:10px 0px;font-size:20px;">개인정보취급방침</h4>
+        
+                                        <h5>제1조 (총칙)</h5>
+                                        <ol>
+                                            <li>개인정보란 생존하고 있는 개인에 관한 정보로서 당해 개인을 알아볼 수 있는 부호, 문자, 음성, 음향 및 영상 등의 정보(당해 정보만으로는 특정 개인을 알아볼 수 없는 경우에도 다른 정보와 용이하게 결합하여 알아볼 수 있는 것을 포함)를 말합니다.</li>
+                                            <li>맥스토크(이하 "회사"라 함)는 가입자정보보호를 위해 정보통신망 이용촉진 및 정보보호 등에 관한 법률(이하 "정보통신망법"이라 함) 및 개인정보보호법을 비롯한 모든 개인정보보호 관련 법률규정을 준수하고 있습니다.</li>
+                                            <li>회사는 본 개인정보취급방침을 통하여 가입자에게 제공하는 개인정보가 어떤 용도와 방식으로 이용되고 있으며 개인정보를 효과적이고 적극적으로 보호하기 위해 회사가 노력하는 사항을 알립니다.</li>
+                                            <li>회사는 본 개인정보취급방침을 서비스 가입 화면 및 서비스 공지사항 내에 공개함으로써 가입자가 용이하게 볼 수 있도록 조치하고 있습니다.</li>
+                                            <li>본 서비스의 개인정보취급방침은 관련 법률 및 관련 규정의 변경 또는 내부 운영 방침의 변경에 따라 변경될 수 있습니다. 개인정보취급방침이 변경될 경우 변경된 사항을 홈페이지를 통하여 공지함으로써 개정된 내용을 가입자가 쉽게 알아볼 수 있도록 하고 있습니다.</li>
+                                        </ol>
+        
+                                        <h5>제2조 (개인정보의 수집항목 및 이용 목적)</h5>
+                                        <ol>
+                                            <li>회사는 다음과 같이 개인정보를 수집하여 이용합니다.
+                                                <ol>
+                                                    <li>필수항목 : 이름, 생년월일, 이메일, 통신사, 휴대폰번호, 로그인ID, 비밀번호, 이메일주소, 주소, 닉네임, 사진, 이동통신사, 암호화된 계정정보, 휴대폰 기종, 백업/복구용 계정정보</li>
+                                                </ol>
+                                            </li>
+                                            <li>서비스 이용과정이나 사업처리과정에서 다음과 같은 정보들이 생성되어 수집될 수 있습니다.
+                                                <ol>
+                                                    <li>연계정보(CI), 중복확인가입정보(DI), 서비스 신청기록, 이용/해지 기록 등 서비스 이용시 발생한 내역, 운행정보기록, 상담내역</li>
+                                                    <li>IP주소, 접속로그, 기기고유번호, 서비스 이용기록, 방문 기록, 불량 이용 기록, 성명, 주소, 신용카드번호, 은행계좌정보 등 결제정보 등</li>
+                                                </ol>
+                                            </li>
+                                            <li>운행정보기록
+                                                <ol>
+                                                    <li>회원의 예약 사용 후 반납시간이 종료되는 시점에서 자동차의 반납장소 위치, 총누적주행거리 등의 운행 정보 기록은 바이크의 단말기에서 "마이렌탈바이크"서버로 전송됩니다.</li>
+                                                    <li>"마이렌탈바이크"의 운행거리 및 통계데이터 등의 사용 현황 데이터는 제휴 대학 및 회사에 현황 정보 제공의 목적을 위해 활용될 수 있습니다.</li>
+                                                    <li>"마이렌탈바이크"는 회원의 자동차 미반환 등 계약 위반시의 자동차 회수, 자동차 임대차계약의 이행 또는 분쟁 해결 등을 위한 경우, 수사기관/정부기관/행정청/법원 등의 적법한 조사요구 또는 명령 등에 대한 협조/이행을 위한 경우, 그 외에 본인이 별도로 본인의 위치정보 수집, 이용, 제공에 동의한 경우 위 목적 범위 내에서 차량의 위치정보를 수집, 이용, 제공할 수 있습니다.</li>
+                                                    <li>위치정보의 보호 및 이용 등에 관한 법률 제20조에 따라 급박한 위험으로부터 긴급구조 요청이 있는 경우에는 본인의 동의 없이도 개인위치정보가 긴급구조기관에게 제공될 수 있습니다.</li>
+                                                </ol>
+                                            </li>
+        
+                                            <li>이용목적
+                                                <ol>
+                                                    <li>사용자관리
+                                                        <ol>
+                                                            <li>회원 가입 및 관리 재화 또는 서비스 제공</li>
+                                                            <li>서비스 이용에 따른 본인확인, 개인식별</li>
+                                                            <li>고지사항 전달 및 가입자 불만 접수 및 처리 의사소통 경로 확보</li>
+                                                        </ol>
+                                                    </li>
+                                                    <li>서비스 제공에 따른 요금정산
+                                                        <ol>
+                                                            <li>구매 및 요금결제, 거래내역 관리</li>
+                                                            <li>컨텐츠 제공, 이벤트/경품당첨 결과안내 및 상품배송</li>
+                                                        </ol>
+                                                    </li>
+                                                    <li>마케팅 및 광고 활용
+                                                        <ol>
+                                                            <li>가입자에게 최적화된 서비스 제공</li>
+                                                            <li>서비스 이용에 대한 통계</li>
+                                                            <li>서비스 및 상품 안내</li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-sm pull-right w100" data-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 오토바이 체급과 체도 -->
+            <div class="box box07 overflowHidden">
+                <div class="leftArea">
+                    <h2>오토바이 체급과 제도</h2>
+                    <p>운전자가 꼭 알아야하는<br>오토바이 체급과 관련 제도</p>
+                </div>
+                <div class="rightArea">
+                    <table class="w100p borderRad10 overflowHidden">
+                        <tr>
+                            <th>제도</th>
+                            <th colspan="5">배기량</th>
+                        </tr>
+                        <tr>
+                            <th>자동차<br>관련법</th>
+                            <td>~45cc</td>
+                            <td>50cc<br>~100cc</td>
+                            <td>101cc<br>~125cc</td>
+                            <td>126cc<br>~260cc</td>
+                            <td>261cc~</td>
+                        </tr>
+                        <tr>
+                            <th>도로<br>교통법</th>
+                            <td>경형이륜<br>자동차</td>
+                            <td>소형이륜<br>자동차</td>
+                            <td colspan="2">중형이륜<br>자동차</td>
+                            <td>대형이륜<br>자동차</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">면허</th>
+                            <td colspan="5" class="g_green">2종 소형 면허</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="g_green">원등기장치자전거면허</td>
+                            <td colspan="2" class="g_red">운전불가</td>
+                        </tr>
+                        <tr>
+                            <th>면허취득<br>가능연령</th>
+                            <td colspan="3" class="g_green">만 16세 이상</td>
+                            <td colspan="2" class="g_green">만 18세 이상</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">고속도로 /<br>고속화<br>도로진입</th>
+                            <td rowspan="2" colspan="3" class="g_red">금지</td>
+                            <td rowspan="2" colspan="2" class="g_red">금지<br>(긴급 자동차는 가능)</td>
+                        </tr>
+                        <tr></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom nav -->
+        <div class="w100p h60 borderTop" id="footerMobSpace">
+            <nav id="footerMob" class="navbar navbar-default navbar-fixed-bottom bottom-nav h60">
+                <ul>
+                    <li>
+                        <a href="main.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/home_off_icon.png" alt="홈">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/home_on_icon.png" alt="홈"> -->
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="guide.html" class="wh100p">
+                            <!-- <img class="pgNormal" src="../images/mobile/bottom-nav/guide_off_icon.png" alt="이용안내"> -->
+                            <img class="pgFocus" src="../images/mobile/bottom-nav/guide_on_icon.png" alt="이용안내">
+                            <p>이용안내</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="searchs.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/search_off_icon.png" alt="바이크검색">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/search_on_icon.png" alt="바이크검색"> -->
+                            <p>바이크검색</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contens.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/cont_off_icon.png" alt="콘텐츠">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/cont_on_icon.png" alt="콘텐츠"> -->
+                            <p>콘텐츠</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/commu_off_icon.png" alt="커뮤니티">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/commu_on_icon.png" alt="커뮤니티"> -->
+                            <p>커뮤니티</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </body>
+</html>
