@@ -144,14 +144,14 @@ div {display: block;}
 .marginTop10 {margin-top: 10px;}
 .marginTop13 {margin-top: 13px;}
 .marginTop15 {margin-top: 15px;}
-.marginTop20 {margin-top: 20px;}
+.marginTop20 {margin-top: 20px !important;}
 .marginTop100 {margin-top: 100px;}
 .marginBottom0 {margin-bottom: 0px !important;}
 .marginBottom5 {margin-bottom: 5px !important;}
 .marginBottom10 {margin-bottom: 10px !important;}
 .marginBottom15 {margin-bottom: 15px !important;}
 .marginBottom20 {margin-bottom: 20px;}
-.marginBottom30 {margin-bottom: 30px;}
+.marginBottom30 {margin-bottom: 30px !important;}
 .marginBottom40 {margin-bottom: 40px;}
 .marginBottom60 {margin-bottom: 60px;}
 .marginTB0 {margin-top: 0px !important; margin-bottom: 0px !important;}
@@ -163,7 +163,7 @@ div {display: block;}
 .marginSide15 {margin: 0px 15px !important;}
 .borderRad0 {border-radius: 0 !important;}
 .borderRad5 {border-radius: 5px;}
-.borderRad10 {border-radius: 10px;}
+.borderRad10 {border-radius: 10px !important;}
 .borderRad15 {border-radius: 15px;}
 .borderRad20 {border-radius: 20px !important;}
 .borderRad50 {border-radius: 50px !important;}

@@ -75,26 +75,66 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- 로그인 전 임시 display:none -->
-                    <ul class="nav navbar-nav navbar-right nav-before-login" style="display: none;">
+                    <!-- 로그인 전 -->
+                    <ul class="nav navbar-nav navbar-right nav-before-login">
                         <li><a href="login.html">로그인</a></li>
                         <li><a href="signin.html">회원가입</a></li>
                     </ul>
-                    <!-- 로그인 후 -->
-                    <ul class="nav navbar-nav navbar-right nav-after-login">
+                    <!-- 로그인 후 임시 display:none -->
+                    <ul class="nav navbar-nav navbar-right nav-after-login" style="display: none;">
                         <li><a href="mypage.html" class="fontWeight500">마이페이지</a></li>
                         <li><a href="management_shop.html" class="fontWeight500">대여소 관리</a></li>
-                        <li><a href="managemant_bike.html" class="fontWeight500">바이크 관리</a></li>
+                        <li><a href="management_bike.html" class="fontWeight500">바이크 관리</a></li>
                         <li class="borderTop"><a href="">로그아웃</a></li>
                     </ul> 
                 </div>
             </div>
         </nav>
 
+        <!-- content -->
+        <div class="Container">
+            <div class="loginWrap boxShadow borderRad15 borderBF">
+                <h2 class="borderBottom fontWeightBold">로그인</h2>
+                <div class="lg_cont">
+                    <div class="input_text">
+                        <input class="borderRad10 w100p" type="text" placeholder="이메일">
+                        <input class="borderRad10 w100p" type="password" placeholder="비밀번호">
+                    </div>
+                    <div class="lg_btns">
+                        <div class="leftArea">
+                            <label class="cursorPointer" for="">
+                                <input type="checkbox" name="remember" checked>로그인 기억하기
+                            </label>
+                        </div>
+                        <div class="rightArea">
+                            <a href="remind.html"><i class="fas fa-key"></i>비밀번호 재설정</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg_foot paddingTop0">
+                    <button type="submit" class="white w100p borderRad10 fontWeightBold">로그인</button>
+                    <div class="sns_lg">
+                        <p>또는<br>SNS계정으로 간편 로그인하기</p>
+    
+                        <!-- sns login -->
+                                            
+                        <div class="sns_login_m">
+                            <div class="auth">
+                                <div class="sns_logo login_ka_m" onclick="location.href=&#39;https://kauth.kakao.com/oauth/authorize?response_type=code&amp;client_id=bac8f63718ac7cba9f4517f4727797e1&amp;redirect_uri=https://rentalbike.kr/oauth_kakao&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&#39;"></div>
+                                <div class="sns_logo login_na_m" onclick="location.href=&#39;https://nid.naver.com/oauth2.0/authorize?response_type=code&amp;client_id=Cn2f6p9tUI6L9SIDdm8j&amp;redirect_uri=https://rentalbike.kr/oauth_naver&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&#39;"></div>
+                                <div class="sns_logo login_go_m" onclick="location.href=&#39;https://accounts.google.com/o/oauth2/auth?response_type=code&amp;client_id=12833546004-jgoou3aenc3kbaedsoilqne8b3120kkb.apps.googleusercontent.com&amp;redirect_uri=https://rentalbike.kr/oauth_google&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&amp;access_type=offline&amp;scope=https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email&#39;"></div>
+                                <div class="sns_logo login_ap_m" onclick="location.href=&#39;https://appleid.apple.com/auth/authorize?response_type=code&amp;response_mode=form_post&amp;client_id=myrentalbike.rentalbike.kr&amp;redirect_uri=https%3A%2F%2Frentalbike.kr%2Foauth_apple&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&amp;scope=name+email&#39;"></div>
+                                <div class="sns_logo login_fa_m" onclick="location.href=&#39;https://www.facebook.com/v9.0/dialog/oauth?client_id=632754617663455&amp;redirect_uri=https%3A%2F%2Frentalbike.kr%2Foauth_facebook&amp;state=e2b486a6f6be71f17f1a4047b4be4ba2&amp;scope=email&#39;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- bottom nav -->
-        <div class="w100p h60 borderTop" id="footerMobSpace">
-            <nav id="footerMob" class="navbar navbar-default navbar-fixed-bottom bottom-nav h60">
+        <div class="" id="footerMobSpace">
+            <nav id="footerMob" class="navbar navbar-default navbar-fixed-bottom bottom-nav h60 borderTop">
                 <ul>
                     <li>
                         <a href="main.html" class="wh100p">
