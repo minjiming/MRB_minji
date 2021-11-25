@@ -894,7 +894,7 @@
 .regist_cont {display: flex; justify-content: space-between;}
 .regist_cont .leftArea {width: 50%;}
 .loginWrap .lg_cont .regist_cont .input_text input {background-color: #fff;}
-.regist_cont .leftArea .tel_form input {height: 40px;}
+.regist_cont .leftArea .tel_form input, .regist_cont .leftArea .input_text input:nth-of-type(2) {height: 40px;}
 .regist_cont .leftArea .time_form .time_box {margin-bottom: 20px; display: flex; justify-content: center; align-items: center; padding: 30px 0;}
 .regist_cont .leftArea .time_form .time_box label {margin: 10px;}
 .regist_cont .leftArea .time_form .time_box label input[type="checkbox"] {margin-right: 5px;}

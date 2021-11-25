@@ -10,7 +10,7 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="마이렌탈바이크">
         <meta property="og:description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
-        <meta property="og:image" content="images/common/rbicon.png">
+        <meta property="og:image" content="../images/common/rbicon.png">
         <meta property="og:url" content="https://rentalbike.kr/">
 
         <!-- bing은 xml로 대체 -->
@@ -29,19 +29,21 @@
         <link rel="apple-touch-icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/common.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css">
+        <link rel="stylesheet" type="text/css" href="../css/common.css">
+        <link rel="stylesheet" type="text/css" href="../css/m_style.css">
 
         <!-- JS -->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/common.js"></script>
-        <script type="text/javascript" src="js/jquery.datetimepicker.full.js"></script>
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/jquery.datetimepicker.full.js"></script>
+        <!-- 어썸폰트 -->
+        <script src="https://kit.fontawesome.com/c184921f02.js" crossorigin="anonymous"></script>
 
         <!-- Naver Analytics -->
 	    <script type="text/javascript" src="js/wcslog.js"></script>
@@ -53,54 +55,90 @@
             }
         </script>
 
-        <!-- nav 스크롤시 배경색 변경 -->
-        <script> 
-        $(document).scroll(function () { 
-            var $nav = $("#navHeader"); 
-            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height()); }); 
+        <!-- 이미지 업로드 -->
+        <script>
+            $(document).ready(function(){
+                var fileTarget = $('.filebox .upload-hidden');
+
+                    fileTarget.on('change', function(){
+                        if(window.FileReader){
+                            // 파일명 추출
+                            var filename = $(this)[0].files[0].name;
+                        } 
+
+                        else {
+                            // Old IE 파일명 추출
+                            var filename = $(this).val().split('/').pop().split('\\').pop();
+                        };
+
+                        $(this).siblings('.upload-name').val(filename);
+                    });
+
+                    //preview image 
+                    var imgTarget = $('.preview-image .upload-hidden');
+
+                    imgTarget.on('change', function(){
+                        var parent = $(this).parent();
+                        parent.children('.upload-display').remove();
+
+                        if(window.FileReader){
+                            //image 파일만
+                            if (!$(this)[0].files[0].type.match(/image\//)) return;
+                            
+                            var reader = new FileReader();
+                            reader.onload = function(e){
+                                var src = e.target.result;
+                                parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img src="'+src+'" class="upload-thumb"></div></div>');
+                            }
+                            reader.readAsDataURL($(this)[0].files[0]);
+                        }
+
+                        else {
+                            $(this)[0].select();
+                            $(this)[0].blur();
+                            var imgSrc = document.selection.createRange().text;
+                            parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img class="upload-thumb"></div></div>');
+
+                            var img = $(this).siblings('.upload-display').find('img');
+                            img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")";        
+                        }
+                    });
+                });
+
         </script>
+
     </head>
     <body>
         <!-- nav -->
 		<nav  id="navHeader" class="navbar-default navbar-fixed-top">
-            <div class="Container h100p">
-                <div class="navbar-head wh100p">
-                    <!-- navbar-left -->
-                    <div class="navbar-logo w100">
-                        <a href="main.html">
-                            <img class="w100p logonormal" src="images/rb_w_rv.png" alt="마이렌탈바이크">
-                            <img class="w100p logohover" src="images/rb_w.png" alt="마이렌탈바이크">
-                        </a>
-                    </div>
-                    <!-- navbar-right -->
-                    <div class="navbar-btns">
-                        <ul>
-                            <li><a href="guide.html">이용안내</a></li>
-                            <li><a href="searchs.html">바이크검색</a></li>
-                            <li><a href="contens.html">콘텐츠</a></li>
-                            <li><a href="community.html">커뮤니티</a></li>
-                        </ul>
-                        <!-- 로그인 전 노출 -->
-                        <div class="loginBox" style="display: none;">
-                            <ul>
-                                <li><a href="login.html">로그인</a></li> 
-                                <li><a href="signin.html">회원가입</a></li> 
-                            </ul>
-                        </div>
-                        <!-- 로그인 후 노출 -->
-                        <!-- navbar-right-dropdown -->
-                        <div class="dropdown">
-                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                사용자 <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                <li><a class="newblue" href="mypage.html">마이페이지</a></li>
-                                <li><a class="newblue" href="management_shop.html">대여소 관리</a></li>
-                                <li><a class="newblue" href="management_bike.html">바이크 관리</a></li>
-                                <li><a class="newblue" href="">로그아웃</a></li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="navbar-head wh100p Container">
+                <!-- navbar-left -->
+                <div class="navbar-logo w70">
+                    <a href="main.html">
+                        <img class="w100p logonormal" src="../images/rb_w_rv.png" alt="마이렌탈바이크">
+                        <img class="w100p logohover" src="../images/rb_w.png" alt="마이렌탈바이크">
+                    </a>
+                </div>
+                <!-- navbar-right -->
+                <button type="button" class="navbar-toggle collapsd" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- 로그인 전 임시 display:none -->
+                    <ul class="nav navbar-nav navbar-right nav-before-login" style="display: none;">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="signin.html">회원가입</a></li>
+                    </ul>
+                    <!-- 로그인 후 -->
+                    <ul class="nav navbar-nav navbar-right nav-after-login">
+                        <li><a href="mypage.html" class="fontWeight500">마이페이지</a></li>
+                        <li><a href="management_shop.html" class="fontWeight500">대여소 관리</a></li>
+                        <li><a href="management_bike.html" class="fontWeight500">바이크 관리</a></li>
+                        <li class="borderTop"><a href="">로그아웃</a></li>
+                    </ul> 
                 </div>
             </div>
         </nav>
@@ -112,14 +150,18 @@
                     <h2 class="borderBottom fontWeightBold">대여소 등록</h2>
                     <div class="lg_cont">
                         <div class="regist_cont">
+                            <div class="rightArea borderBF">
+                                <!-- 임시 지도 -->
+                                <img class="wh100p" src="../images/exam/m_ex_result_map.png" alt="">
+                            </div>
                             <div class="leftArea">
                                 <div class="input_text">
                                     <!-- 대여소 이름 -->
                                     <label for="shop_name">대여소 이름</label>
-                                    <input class="borderRad15 w100p borderBF" id="shop_name" type="text" placeholder="대여소 이름을 입력해주세요">
+                                    <input class="borderRad10 w100p borderBF marginBottom30" id="shop_name" type="text" placeholder="대여소 이름을 입력해주세요">
                                     <!--  지역 -->
                                     <label for="area">지역</label>
-                                    <select class="borderRad15 w100p borderBF bgsNoReat" name="area" id="area">
+                                    <select class="borderRad10 w100p borderBF bgsNoReat marginBottom30" name="area" id="area">
                                         <option value="" selected>선택</option>
                                         <option value="seoul">서울시</option>
                                         <option value="jeju">제주도</option>
@@ -133,49 +175,49 @@
                                         <option value="gyeongnam">부산/울산/경남</option>
                                         <option value="gyeongbuk">대구/경북</option>
                                     </select>
-                                    <!-- 주소 -->
-                                    <label for="shop_address">주소</label>
-                                    <input class="borderRad15 w100p borderBF" id="shop_address" type="text" placeholder="주소를 입력해주세요">
+                                     <!-- 주소 -->
+                                     <label for="shop_address">주소</label>
+                                     <input class="borderRad10 w100p borderBF marginBottom30" id="shop_address" type="text" placeholder="주소를 입력해주세요">
                                     <!-- 전화번호 -->
                                     <label for="tel">전화번호</label>
-                                    <div id="tel" class="tel_form">
-                                        <input type="text" class="borderRad15 borderBF" id="tel1" value="010" maxlength="3" readonly>
+                                    <div id="tel" class="tel_form marginBottom30">
+                                        <input type="text" class="borderRad10 borderBF" id="tel1" value="010" maxlength="3" readonly>
                                         <span>-</span>
-                                        <input type="text" class="borderRad15 borderBF" id="tel2" minlength="3" maxlength="4" value="">
+                                        <input type="text" class="borderRad10 borderBF" id="tel2" minlength="3" maxlength="4" value="">
                                         <span>-</span>
-                                        <input type="text" class="borderRad15 borderBF" id="tel3" minlength="3" maxlength="4" value="">
+                                        <input type="text" class="borderRad10 borderBF" id="tel3" minlength="3" maxlength="4" value="">
                                     </div>
                                     <!-- 운영시간 -->
                                     <label for="time">운영시간</label>
                                     <div id="time" class="time_form">
-                                        <div class="borderBF borderRad15 time_box">
+                                        <div class="time_box">
                                             <label>
-                                                <input type="checkbox" name="day1" id="day1">월
+                                                <input type="checkbox" name="day1" id="day1"><span>월</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="day2" id="day2">화
+                                                <input type="checkbox" name="day2" id="day2"><span>화</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="day3" id="day3">수
+                                                <input type="checkbox" name="day3" id="day3"><span>수</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="day4" id="day4">목
+                                                <input type="checkbox" name="day4" id="day4"><span>목</span>
+                                            </label>
+                                            <label class="marginRigth0">
+                                                <input type="checkbox" name="day5" id="day5"><span>금</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="day5" id="day5">금
+                                                <input type="checkbox" name="day6" id="day6"><span>토</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="day6" id="day6">토
+                                                <input type="checkbox" name="day7" id="day7"><span>일</span>
                                             </label>
-                                            <label>
-                                                <input type="checkbox" name="day7" id="day7">일
-                                            </label>
-                                            <label>
-                                                <input type="checkbox" name="day8" id="day8">공휴일
+                                            <label class="marginRigth0">
+                                                <input type="checkbox" name="day8" id="day8"><span>공휴일</span>
                                             </label>
                                         </div>
                                         <div class="time_select">
-                                            <select class="borderBF borderRad15 bgsNoReat" name="time1" id="time1">
+                                            <select class="borderBF borderRad10 bgsNoReat" name="time1" id="time1">
                                                 <option value="00:00">00:00</option>
                                                 <option value="01:00">01:00</option>
                                                 <option value="02:00">02:00</option>
@@ -203,7 +245,7 @@
                                                 <option value="24:00">24:00</option>
                                             </select>
                                             <span>~</span>
-                                            <select class="borderBF borderRad15 bgsNoReat" name="time2" id="time2">
+                                            <select class="borderBF borderRad10 bgsNoReat" name="time2" id="time2">
                                                 <option value="00:00">00:00</option>
                                                 <option value="01:00">01:00</option>
                                                 <option value="02:00">02:00</option>
@@ -234,17 +276,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="rightArea borderBF">
-                                <!-- 임시 지도 -->
-                                <img class="wh100p" src="images/exam/ex_result_map.png" alt="">
-                            </div>
                         </div>
                         <div class="guide_edit text_input">
                             <!-- 대여안내 -->
                             <label for="edit_info">대여안내</label>
                             <div class="edti_wrap borderBF">
                                 <!-- !!임시!! 에디터 캡쳐 이미지 -->
-                                <img class="wh100p" src="images/exam/ex_editter.jpg" alt="">
+                                <img class="wh100p" src="../images/exam/m_ex_editter.png" alt="">
                             </div>
                         </div>
                         <div class="submitbtn">
@@ -254,30 +292,49 @@
                 </div>
             </div>
         </div>
-        <!-- footer -->
-        <div class="footer w100p margin0">
-            <div class="Container">
-                <div class="leftArea">
-                    <div class="logo_ft">
-                        <img src="images/rb_w_ft.png" alt="마이렌탈바이크">
-                    </div>
-                    <div class="txt_ft">
-                        <ul>
-                            <li class="white">맥스토크 ｜ 관리자:임성용</li>
-                            <li class="white">Tel:010-4952-0134 ｜ E-mail:admin@rentalbike.kr</li>
-                            <li class="white">주소:전북 전주시 완산구 풍남문4길 25-26 813호</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="rightArea">
-                    <ul>
-                        <li><a href="https://www.instagram.com/myrental_bike/"><span class="bgImg"></span></a></li>
-                        <li><a href="https://www.facebook.com/myrentalbike/"><span class="bgImg"></span></a></li>
-                        <li><a href="https://blog.naver.com/biz9ine"><span class="bgImg"></span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UC3IQigWXcYpJRCFWPMqM9KQ/featured"><span class="bgImg"></span></a></li>
-                    </ul>
-                </div>
-            </div>
+
+        <!-- bottom nav -->
+        <div class="" id="footerMobSpace">
+            <nav id="footerMob" class="navbar navbar-default navbar-fixed-bottom bottom-nav h60 borderTop">
+                <ul>
+                    <li>
+                        <a href="main.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/home_off_icon.png" alt="홈">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/home_on_icon.png" alt="홈"> -->
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="guide.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/guide_off_icon.png" alt="이용안내">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/guide_on_icon.png" alt="이용안내"> -->
+                            <p>이용안내</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="searchs.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/search_off_icon.png" alt="바이크검색">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/search_on_icon.png" alt="바이크검색"> -->
+                            <p>바이크검색</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contens.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/cont_off_icon.png" alt="콘텐츠">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/cont_on_icon.png" alt="콘텐츠"> -->
+                            <p>콘텐츠</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/commu_off_icon.png" alt="커뮤니티">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/commu_on_icon.png" alt="커뮤니티"> -->
+                            <p>커뮤니티</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+
     </body>
 </html>

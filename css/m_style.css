@@ -504,7 +504,7 @@
 
 .loginWrap .lg_cont .input_text .tel_form {display: flex; justify-content: space-between;}
 .loginWrap .lg_cont .input_text .tel_form input:first-of-type {width: 20%;}
-.loginWrap .lg_cont .input_text .tel_form input {width: 30%;}
+.loginWrap .lg_cont .input_text .tel_form input {width: 30%; padding: 17px 15px;}
 .loginWrap .lg_cont .input_text .tel_form span {font-size: 16px; font-weight: bold; margin-top: 14px;}
 .loginWrap .lg_cont .input_text .gender_form .user-btn-group {display: flex; justify-content: space-between;}
 .loginWrap .lg_cont .input_text .gender_form .user-btn-group .btn {width: 50%; height: 38px; border: 1px solid #4e6bd3; padding: 0; display: flex; align-items: center; justify-content: center;}
@@ -521,7 +521,7 @@
 .loginWrap .lg_cont .re_pw_link p {color: #bfbfbf; text-align: left;}
 .loginWrap .lg_cont .re_pw_link button {border: 1px solid #4e6bd3; color: #4e6bd3; height: 38px; margin: 15px 0 25px;}
 .loginWrap .mem_out_btn {padding: 20px 20px; text-align: left;}
-.loginWrap .mem_out_btn button {margin-bottom: 0; background-color: #fff; color: #bfbfbf; font-size: 14px; padding: 5px 15px;}
+.loginWrap .mem_out_btn button {margin-bottom: 0; background-color: #fff; color: #bfbfbf; font-size: 14px; padding: 0 15px; height: 34px;}
 
 
 
@@ -640,6 +640,42 @@
 .bike_detail_box .rightArea .boxCont .price_txt {text-align: right; font-size: 18px; line-height: 1.5; padding-top: 13px; margin-top: 20px;}
 /* 바이크 임시 썸네일 */
 .bike_detail_box .leftArea .imgArea {background-image: url(../images/exam/ex_bike.jpg);}
+
+
+
+
+
+/* 대여소 등록 & 수정 */
+.regist_cont .leftArea {width: 100%;}
+.loginWrap .lg_cont .regist_cont .input_text input, .loginWrap .lg_cont .regist_cont .input_text select {background-color: #fff;}
+.regist_cont .leftArea .time_form .time_box {display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 10px 0;}
+.regist_cont .leftArea .time_form .time_box label {margin-right: 10px; width: 17.3%; font-weight: 500;}
+.regist_cont .leftArea .time_form .time_box label:last-of-type {width: 58.7%;}
+.regist_cont .leftArea .time_form .time_box label input[type="checkbox"] {display: none;}
+.regist_cont .leftArea .time_form .time_box label input[type="checkbox"] + span {width: 100%; height: 26px; border: 1px solid #bfbfbf; color: #bfbfbf; display: flex; justify-content: center; align-items: center;}
+.regist_cont .leftArea .time_form .time_box label input[type="checkbox"]:checked + span {background-color: #4E6BD3; border-color: #4E6BD3; color: #fff;}
+.regist_cont .leftArea .time_form .time_select {display: flex; justify-content: space-between;}
+.regist_cont .leftArea .time_form .time_select select {width: 45%; background-position: 89%;}
+.regist_cont .leftArea .time_form .time_select span {margin-top: 12px;}
+.regist_cont .rightArea {width: 100%; height: 260px; margin-bottom: 40px;}
+.loginWrap .lg_cont .guide_edit {margin-top: 20px;}
+.loginWrap .lg_cont .guide_edit label {text-align: left; color: #999; font-size: 16px; margin-bottom: 10px; display: block;}
+.loginWrap .lg_cont .submitbtn {margin-top: 30px; text-align: right;}
+/* 수정 페이지 삭제 버튼 있을 때 */
+.loginWrap .lg_cont .submitbtn button.dele_btn {float: left; padding: 8px 18px; color: #999;}
+
+
+
+
+/* 바이크 등록 & 수정 */
+.bike_thumb_filebox .upload-display .upload-thumb-wrap {width: 100px; height: 100px; border-radius: 10px; overflow: hidden;}
+.loginWrap .lg_cont .bikeInfo .bikeInfo_form {width: 100%; text-align: left;}
+.loginWrap .lg_cont .bikeInfo .bikeInfo_form input[type="text"] {height: 42px; background-color: #fff;}
+.loginWrap .lg_cont .bikeInfo .bikeInfo_form select {background-color: #fff;}
+.loginWrap .lg_cont .elecInfo .bikeInfo_form input[type="text"] {width: 100%;}
+.loginWrap .lg_cont .rental_check_form input[type="text"] {background-color: #Fff;}
+.loginWrap .lg_cont .guide_edit_form label i {display: inline-block; background-image: url(../images/rental_guide_icon.png); width: 18px; height: 18px; margin-right: 10px;}
+.loginWrap .lg_cont .guide_edit_form p {text-align: left; line-height: 1.4; margin-left: 28px;}
 
 
 
