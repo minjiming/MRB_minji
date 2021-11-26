@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- 오픈 그래프 -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="마이렌탈바이크">
+        <meta property="og:description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta property="og:image" content="../images/common/rbicon.png">
+        <meta property="og:url" content="https://rentalbike.kr/">
+
+        <!-- bing은 xml로 대체 -->
+        <meta name="naver-site-verification" content="02805b5edd23aab251aa712194a9829b44f6a633"> <!-- naver -->
+        <meta name="google-site-verification" content="QuRSeSM0JKaS8OeovUQYa1hDRHgPJDaRTXz67ov3w-0"> <!-- google -->
+        <meta name="description" content="여행자를 위한 오토바이 렌탈 서비스 플랫폼">
+        <meta name="keywords" content="맥스토크, 마이렌탈바이크, 당빠, 홈페이지, IT, 이륜차, 오토바이, 바이크, 라이더, 전국, 모터사이클, 중고, 신차, 구매, 관광지, 리스, 대여, 렌탈, 렌트, mrb">
+        <!-- 모바일용 화면크기 비율고정 -->
+        <meta id="mobileMeta" name="viewport" content="width=device-width">
+
+        <title>마이렌탈바이크</title>
+
+        <!-- 서비스 아이콘 -->
+        <link rel="canonical" href="https://rentalbike.kr/">
+        <link rel="shortcut icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+        <link rel="apple-touch-icon" href="https://rentalbike.kr/storage/images/common/rbicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css">
+        <link rel="stylesheet" type="text/css" href="../css/common.css">
+        <link rel="stylesheet" type="text/css" href="../css/m_style.css">
+
+        <!-- JS -->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/jquery.datetimepicker.full.js"></script>
+        <!-- 어썸폰트 -->
+        <script src="https://kit.fontawesome.com/c184921f02.js" crossorigin="anonymous"></script>
+
+        <!-- Naver Analytics -->
+	    <script type="text/javascript" src="js/wcslog.js"></script>
+        <script type="text/javascript">
+            if(!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "8b08b84b8b1f38";
+            if(window.wcs) {
+                wcs_do();
+            }
+        </script>
+
+    </head>
+    <body>
+        <!-- nav -->
+		<nav  id="navHeader" class="navbar-default navbar-fixed-top">
+            <div class="navbar-head wh100p Container">
+                <!-- navbar-left -->
+                <div class="navbar-logo w70">
+                    <a href="main.html">
+                        <img class="w100p logonormal" src="../images/rb_w_rv.png" alt="마이렌탈바이크">
+                        <img class="w100p logohover" src="../images/rb_w.png" alt="마이렌탈바이크">
+                    </a>
+                </div>
+                <!-- navbar-right -->
+                <button type="button" class="navbar-toggle collapsd" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- 로그인 전 임시 display:none -->
+                    <ul class="nav navbar-nav navbar-right nav-before-login" style="display: none;">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="signin.html">회원가입</a></li>
+                    </ul>
+                    <!-- 로그인 후 -->
+                    <ul class="nav navbar-nav navbar-right nav-after-login">
+                        <li><a href="mypage.html" class="fontWeight500">마이페이지</a></li>
+                        <li><a href="management_shop.html" class="fontWeight500">대여소 관리</a></li>
+                        <li><a href="management_bike.html" class="fontWeight500">바이크 관리</a></li>
+                        <li class="borderTop"><a href="">로그아웃</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </nav>
+
+        <div class="search_wrap">
+
+            <!-- 바이크 검색 -->
+            <div class="search_panel borderBottom">
+                <div class="navbar-form navbar-left search_m_form marginSide0 paddingTB0" role="search">
+                    <div class="form-group sch-group">
+                        <select name="area" id="area" class="bgsNoReat borderRad10 borderBF">
+                            <option value="all" selected="selected">지역 (전체)</option>
+                            <option value="seoul">서울시</option>
+                            <option value="jeju">제주도</option>
+                            <option value="gyenggi">경기</option>
+                            <option value="gangwon">강원</option>
+                            <option value="sejong">세종</option>
+                            <option value="chungnam">충남</option>
+                            <option value="chungbouk">충북</option>
+                            <option value="jeonnam">광주/전남</option>
+                            <option value="jeonbuk">전북</option>
+                            <option value="gyeongnam">부산/울산/경남</option>
+                            <option value="gyeongbuk">대구/경북</option>
+                        </select>
+                        <div class="sch_form overflowHidden borderRad10 borderBF">
+                            <input type="text" class="" name="search_key" id="search_key" placeholder="스쿠터 검색">
+                            <button type="submit" class="fontWeightBold backblue_btn"><i class="bgImg"></i></button></span>
+                        </div>
+                        <button type="button" class="navbar-toggle collapsed borderRad5 borderBF" data-toggle="collapse" data-target="#search-filter-collapse" aria-expanded="false">
+                            <img class="w100p" src="../images/mobile/filter_icon.png" alt="filter">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- filter 더보기 -->
+                <div id="search-filter-collapse" class="navbar-collapse collapse form-group sch_filter_group" aria-expanded="false">
+                    <div class="filter-form rent_date">
+                        <label for="rent_date">렌트기간</label>
+                        <div id="rent_date" class="search rent_date filter-input cursorPointer">
+                            <!-- 대여일 -->
+                            <input id="rent_start_date" class="rent_start_date borderBF w100p bgsNoReat borderRad10" name="rent_start_date" type="text" placeholder="대여날" readonly>
+                            <!-- 반납일 -->
+                            <input id="rent_end_date" class="rent_end_date borderBF w100p bgsNoReat borderRad10" name="rent_end_date" type="text" placeholder="반납날" readonly>
+                        </div>
+
+                        <!-- 대여일/반납일 bootstrap datepicker -->
+                        <script type="text/javascript">
+                            var rent_start_date = "+1970/01/01";
+                            var rent_end_date = "+1970/01/02";
+                            $.datetimepicker.setLocale('kr');
+                            $('.rent_start_date').datetimepicker({
+                                // format:'unixtime',
+                                lang:'ko',
+                                timepickerScrollbar:false,
+                                // timepicker:true,
+                                allowTimes:['09:00','10:00','12:00','13:00','14:00','15:00','17:00','18:00','19:00','20:00'],
+                                // format:'Y/m/d',
+                                formatDate:'Y/m/d',
+                                formatTime:'H:i',
+                                // minDate:'-1970/01/02', //yesterday is minimum date(for today use 0 or -1970/01/01)
+                                // maxDate:'+1970/01/02', //tomorrow is maximum date calendar
+                                minDate:'0', //yesterday is minimum date(for today use 0 or -1970/01/01)
+                                maxDate:'+1970/03/01', //tomorrow is maximum date calendar
+                                // value:'+1970/01/01',
+                                value:rent_start_date,
+        
+                                onShow:function( ct ){
+                                    this.setOptions({
+                                        // maxDate:'+1970/04/01',
+                                    })
+                                },
+                                onSelectTime:function(current_time,$input){
+                                    
+                                },
+                            });
+        
+                            $('.rent_end_date').datetimepicker({
+                                lang:'ko',
+                                timepickerScrollbar:false,
+                                // timepicker:true,
+                                allowTimes:['09:00','10:00','12:00','13:00','14:00','15:00','17:00','18:00','19:00','20:00'],
+                                // format:'Y/m/d',
+                                formatDate:'Y/m/d',
+                                formatTime:'H:i',
+                                minDate:'0', //yesterday is minimum date(for today use 0 or -1970/01/01)
+                                maxDate:'0', //tomorrow is maximum date calendar
+                                // value:'+1970/01/02',
+                                value:rent_end_date,
+        
+                                onShow:function( ct ){
+                                    this.setOptions({
+                                        minDate:$('#rent_start_date').val()?$('#rent_start_date').val():'0',
+                                        maxDate:get_after_date(term = 6),
+                                    })
+                                },
+        
+                                onSelectTime:function(current_time,$input){
+                                    
+                                },
+                            });
+                        </script>
+                    </div>
+                    <!-- 종류 select -->
+                    <div class="filter-form rent_cate">
+                        <label for="category">카테고리</label>
+                        <select class="borderRad10 borderBF bgsNoReat filter-input" name="category" id="category">
+                            <option value="all" selected="selected">전체</option>
+                            <option value="sc">스쿠터</option>
+                            <option value="eb">전동바이크</option>
+                            <option value="ek">전동킥보드</option>
+                            <option value="at">ATV</option>
+                            <option value="re">레플리카</option>
+                            <option value="na">네이키드/스트리트</option>
+                            <option value="to">투어러/크루즈</option>
+                            <option value="am">아메리칸/모던</option>
+                            <option value="of">어드벤처/오프로드</option>
+                            <option value="un">언더본/비즈니스</option>
+                            <option value="po">포켓/미니</option>
+                            <option value="etc">기타</option>
+                        </select>
+                    </div>
+                    <!-- 제조사 -->
+                    <div class="filter-form rent_facturer">
+                        <label for="manufacturer">제조사</label>
+                        <select class="borderRad10 borderBF bgsNoReat filter-input" name="manufacturer" id="manufacturer">
+                            <option value="all" selected="selected">제조사 (전체)</option>
+                            <option value="da">대림</option>
+                            <option value="km">KR/S&amp;T/효성</option>
+                            <option value="sy">SYM</option>
+                            <option value="ho">혼다</option>
+                            <option value="ya">야마하</option>
+                            <option value="su">스즈키</option>
+                            <option value="ka">가와사키</option>
+                            <option value="ha">할리데이비슨</option>
+                            <option value="bm">BMW</option>
+                            <option value="be">베스파</option>
+                            <option value="du">두카티</option>
+                            <option value="etc">기타</option>
+                        </select>
+                    </div>
+                    <!-- 배기량 -->
+                    <div class="filter-form rent_cc">
+                        <label for="cc">배기량</label>
+                        <select class="borderRad10 borderBF bgsNoReat filter-input" name="cc" id="cc">
+                            <option value="all" selected="selected">배기량 (전체)</option>
+                            <option value="49">~ 49cc</option>
+                            <option value="50100">50cc ~ 100cc</option>
+                            <option value="101125">101cc ~ 125cc</option>
+                            <option value="126260">126cc ~ 260cc</option>
+                            <option value="261">261cc ~</option>
+                        </select>
+                    </div>
+                    <!-- 변속기 -->
+                    <div class="filter-form rent_trans">
+                        <label for="transmission">변속기</label>
+                        <select class="borderRad10 borderBF bgsNoReat filter-input" name="transmission" id="transmission">
+                            <option value="all" selected="selected">변속기 (전체)</option>
+                            <option value="auto">자동</option>
+                            <option value="manual">수동</option>
+                        </select>
+                    </div>
+                    <!-- 연료 -->
+                    <div class="filter-form rent_fuel">
+                        <label for="fuel_type">연료</label>
+                        <select class="borderRad10 borderBF bgsNoReat filter-input" name="fuel_type" id="fuel_type">
+                            <option value="all" selected="selected">연료 (전체)</option>
+                            <option value="gasoline">휘발류</option>
+                            <option value="electronic">전기</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 지도 -->
+            <div class="map_wrap overflowHidden">
+                <img src="../images/exam/m_ex_result_map.png" alt="">
+            </div>
+
+            <!-- 현재 샵(지역) 별로 대여 가능한 바이크 리스트 -->
+            <div class="marginBottom60 bike_list_wrap">
+                <div class="navbar-header">
+                    <div class="shop_info_box borderBottom">
+                        <div class="info_tit">
+                            <h5 class="jalnanFont">맥스토크 대여소</h5>
+                            <a href="shop_detail.html" class="newblue_txt"><i class="fas fa-link"></i>대여소 상세보기</a>
+                        </div>
+                        <button type="button" class="navbar-toggle margin0" data-toggle="collapse" data-target="#app-navbar-collapse2" aria-expanded="ture">
+                            <i class="fas fa-sort"></i>
+                        </button>
+                    </div>
+                    <!-- 검색결과 개수 -->
+                    <p>검색결과 <span>8</span>개</p>
+                </div>
+                <div id="app-navbar-collapse2" class="navbar-collapse padding0 h140 overflowYHidden collapse in" aria-expanded="ture">
+                    <div id="carousel-product-generic" class="carousel slide h140" data-interval="false">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active" onclick="location.href='bike_detail.html';">
+                                <div class="bike_pd_box">
+                                    <!-- 이미지 -->
+                                    <div class="imgArea borderRad15 bgImg borderBF"></div>
+                                    <!-- 정보 -->
+                                    <div class="infoArea">
+                                        <div class="tit borderBottom">
+                                            <!-- 바이크이름 -->
+                                            <p class="fontWeightBold">YZF-R6</p>
+                                            <!-- 종류 -->
+                                            <span class="borderRad50 newblue_txt fontWeightBold">레플리카</span>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="b_filter">
+                                                <!-- 제조사 -->
+                                                <span class="fontWeightBold">야마하</span>
+                                                <!-- 배기량 -->
+                                                <span class="fontWeightBold">599cc</span>
+                                                <!-- 변속기 -->
+                                                <span class="fontWeightBold">수동</span>
+                                                <!-- 연료 -->
+                                                <span class="fontWeightBold">휘발유</span>
+                                            </div>
+                                            <!-- 대여소 -->
+                                            <p class="ad_store fontWeight500"><i class="bgImg"></i>전북 전주시 백스토크 대여소</p>
+                                            <!-- 가격 -->
+                                            <div class="price_txt">
+                                                <p class="price newblue_txt fontWeightBold">1시간 <span class="newblue_txt">40,000 ₩</span></p>
+                                                <p class="price newblue_txt fontWeightBold">1일 <span class="newblue_txt">150,000 ₩</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" onclick="location.href='bike_detail.html';">
+                                <div class="bike_pd_box">
+                                    <!-- 이미지 -->
+                                    <div class="imgArea borderRad15 bgImg borderBF"></div>
+                                    <!-- 정보 -->
+                                    <div class="infoArea">
+                                        <div class="tit borderBottom">
+                                            <!-- 바이크이름 -->
+                                            <p class="fontWeightBold">YZF-R6</p>
+                                            <!-- 종류 -->
+                                            <span class="borderRad50 newblue_txt fontWeightBold">레플리카</span>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="b_filter">
+                                                <!-- 제조사 -->
+                                                <span class="fontWeightBold">야마하</span>
+                                                <!-- 배기량 -->
+                                                <span class="fontWeightBold">599cc</span>
+                                                <!-- 변속기 -->
+                                                <span class="fontWeightBold">수동</span>
+                                                <!-- 연료 -->
+                                                <span class="fontWeightBold">휘발유</span>
+                                            </div>
+                                            <!-- 대여소 -->
+                                            <p class="ad_store fontWeight500"><i class="bgImg"></i>전북 전주시 백스토크 대여소</p>
+                                            <!-- 가격 -->
+                                            <div class="price_txt">
+                                                <p class="price newblue_txt fontWeightBold">1시간 <span class="newblue_txt">40,000 ₩</span></p>
+                                                <p class="price newblue_txt fontWeightBold">1일 <span class="newblue_txt">150,000 ₩</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" onclick="location.href='bike_detail.html';">
+                                <div class="bike_pd_box">
+                                    <!-- 이미지 -->
+                                    <div class="imgArea borderRad15 bgImg borderBF"></div>
+                                    <!-- 정보 -->
+                                    <div class="infoArea">
+                                        <div class="tit borderBottom">
+                                            <!-- 바이크이름 -->
+                                            <p class="fontWeightBold">YZF-R6</p>
+                                            <!-- 종류 -->
+                                            <span class="borderRad50 newblue_txt fontWeightBold">레플리카</span>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="b_filter">
+                                                <!-- 제조사 -->
+                                                <span class="fontWeightBold">야마하</span>
+                                                <!-- 배기량 -->
+                                                <span class="fontWeightBold">599cc</span>
+                                                <!-- 변속기 -->
+                                                <span class="fontWeightBold">수동</span>
+                                                <!-- 연료 -->
+                                                <span class="fontWeightBold">휘발유</span>
+                                            </div>
+                                            <!-- 대여소 -->
+                                            <p class="ad_store fontWeight500"><i class="bgImg"></i>전북 전주시 백스토크 대여소</p>
+                                            <!-- 가격 -->
+                                            <div class="price_txt">
+                                                <p class="price newblue_txt fontWeightBold">1시간 <span class="newblue_txt">40,000 ₩</span></p>
+                                                <p class="price newblue_txt fontWeightBold">1일 <span class="newblue_txt">150,000 ₩</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Controls -->
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-product-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-product-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom nav -->
+        <div class="" id="footerMobSpace">
+            <nav id="footerMob" class="navbar navbar-default navbar-fixed-bottom bottom-nav h60 borderTop">
+                <ul>
+                    <li>
+                        <a href="main.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/home_off_icon.png" alt="홈">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/home_on_icon.png" alt="홈"> -->
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="guide.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/guide_off_icon.png" alt="이용안내">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/guide_on_icon.png" alt="이용안내"> -->
+                            <p>이용안내</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="searchs.html" class="wh100p">
+                            <!-- <img class="pgNormal" src="../images/mobile/bottom-nav/search_off_icon.png" alt="바이크검색"> -->
+                            <img class="pgFocus" src="../images/mobile/bottom-nav/search_on_icon.png" alt="바이크검색">
+                            <p>바이크검색</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contens.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/cont_off_icon.png" alt="콘텐츠">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/cont_on_icon.png" alt="콘텐츠"> -->
+                            <p>콘텐츠</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html" class="wh100p">
+                            <img class="pgNormal" src="../images/mobile/bottom-nav/commu_off_icon.png" alt="커뮤니티">
+                            <!-- <img class="pgFocus" src="../images/mobile/bottom-nav/commu_on_icon.png" alt="커뮤니티"> -->
+                            <p>커뮤니티</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </body>
+</html>
